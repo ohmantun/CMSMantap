@@ -7,7 +7,6 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.ui.AppBarConfiguration
-import com.example.cmsmantap.databinding.ActivityBerandaBinding.inflate
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import androidx.navigation.findNavController
