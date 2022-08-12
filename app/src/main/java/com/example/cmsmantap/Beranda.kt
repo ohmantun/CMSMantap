@@ -1,9 +1,11 @@
 package com.example.cmsmantap
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.widget.ArrayAdapter
+import android.widget.ImageButton
 import android.widget.Spinner
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.ui.AppBarConfiguration
@@ -25,6 +27,7 @@ class Beranda : AppCompatActivity() {
         setContentView(R.layout.activity_main_page)
 
         val spinner: Spinner = findViewById(R.id.spinner_rek)
+        val menubtnPayroll = findViewById<ImageButton>(R.id.btnPayroll)
 
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter.createFromResource(
@@ -36,6 +39,11 @@ class Beranda : AppCompatActivity() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             // Apply the adapter to the spinner
             spinner.adapter = adapter
+        }
+
+        menubtnPayroll.setOnClickListener {
+            val intent = Intent(this, Beranda::class.java)
+            startActivity(intent)
         }
 
     }

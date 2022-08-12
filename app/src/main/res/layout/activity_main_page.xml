@@ -75,26 +75,27 @@
         app:layout_constraintTop_toTopOf="parent">
     </androidx.cardview.widget.CardView>
 
-
-
-
     <RelativeLayout
+        android:id="@+id/relativelay1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="240dp">
 
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:columnCount="2"
         android:rowCount="2"
         android:background="@drawable/ic_box_kuning">
 
-        <ImageView
-            android:layout_width="87dp"
+        <ImageButton
+            android:layout_width="50dp"
             android:layout_height="137dp"
             android:layout_row="0"
             android:layout_rowWeight="1"
@@ -104,14 +105,16 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/ic_rectangle_3"
+            android:background="@drawable/menu_mutasi"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.146"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </ImageView>
+            app:layout_constraintTop_toTopOf="parent"
+            android:clickable="true"
+            android:contextClickable="true">
+        </ImageButton>
 
-        <ImageView
+        <ImageButton
             android:layout_width="87dp"
             android:layout_height="137dp"
             android:layout_row="1"
@@ -122,14 +125,16 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="40dp"
-            android:background="@drawable/ic_rectangle_3"
+            android:background="@drawable/menu_transaksi"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.146"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </ImageView>
+            app:layout_constraintTop_toTopOf="parent"
+            android:clickable="true"
+            android:contextClickable="true">
+        </ImageButton>
 
-        <ImageView
+        <ImageButton
             android:layout_width="87dp"
             android:layout_height="137dp"
             android:layout_row="1"
@@ -140,14 +145,17 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="40dp"
-            android:background="@drawable/ic_rectangle_3"
+            android:background="@drawable/menu_laporan"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.146"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </ImageView>
+            app:layout_constraintTop_toTopOf="parent"
+            android:clickable="true"
+            android:contextClickable="true">
+        </ImageButton>
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/btnPayroll"
             android:layout_width="87dp"
             android:layout_height="137dp"
             android:layout_row="0"
@@ -158,14 +166,17 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/ic_rectangle_3"
+            android:background="@drawable/menu_payroll"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.146"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </ImageView>
+            app:layout_constraintTop_toTopOf="parent"
+            android:clickable="true"
+            android:contextClickable="true">
+        </ImageButton>
 
     </GridLayout>
+   </ScrollView>
     <TextView
         android:id="@+id/menu_utama"
         android:layout_width="wrap_content"
