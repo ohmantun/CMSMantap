@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CMSMantap</string>
+    <!-- Strings related to login -->
+    <string name="prompt_idinstitusi">ID Institusi</string>
+    <string name="prompt_idpengguna">ID Pengguna</string>
+    <string name="prompt_password">Password</string>
+    <string name="welcome2">Selamat Datang</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="hallo">Hello!</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="nama">"MAKER002"</string>
+    <string-array name="pilih_rek">
+        <item>Rekening 1</item>
+        <item>Rekening 2</item>
+        <item>Rekening 3</item>
+    </string-array>
+</resources>
