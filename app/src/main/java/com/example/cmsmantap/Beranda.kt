@@ -1,9 +1,12 @@
 package com.example.cmsmantap
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Spinner
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.ui.AppBarConfiguration
@@ -38,5 +41,11 @@ class Beranda : AppCompatActivity() {
             spinner.adapter = adapter
         }
 
+    /*    val payrollbtn = findViewById<ImageButton>(R.id.payroll_btn)
+        payrollbtn.setOnClickListener {
+            val Intent = Intent(this,Payroll::class.java)
+            startActivity(Intent)
+
+        } */
     }
 }
