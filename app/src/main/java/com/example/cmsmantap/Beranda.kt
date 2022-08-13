@@ -43,7 +43,7 @@ class Beranda : AppCompatActivity() {
         }
 
         menubtnPayroll.setOnClickListener {
-            val intent = Intent(this, PayrollUmum::class.java)
+            val intent = Intent(this, Payroll::class.java)
             startActivity(intent)
         }
 
