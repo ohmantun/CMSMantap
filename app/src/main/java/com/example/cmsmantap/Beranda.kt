@@ -15,6 +15,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.cmsmantap.data.PayrollUmum
 import com.example.cmsmantap.databinding.ActivityLoginBinding.inflate
 import com.example.cmsmantap.databinding.ActivityLoginBinding
 
@@ -42,7 +43,7 @@ class Beranda : AppCompatActivity() {
         }
 
         menubtnPayroll.setOnClickListener {
-            val intent = Intent(this, Beranda::class.java)
+            val intent = Intent(this, PayrollUmum::class.java)
             startActivity(intent)
         }
 
