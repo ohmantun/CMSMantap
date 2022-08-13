@@ -39,7 +39,6 @@ class PayrollUmum : AppCompatActivity() {
                 Toast.LENGTH_SHORT
                 ).show()
             }
-
         }
 
 
