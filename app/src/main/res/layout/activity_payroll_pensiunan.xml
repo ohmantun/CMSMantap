@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    tools:context=".PayrollPensiunan">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_arrow"
+                    android:clickable="true"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/payroll_pensiun" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payroll Pensiunan"
+                    android:layout_marginTop="7dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#231F20"
+                    android:textAlignment="center"
+                    android:layout_marginStart="10dp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:columnCount="2"
+            android:rowCount="1"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="Buat Baru"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#07334E" />
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="Daftar Transaksi"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#07334E" />
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="Rekening Sumber"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#083358"
+            android:layout_marginTop="40dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_rek_sumber"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content"></Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="Saldo"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#083358"/>
+
+        <EditText
+            android:id="@+id/saldo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:autofillHints="total saldo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="File Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#083358"/>
+
+        <Button
+            android:id="@+id/carifile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cari File"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/box_biru"
+            android:layout_marginTop="10dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keterangan"
+            android:textSize="18sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textStyle="bold"
+            android:textColor="#083358"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/input_berita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="Masukkan Berita"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="Tanggal Pembayaran Gaji"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#083358"/>
+
+        <RadioGroup
+            android:id="@+id/tglpembayaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#AFAFAF"
+                android:text="Transfer Sekarang"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#AFAFAF"
+                android:text="Terjadwal"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:gravity="center"/>
+        </RadioGroup>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:columnCount="2"
+            android:rowCount="1"
+            >
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/box_biru"
+                android:background="@drawable/tombol"
+                android:enabled="true"
+                android:text="Cancel"/>
+
+            <Button
+                android:id="@+id/btnUpload"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="end"
+                android:backgroundTint="@color/box_biru"
+                android:background="@drawable/tombol"
+                android:enabled="true"
+                android:text="Proses"/>
+        </GridLayout>
+
+    </LinearLayout>
+
+
+
+  </LinearLayout>
