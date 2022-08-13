@@ -14,7 +14,7 @@
         android:theme="@style/splashScreenTheme"
         tools:targetApi="31">
         <activity
-            android:name=".PayrollUmum"
+            android:name=".data.PayrollUmum"
             android:exported="false" />
         <activity
             android:name=".Payroll"
