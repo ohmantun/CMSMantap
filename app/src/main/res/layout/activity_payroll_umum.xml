@@ -6,13 +6,12 @@
     android:layout_height="match_parent"
     android:background="#F7F7F7"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="15dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="8dp"
         android:orientation="vertical">
 
         <FrameLayout
@@ -57,14 +56,14 @@
             android:orientation="vertical"
             android:columnCount="2"
             android:rowCount="1"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:text="Buat Baru"
                 android:textAlignment="center"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#07334E" />
 
@@ -73,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:text="Daftar Transaksi"
                 android:textAlignment="center"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#07334E" />
 
@@ -83,9 +82,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Jenis Transaksi"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#07334E"
+            android:textColor="#083358"
             android:layout_marginTop="40dp"/>
 
         <Spinner
@@ -97,9 +96,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nomor Rekening Pengirim"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#07334E"/>
+            android:textColor="#083358"/>
 
         <Spinner
             android:id="@+id/spinner_norek_pengirim"
@@ -110,25 +109,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="File Name"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#07334E"/>
+            android:textColor="#083358"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cari File"
             android:background="@color/box_biru"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="10dp"/>
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Keterangan"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#07334E"
+            android:textColor="#083358"
             android:layout_marginTop="10dp"/>
 
         <EditText
@@ -142,9 +141,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tanggal Pembayaran Gaji"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#07334E"/>
+            android:textColor="#083358"/>
 
         <RadioGroup
             android:id="@+id/rgTglpembayaran"
@@ -155,17 +154,17 @@
             <androidx.appcompat.widget.AppCompatRadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="#AFAFAF"
                 android:text="Sekarang"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:layout_weight="1"
                 android:gravity="center"/>
             <androidx.appcompat.widget.AppCompatRadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="#AFAFAF"
                 android:text="Terjadwal"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:layout_weight="1"
                 android:gravity="center"/>
         </RadioGroup>
