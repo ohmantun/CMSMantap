@@ -8,6 +8,7 @@
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1395" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable-v24/ic_vector_login.xml" value="0.217" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable-v24/tombol.xml" value="0.1285" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/back_arrow.xml" value="0.1535" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/box.xml" value="0.1595" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/box_rek.xml" value="0.227" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/button.xml" value="0.1595" />
@@ -32,10 +33,12 @@
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_main_page.xml" value="0.12" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_payroll.xml" value="0.2" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_payroll_pensiunan.xml" value="0.2" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_payroll_umum.xml" value="0.1483539974348012" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/app_bar_main.xml" value="0.18385416666666668" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/beranda.xml" value="0.22826086956521738" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/content_main.xml" value="0.18385416666666668" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/dropdown_item.xml" value="0.20863616930312098" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/main.xml" value="0.22826086956521738" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/nav_header.xml" value="0.4" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/pa.xml" value="0.11799914493373237" />

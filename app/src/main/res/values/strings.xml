@@ -12,6 +12,7 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="nama">"MAKER002"</string>
+    <string name="p_pensiunan">"Payroll Pensiunan"</string>
     <!-- Strings related to array at main page -->
     <string-array name="pilih_rek">
         <item>Rekening 1</item>
