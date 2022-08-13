@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.example.cmsmantap.Beranda
+import com.example.cmsmantap.Payroll
 import com.example.cmsmantap.R
 
 class PayrollUmum : AppCompatActivity() {
@@ -19,7 +20,7 @@ class PayrollUmum : AppCompatActivity() {
         val btnBack = findViewById<ImageView>(R.id.btnBack)
 
         btnBack.setOnClickListener {
-            val intent = Intent(this,Beranda::class.java)
+            val intent = Intent(this,Payroll::class.java)
             startActivity(intent)
         }
 

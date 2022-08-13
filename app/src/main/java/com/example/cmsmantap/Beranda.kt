@@ -16,8 +16,6 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.cmsmantap.data.PayrollUmum
-import com.example.cmsmantap.databinding.ActivityLoginBinding.inflate
-import com.example.cmsmantap.databinding.ActivityLoginBinding
 
 
 class Beranda : AppCompatActivity() {
@@ -46,6 +44,8 @@ class Beranda : AppCompatActivity() {
             val intent = Intent(this, Payroll::class.java)
             startActivity(intent)
         }
+
+
 
     }
 }
