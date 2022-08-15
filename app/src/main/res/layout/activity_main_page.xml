@@ -61,6 +61,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></Spinner>
 
+    <LinearLayout
+        android:clipToPadding="false"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/rekening"
         android:layout_width="240dp"
@@ -68,12 +76,46 @@
         android:layout_marginTop="149dp"
         android:layout_marginLeft="15dp"
         app:cardBackgroundColor="@color/box_biru"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:text="TABUNGAN SIMANTAP GOLD"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1234567890"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Rp. 550.000.324"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/relativelay1"
@@ -101,11 +143,11 @@
                     android:layout_rowWeight="1"
                     android:layout_column="0"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="40dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginRight="15dp"
                     android:layout_marginBottom="20dp"
-                    android:background="@drawable/menu_mutasi"
+                    android:background="@drawable/mutasi_icon"
                     android:clickable="true"
                     android:contextClickable="true"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -120,11 +162,11 @@
                     android:layout_rowWeight="1"
                     android:layout_column="1"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="40dp"
-                    android:background="@drawable/menu_transaksi"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="120dp"
+                    android:background="@drawable/lap_tr_icon"
                     android:clickable="true"
                     android:contextClickable="true"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -139,11 +181,11 @@
                     android:layout_rowWeight="1"
                     android:layout_column="0"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="40dp"
-                    android:background="@drawable/menu_laporan"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="120dp"
+                    android:background="@drawable/lap_akt_pengguna_icon"
                     android:clickable="true"
                     android:contextClickable="true"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -159,11 +201,11 @@
                     android:layout_rowWeight="1"
                     android:layout_column="1"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_marginTop="40dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginRight="30dp"
                     android:layout_marginBottom="20dp"
-                    android:background="@drawable/menu_payroll"
+                    android:background="@drawable/payroll_icon"
                     android:clickable="true"
                     android:contextClickable="true"
                     app:layout_constraintEnd_toEndOf="parent"
