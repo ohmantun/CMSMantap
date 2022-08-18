@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:layout_width="70dp"
@@ -25,17 +25,17 @@
         android:src="@drawable/logo2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="290dp"
+        android:layout_marginStart="290dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/ic_notification"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/welcome"
@@ -54,16 +54,16 @@
         android:id="@+id/spinner_rek"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="110dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></Spinner>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
         android:clipToPadding="false"
-        android:gravity="left"
+        android:gravity="start"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
         android:layout_width="240dp"
         android:layout_height="80dp"
         android:layout_marginTop="149dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
         app:cardBackgroundColor="@color/box_biru"
         app:cardCornerRadius="10dp">
 
@@ -82,11 +82,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="left"
+            android:gravity="start"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp">
 
             <TextView
+                android:id="@+id/jenis_rek"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
@@ -96,6 +97,7 @@
                 android:textSize="16sp"/>
 
             <TextView
+                android:id="@+id/noRekening"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -104,6 +106,7 @@
                 android:textColor="@color/white"/>
 
             <TextView
+                android:id="@+id/totalSaldo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -114,6 +117,8 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
+
 
     </LinearLayout>
 
@@ -143,9 +148,9 @@
                     android:layout_rowWeight="1"
                     android:layout_column="0"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="40dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/mutasi_icon"
                     android:clickable="true"
@@ -153,7 +158,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.146"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageButton
                     android:layout_width="87dp"
@@ -162,9 +167,9 @@
                     android:layout_rowWeight="1"
                     android:layout_column="1"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="30dp"
                     android:layout_marginBottom="120dp"
                     android:background="@drawable/lap_tr_icon"
                     android:clickable="true"
@@ -172,7 +177,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.146"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageButton
                     android:layout_width="87dp"
@@ -181,9 +186,9 @@
                     android:layout_rowWeight="1"
                     android:layout_column="0"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="120dp"
                     android:background="@drawable/lap_akt_pengguna_icon"
                     android:clickable="true"
@@ -191,7 +196,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.146"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageButton
                     android:id="@+id/btnPayroll"
@@ -201,9 +206,9 @@
                     android:layout_rowWeight="1"
                     android:layout_column="1"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="40dp"
-                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="30dp"
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/payroll_icon"
                     android:clickable="true"
@@ -211,7 +216,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.146"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
+                    app:layout_constraintTop_toTopOf="parent"/>
 
             </GridLayout>
         </ScrollView>
@@ -241,8 +246,8 @@
                 android:layout_rowWeight="0"
                 android:layout_column="0"
                 android:layout_columnWeight="0"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/footer_beranda"
@@ -261,8 +266,8 @@
                 android:layout_rowWeight="0"
                 android:layout_column="0"
                 android:layout_columnWeight="0"
-                android:layout_marginLeft="180dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginStart="180dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/footer_pengaturan"
@@ -281,8 +286,8 @@
                 android:layout_rowWeight="0"
                 android:layout_column="0"
                 android:layout_columnWeight="0"
-                android:layout_marginLeft="350dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginStart="340dp"
+                android:layout_marginEnd="30dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/footer_keluar"
