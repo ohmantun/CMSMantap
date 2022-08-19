@@ -25,6 +25,25 @@ class FragmentBaruPensiunan : Fragment() {
         val arrAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, pilihRekening)
         binding.acTvNoRekPengirim.setAdapter(arrAdapter)
 
+        binding.apply {
+            btnPilihtgl.setOnClickListener {
+                val datePickerFragment = DatePickerFragment()
+                val supportFragmentManager = requireActivity().supportFragmentManager
+
+                supportFragmentManager.setFragmentResultListener(
+                    "REQUEST_KEY",
+                    viewLifecycleOwner
+                ){
+                        resultKey, bundle -> if (resultKey == "REQUEST_KEY"){
+                    val date = bundle.getString("SELECTED_DATE")
+                    tvTglterjadwal.text = date
+                    }
+                }
+                //show
+                datePickerFragment.show(supportFragmentManager, "DatePickerFragment")
+            }
+        }
+
         return binding.root
 
 
