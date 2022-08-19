@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <ImageView
         android:layout_width="70dp"
@@ -25,17 +25,17 @@
         android:src="@drawable/logo2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="290dp"
+        android:layout_marginLeft="290dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/ic_notification"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <TextView
         android:id="@+id/welcome"
@@ -54,71 +54,66 @@
         android:id="@+id/spinner_rek"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="110dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"></Spinner>
 
     <LinearLayout
         android:clipToPadding="false"
-        android:gravity="start"
+        android:gravity="left"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/rekening"
-        android:layout_width="240dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="149dp"
-        android:layout_marginStart="15dp"
-        app:cardBackgroundColor="@color/box_biru"
-        app:cardCornerRadius="10dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rekening"
+            android:layout_width="240dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="149dp"
+            android:layout_marginLeft="15dp"
+            app:cardBackgroundColor="@color/box_biru"
+            app:cardCornerRadius="10dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="start"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
-            <TextView
-                android:id="@+id/jenis_rek"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:text="TABUNGAN SIMANTAP GOLD"
-                android:textColor="@color/white"
-                android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:text="TABUNGAN SIMANTAP GOLD"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
 
-            <TextView
-                android:id="@+id/noRekening"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="1234567890"
-                android:textSize="16sp"
-                android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1234567890"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
 
-            <TextView
-                android:id="@+id/totalSaldo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Rp. 550.000.324"
-                android:textSize="16sp"
-                android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Rp. 550.000.324"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
 
-        </LinearLayout>
+            </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
-
-
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
@@ -139,87 +134,161 @@
                 android:layout_marginRight="15dp"
                 android:background="@drawable/ic_box_kuning"
                 android:columnCount="2"
+                android:orientation="vertical"
                 android:rowCount="2">
 
                 <ImageButton
-                    android:layout_width="50dp"
-                    android:layout_height="137dp"
+                    android:layout_width="40dp"
+                    android:layout_height="150dp"
                     android:layout_row="0"
-                    android:layout_rowWeight="1"
+                    android:layout_rowWeight="0"
                     android:layout_column="0"
                     android:layout_columnWeight="1"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/mutasi_icon"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@drawable/menu_mutasi"
                     android:clickable="true"
                     android:contextClickable="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.146"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
                 <ImageButton
-                    android:layout_width="87dp"
-                    android:layout_height="137dp"
+                    android:layout_width="40dp"
+                    android:layout_height="150dp"
                     android:layout_row="1"
-                    android:layout_rowWeight="1"
+                    android:layout_rowWeight="0"
                     android:layout_column="1"
                     android:layout_columnWeight="1"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginBottom="120dp"
-                    android:background="@drawable/lap_tr_icon"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/menu_transaksi"
                     android:clickable="true"
                     android:contextClickable="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.146"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
                 <ImageButton
-                    android:layout_width="87dp"
-                    android:layout_height="137dp"
+                    android:layout_width="40dp"
+                    android:layout_height="150dp"
                     android:layout_row="1"
-                    android:layout_rowWeight="1"
+                    android:layout_rowWeight="0"
                     android:layout_column="0"
                     android:layout_columnWeight="1"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginBottom="120dp"
-                    android:background="@drawable/lap_akt_pengguna_icon"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/menu_laporan"
                     android:clickable="true"
                     android:contextClickable="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.146"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
                 <ImageButton
                     android:id="@+id/btnPayroll"
-                    android:layout_width="87dp"
-                    android:layout_height="137dp"
+                    android:layout_width="40dp"
+                    android:layout_height="150dp"
                     android:layout_row="0"
-                    android:layout_rowWeight="1"
+                    android:layout_rowWeight="0"
                     android:layout_column="1"
                     android:layout_columnWeight="1"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/payroll_icon"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@drawable/menu_payroll"
                     android:clickable="true"
                     android:contextClickable="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.146"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
             </GridLayout>
+
         </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginTop="410dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="1dp">
+
+        <ImageView
+            android:id="@+id/info_pending"
+            android:layout_width="135dp"
+            android:layout_height="170dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/info_pending"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.146"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:orientation="vertical"
+            android:rowCount="2"
+            android:layout_marginRight="15dp">
+
+            <ImageView
+                android:id="@+id/info_validate"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/info_validate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.146"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <ImageView
+                android:id="@+id/info_approve"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/info_approve"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.146"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        </GridLayout>
+
+    </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
 
@@ -227,7 +296,6 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent">
-
 
         <GridLayout
             android:id="@+id/footer_payroll"
@@ -246,8 +314,8 @@
                 android:layout_rowWeight="0"
                 android:layout_column="0"
                 android:layout_columnWeight="0"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/footer_beranda"
@@ -266,8 +334,8 @@
                 android:layout_rowWeight="0"
                 android:layout_column="0"
                 android:layout_columnWeight="0"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/footer_pengaturan"
@@ -286,8 +354,8 @@
                 android:layout_rowWeight="0"
                 android:layout_column="0"
                 android:layout_columnWeight="0"
-                android:layout_marginStart="340dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="350dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/footer_keluar"
@@ -298,8 +366,8 @@
                 android:contextClickable="true">
             </ImageButton>
 
-
         </GridLayout>
+
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
