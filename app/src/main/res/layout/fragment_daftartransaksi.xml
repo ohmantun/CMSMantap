@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F7F7F7"
     android:orientation="vertical"
-    android:padding="15dp"
     tools:context=".fragment.FragmentDaftarTransaksi">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/textView2"
@@ -22,17 +22,31 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/spinner_pilih"
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView2"></Spinner>
+            app:boxBackgroundColor="#F7F7F7"
+            android:layout_below="@+id/textView2">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:inputType="none"
+                android:text="-Pilih-"
+                android:textColor="@color/teal_700" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/spinner_pilih"
+            android:layout_below="@+id/textInput"
             android:hint="Masukkan Keterangan"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -42,41 +56,41 @@
             android:id="@+id/grid_filter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_below="@+id/editText"
+            android:layout_marginTop="10dp"
             android:columnCount="3"
-            android:rowCount="1"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/editText">
+            android:orientation="horizontal"
+            android:rowCount="1">
 
             <Button
                 android:id="@+id/btnKembali"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_gravity="start"
-                android:backgroundTint="@color/box_biru"
                 android:background="@drawable/tombol"
+                android:backgroundTint="@color/box_biru"
                 android:enabled="true"
-                android:text="Kembali"/>
+                android:text="Kembali" />
 
             <Button
                 android:id="@+id/btnCari"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_gravity="start"
-                android:backgroundTint="@color/box_biru"
                 android:background="@drawable/tombol"
+                android:backgroundTint="@color/box_biru"
                 android:enabled="true"
-                android:text="Cari"/>
+                android:text="Cari" />
 
             <Button
                 android:id="@+id/btnReset"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_gravity="start"
-                android:backgroundTint="@color/box_biru"
                 android:background="@drawable/tombol"
+                android:backgroundTint="@color/box_biru"
                 android:enabled="true"
-                android:text="Reset"/>
+                android:text="Reset" />
         </GridLayout>
         <ScrollView
             android:layout_width="match_parent"
@@ -91,7 +105,7 @@
             android:id="@+id/linear_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
 
             <TextView
@@ -290,4 +304,4 @@
 
 
 
-</FrameLayout>
+</LinearLayout>

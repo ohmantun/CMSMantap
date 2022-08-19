@@ -130,11 +130,46 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Transfer Pada Tanggal"
+            android:layout_marginLeft="30dp"
+            android:paddingLeft="3dp"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp"
+            android:paddingLeft="3dp">
+
+            <TextView
+                android:id="@+id/tvTglterjadwal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="dd-mm-yyyy"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="200dp" />
+
+            <ImageButton
+                android:id="@+id/btnPilihtgl"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/calendar"
+                tools:layout_editor_absoluteX="341dp"
+                tools:layout_editor_absoluteY="120dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Keterangan:"
             android:textSize="14sp"
             android:textStyle="normal"
             android:textColor="#AFAFAF"
-            android:layout_marginTop="50dp"/>
+            android:layout_marginTop="10dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
