@@ -157,6 +157,7 @@
                     app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
                 <ImageButton
+                    android:id="@+id/laptransaksi"
                     android:layout_width="40dp"
                     android:layout_height="150dp"
                     android:layout_row="1"
@@ -218,6 +219,7 @@
 
         </ScrollView>
 
+
     </RelativeLayout>
 
     <FrameLayout
@@ -226,21 +228,22 @@
         android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toBottomOf="@+id/frameLay">
 
+
         <androidx.cardview.widget.CardView
             android:id="@+id/dashboard"
             android:layout_width="match_parent"
-            android:layout_height="190dp"
-            app:cardBackgroundColor="#F7F7F7"
+            android:layout_height="210dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="15dp">
 
             <ImageView
                 android:id="@+id/info_pending"
-                android:layout_width="135dp"
+                android:layout_width="185dp"
                 android:layout_height="170dp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginBottom="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/info_pending"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.146"
@@ -250,20 +253,18 @@
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="15dp"
                 android:columnCount="2"
                 android:orientation="vertical"
                 android:rowCount="2">
 
                 <ImageView
                     android:id="@+id/info_validate"
-                    android:layout_width="120dp"
+                    android:layout_width="190dp"
                     android:layout_height="80dp"
                     android:layout_row="0"
                     android:layout_column="1"
                     android:layout_marginLeft="0dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/info_validate"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -273,14 +274,13 @@
 
                 <ImageView
                     android:id="@+id/info_approve"
-                    android:layout_width="120dp"
+                    android:layout_width="190dp"
                     android:layout_height="80dp"
                     android:layout_row="1"
                     android:layout_column="1"
                     android:layout_marginLeft="0dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginRight="60dp"
-                    android:layout_marginBottom="40dp"
+
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/info_approve"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.146"
@@ -290,6 +290,7 @@
             </GridLayout>
 
         </androidx.cardview.widget.CardView>
+
 
     </FrameLayout>
 
