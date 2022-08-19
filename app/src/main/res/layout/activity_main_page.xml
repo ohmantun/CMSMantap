@@ -220,79 +220,81 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLay">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:layout_marginTop="410dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="1dp">
-
-        <ImageView
-            android:id="@+id/info_pending"
-            android:layout_width="135dp"
-            android:layout_height="170dp"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginBottom="40dp"
-            android:background="@drawable/info_pending"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.146"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></ImageView>
-
-        <GridLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dashboard"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:orientation="vertical"
-            android:rowCount="2"
-            android:layout_marginRight="15dp">
+            android:layout_height="190dp"
+            app:cardBackgroundColor="#F7F7F7"
+            app:cardCornerRadius="15dp">
 
             <ImageView
-                android:id="@+id/info_validate"
-                android:layout_width="120dp"
-                android:layout_height="80dp"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_marginLeft="0dp"
+                android:id="@+id/info_pending"
+                android:layout_width="135dp"
+                android:layout_height="170dp"
+                android:layout_marginLeft="70dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/info_validate"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.146"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"></ImageView>
-
-            <ImageView
-                android:id="@+id/info_approve"
-                android:layout_width="120dp"
-                android:layout_height="80dp"
-                android:layout_row="1"
-                android:layout_column="1"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginRight="60dp"
+                android:layout_marginRight="0dp"
                 android:layout_marginBottom="40dp"
-                android:background="@drawable/info_approve"
+                android:background="@drawable/info_pending"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.146"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"></ImageView>
 
-        </GridLayout>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:columnCount="2"
+                android:orientation="vertical"
+                android:rowCount="2">
 
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/info_validate"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/info_validate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.146"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
 
-    </RelativeLayout>
+                <ImageView
+                    android:id="@+id/info_approve"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/info_approve"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.146"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            </GridLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/frameLay"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent">
