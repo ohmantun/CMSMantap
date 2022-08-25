@@ -17,6 +17,15 @@
             android:name=".GantiSandi"
             android:exported="false" />
         <activity
+            android:name=".OtorisasiPayroll"
+            android:exported="false" />
+        <activity
+            android:name=".ValidasiPayrollUmum"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPayrollUmum"
+            android:exported="false" />
+        <activity
             android:name=".Pengaturan"
             android:exported="false" />
         <activity
