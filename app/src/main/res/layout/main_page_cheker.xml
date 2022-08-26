@@ -196,7 +196,7 @@
                     app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
                 <ImageButton
-                android:id="@+id/btnPayroll"
+                android:id="@+id/btnOtoritasPayroll"
                 android:layout_width="40dp"
                 android:layout_height="150dp"
                 android:layout_row="0"

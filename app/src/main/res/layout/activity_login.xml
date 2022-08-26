@@ -28,23 +28,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/idpengguna"
-        android:layout_width="250dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="404dp"
-        android:autofillHints="@string/prompt_idpengguna"
-        android:hint="@string/prompt_idpengguna"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:selectAllOnFocus="true"
-        android:textColorHint="#757575"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
         android:id="@+id/idinstitusi"
         android:layout_width="250dp"
         android:layout_height="48dp"
@@ -61,24 +44,53 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/password"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvPengguna"
         android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginTop="468dp"
-        android:autofillHints="@string/prompt_password"
-        android:hint="@string/prompt_password"
-        android:imeActionLabel="@string/action_sign_in_short"
-        android:imeOptions="actionDone"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:selectAllOnFocus="true"
-        android:textColorHint="#757575"
-        android:textSize="15sp"
+        android:layout_marginTop="404dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputPengguna"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:textSize="15sp"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:background="@color/white"
+            android:hint="@string/prompt_idpengguna">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvPassword"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="468dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputPassword"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:autofillHints="@string/prompt_password"
+            android:textSize="15sp"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:background="@color/white"
+            android:hint="@string/prompt_password">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/login"

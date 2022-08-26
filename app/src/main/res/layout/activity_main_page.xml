@@ -279,7 +279,6 @@
                     android:layout_row="1"
                     android:layout_column="1"
                     android:layout_marginLeft="0dp"
-
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/info_approve"
                     app:layout_constraintEnd_toEndOf="parent"

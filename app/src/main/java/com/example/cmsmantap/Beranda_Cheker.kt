@@ -26,10 +26,10 @@ class Beranda_Cheker : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_CMSMantap)
-        setContentView(R.layout.activity_main_page)
+        setContentView(R.layout.main_page_cheker)
 
         val spinner: Spinner = findViewById(R.id.spinner_rek)
-        val menubtnPayroll = findViewById<ImageButton>(R.id.btnPayroll)
+        val menubtnPayroll = findViewById<ImageButton>(R.id.btnOtoritasPayroll)
         val btnPengaturan = findViewById<ImageButton>(R.id.footer_pengaturan)
         val btnKeluar = findViewById<ImageButton>(R.id.footer_keluar)
 
@@ -46,7 +46,7 @@ class Beranda_Cheker : AppCompatActivity() {
         }
 
         menubtnPayroll.setOnClickListener {
-            val intent = Intent(this, Payroll::class.java)
+            val intent = Intent(this, OtorisasiPayroll::class.java)
             startActivity(intent)
         }
 
