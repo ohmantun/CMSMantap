@@ -21,7 +21,7 @@ import com.example.cmsmantap.data.LoginActivity
 import com.example.cmsmantap.data.PayrollUmum
 
 
-class Beranda : AppCompatActivity() {
+class Beranda_Cheker : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
