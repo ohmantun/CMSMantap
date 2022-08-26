@@ -43,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
             val pengguna = inputPengguna.text.toString()
             val password = inputPassword.text.toString()
             if (pengguna.isEmpty()|| password.isEmpty()) {
-                Toast.makeText(this, "Please Insert Email and Password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please Insert ID Institusi, ID Pengguna, and Password", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             if(pengguna == "mk001" || password == "adminmk"){
