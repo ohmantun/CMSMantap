@@ -19,7 +19,7 @@
 
     <ImageView
         android:layout_width="294dp"
-        android:layout_height="247dp"
+        android:layout_height="255dp"
         android:layout_marginTop="292dp"
         android:background="@drawable/box"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,27 +27,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/idinstitusi"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvinstitusi"
         android:layout_width="250dp"
-        android:layout_height="48dp"
+        android:layout_height="60dp"
         android:layout_marginTop="340dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputInstitusi"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:autofillHints="@string/prompt_idinstitusi"
         android:hint="@string/prompt_idinstitusi"
         android:inputType="text"
         android:minHeight="48dp"
         android:selectAllOnFocus="true"
-        android:textColorHint="#757575"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:background="@color/white">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tvPengguna"
         android:layout_width="250dp"
-        android:layout_height="48dp"
+        android:layout_height="60dp"
         android:layout_marginTop="404dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -55,8 +63,9 @@
         app:layout_constraintTop_toTopOf="parent" >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputPengguna"
-            android:layout_width="250dp"
-            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
             android:textSize="15sp"
             android:imeOptions="actionDone"
             android:inputType="text"
@@ -71,8 +80,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tvPassword"
         android:layout_width="250dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="468dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="475dp"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -81,7 +90,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputPassword"
             android:layout_width="250dp"
-            android:layout_height="48dp"
+            android:layout_height="60dp"
             android:autofillHints="@string/prompt_password"
             android:textSize="15sp"
             android:imeOptions="actionDone"
@@ -98,7 +107,6 @@
         android:layout_height="48dp"
         android:layout_gravity="start"
         android:layout_marginTop="560dp"
-        android:backgroundTint="@color/box_biru"
         android:background="@drawable/tombol"
         android:enabled="true"
         android:text="@string/action_sign_in"
