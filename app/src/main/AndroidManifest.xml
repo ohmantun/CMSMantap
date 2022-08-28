@@ -13,6 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/splashScreenTheme"
         tools:targetApi="31">
+
+        <activity
+            android:name=".Beranda_Cheker"
+            android:exported="false" />
         <activity
             android:name=".DetailPayrollPensiunCkr"
             android:exported="false" />
@@ -23,10 +27,16 @@
             android:name=".DetailPayrollUmumCkr"
             android:exported="false" />
         <activity
-            android:name=".ValidasiPayrollUmum"
+            android:name=".GantiSandi"
             android:exported="false" />
         <activity
             android:name=".OtorisasiPayroll"
+            android:exported="false" />
+        <activity
+            android:name=".ValidasiPayrollUmum"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPayrollUmum"
             android:exported="false" />
         <activity
             android:name=".Pengaturan"

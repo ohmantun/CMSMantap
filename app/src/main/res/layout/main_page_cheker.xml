@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <ImageView
         android:layout_width="70dp"
@@ -144,7 +144,7 @@
                     android:layout_rowWeight="0"
                     android:layout_column="0"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="0dp"
@@ -166,7 +166,7 @@
                     android:layout_columnWeight="1"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="40dp"
+                    android:layout_marginRight="20dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/lap_tr_icon"
                     android:clickable="true"
@@ -183,7 +183,7 @@
                     android:layout_rowWeight="0"
                     android:layout_column="0"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="10dp"
@@ -196,24 +196,24 @@
                     app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
                 <ImageButton
-                    android:id="@+id/btnPayroll"
-                    android:layout_width="40dp"
-                    android:layout_height="150dp"
-                    android:layout_row="0"
-                    android:layout_rowWeight="0"
-                    android:layout_column="1"
-                    android:layout_columnWeight="1"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginBottom="0dp"
-                    android:background="@drawable/payroll_icon"
-                    android:clickable="true"
-                    android:contextClickable="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.146"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
+                android:id="@+id/btnOtoritasPayroll"
+                android:layout_width="40dp"
+                android:layout_height="150dp"
+                android:layout_row="0"
+                android:layout_rowWeight="0"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/otoritas_payroll_icon"
+                android:clickable="true"
+                android:contextClickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.146"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
 
             </GridLayout>
@@ -249,8 +249,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.146"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-            </ImageView>
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
 
             <GridLayout
                 android:layout_width="match_parent"
@@ -281,6 +280,7 @@
                     android:layout_row="1"
                     android:layout_column="1"
                     android:layout_marginLeft="0dp"
+
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/info_approve"
                     app:layout_constraintEnd_toEndOf="parent"

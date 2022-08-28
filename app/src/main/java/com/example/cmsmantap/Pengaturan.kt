@@ -25,7 +25,7 @@ class Pengaturan : AppCompatActivity() {
         }
 
         btnGantiSandi.setOnClickListener{
-            val intent = Intent(this, LoginActivity::class.java) //Login Activity ganti ke page sandinya
+            val intent = Intent(this, GantiSandi::class.java) //Login Activity ganti ke page sandinya
             startActivity(intent)
         }
 
