@@ -6,7 +6,7 @@
     android:background="#F7F7F7">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cv_datapayrollumum"
+        android:id="@+id/cv_datapayrollpensiun"
         android:layout_width="375dp"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
@@ -24,57 +24,57 @@
                 android:id="@+id/tv_fileName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Payroll.CSV"
+                android:text="Payroll Pensiun.CSV"
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_margin="3dp"/>
 
             <TextView
-                android:id="@+id/tv_tglPengajuan"
+                android:id="@+id/tv_proses"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tanggal Pengajuan :"
+                android:text="Proses :"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_margin="3dp"/>
 
             <TextView
-                android:id="@+id/tv_tglEksekusi"
+                android:id="@+id/tv_rekSumberPen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tanggal Eksekusi    :"
+                android:text="Rekening Sumber    :"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_margin="3dp"/>
 
             <TextView
-                android:id="@+id/tv_diajukanOleh"
+                android:id="@+id/tv_diajukanOlehPen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Diajukan Oleh           :"
+                android:text="Diajukan Oleh            :"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_margin="3dp"/>
 
             <TextView
-                android:id="@+id/tv_keterangan"
+                android:id="@+id/tv_jadwalTransaksi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Keterangan               :"
+                android:text="Jadwal Transaksi     :"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_margin="3dp"/>
 
             <TextView
-                android:id="@+id/tv_status"
+                android:id="@+id/tv_statusPen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Status                         :"
+                android:text="Status                          :"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -91,7 +91,7 @@
                 android:layout_marginTop="25dp">
 
                 <Button
-                    android:id="@+id/info_status"
+                    android:id="@+id/info_statusPen"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:layout_gravity="start"
@@ -100,7 +100,7 @@
                     android:text="Belum Disetujui"/>
 
                 <Button
-                    android:id="@+id/btnDetail"
+                    android:id="@+id/btnDetailPen"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:layout_gravity="end"

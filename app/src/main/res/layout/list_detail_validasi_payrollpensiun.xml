@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F7F7F7"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_detaildatapayrollpensiun"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#EFEBEB">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp">
+
+
+            <TextView
+                android:id="@+id/tv_nmrPensiun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nomor Pensiunan    :"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_nmrRekening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nomor Rekening      :"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama                           :"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_nilaiGaji"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nilai Gaji                     :"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_keteranganPen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Keterangan                 :"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_statusBlokir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status Blokir                :"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_tglDapem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Dapem           :"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_tglEfektif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Efektif            :"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

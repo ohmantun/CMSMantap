@@ -14,7 +14,13 @@
         android:theme="@style/splashScreenTheme"
         tools:targetApi="31">
         <activity
-            android:name=".DetailPayrollUmum"
+            android:name=".DetailPayrollPensiunCkr"
+            android:exported="false" />
+        <activity
+            android:name=".ValidasiPayrollPensiun"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPayrollUmumCkr"
             android:exported="false" />
         <activity
             android:name=".ValidasiPayrollUmum"
