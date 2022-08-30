@@ -18,6 +18,15 @@
             android:name=".Beranda_Cheker"
             android:exported="false" />
         <activity
+            android:name=".DetailPayrollPensiunCkr"
+            android:exported="false" />
+        <activity
+            android:name=".ValidasiPayrollPensiun"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPayrollUmumCkr"
+            android:exported="false" />
+        <activity
             android:name=".GantiSandi"
             android:exported="false" />
         <activity

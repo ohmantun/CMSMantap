@@ -14,7 +14,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageButton
-            android:id="@+id/btnBackpayroll"
+            android:id="@+id/btnBackpayrollCkr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="45dp"
@@ -35,15 +35,92 @@
 
 
     </RelativeLayout>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:columnCount="1"
-    android:rowCount="2">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/btnPayroll_umum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_536"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:enabled="true"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295"></ImageButton>
+
+    <ImageButton
+        android:id="@+id/btnPayroll_pensiunan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_544"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:enabled="true"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.619"></ImageButton>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Validasi Payroll Umum"
+        android:textColor="#F7F7F7"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/money_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.366" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Validasi Payroll Pensiunan"
+        android:textColor="#F7F7F7"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:src="@drawable/retirement_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.645" />
+
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent">
@@ -53,10 +130,10 @@
             android:id="@+id/footer_payroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/box2"
             android:columnCount="3"
-            android:rowCount="1"
             android:orientation="vertical"
-            android:background="@drawable/box2">
+            android:rowCount="1">
 
             <ImageButton
                 android:id="@+id/footer_beranda"
@@ -67,16 +144,15 @@
                 android:layout_column="0"
                 android:layout_columnWeight="0"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/footer_beranda"
+                android:clickable="true"
+                android:contextClickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:clickable="true"
-                android:contextClickable="true">
-            </ImageButton>
+                app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
             <ImageButton
                 android:id="@+id/footer_pengaturan"
@@ -87,16 +163,15 @@
                 android:layout_column="0"
                 android:layout_columnWeight="0"
                 android:layout_marginLeft="180dp"
-                android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/footer_pengaturan"
+                android:clickable="true"
+                android:contextClickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:clickable="true"
-                android:contextClickable="true">
-            </ImageButton>
+                app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
             <ImageButton
                 android:id="@+id/footer_keluar"
@@ -107,81 +182,19 @@
                 android:layout_column="0"
                 android:layout_columnWeight="0"
                 android:layout_marginLeft="340dp"
-                android:layout_marginRight="30dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/footer_keluar"
+                android:clickable="true"
+                android:contextClickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:clickable="true"
-                android:contextClickable="true">
-            </ImageButton>
+                app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
 
         </GridLayout>
     </FrameLayout>
 
-    <ImageButton
-        android:id="@+id/btnPayroll_pensiunan"
-        android:layout_width="350dp"
-        android:layout_height="200dp"
-        android:background="@drawable/rectangle_627"
-        android:clickable="true"
-        android:contextClickable="true"
-        android:enabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="315dp"></ImageButton>
 
-    <ImageButton
-        android:id="@+id/btnPayroll_umum"
-        android:layout_width="350dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/rectangle_626"
-        android:clickable="true"
-        android:contextClickable="true"
-        android:enabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"></ImageButton>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/payrollumum_ic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="179dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/pensiun_icon"
-        android:paddingTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="350dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Validasi Payroll Umum"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="290dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Validasi Payroll Pensiun"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="462dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
