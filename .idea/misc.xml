@@ -38,6 +38,7 @@
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_payroll_pensiunan.xml" value="0.2" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_payroll_umum.xml" value="0.2" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_pengaturan.xml" value="0.2" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_validasi_payroll_pensiun.xml" value="0.20863616930312098" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/app_bar_main.xml" value="0.18385416666666668" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/beranda.xml" value="0.22826086956521738" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/content_main.xml" value="0.18385416666666668" />
@@ -47,6 +48,10 @@
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/fragment_buatbaru.xml" value="0.15989739204788372" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/fragment_daftartransaksi.xml" value="0.15989739204788372" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/fragment_trpensiunan.xml" value="0.15904232578024796" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/list_detail_validasi_payrollpensiun.xml" value="0.20863616930312098" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/list_detail_validasi_payrollumum.xml" value="0.20863616930312098" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/list_validasi_payrollpensiun.xml" value="0.20863616930312098" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/list_validasi_payrollumum.xml" value="0.20863616930312098" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/main.xml" value="0.22826086956521738" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/main_page_cheker.xml" value="0.2" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/nav_header.xml" value="0.4" />
