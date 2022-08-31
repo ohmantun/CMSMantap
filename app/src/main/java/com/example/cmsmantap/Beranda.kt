@@ -9,6 +9,7 @@ import android.widget.ImageButton
 import android.widget.Spinner
 import android.app.AlertDialog
 import android.content.DialogInterface
+import android.widget.FrameLayout
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.ui.AppBarConfiguration
 import com.google.android.material.navigation.NavigationView
@@ -33,6 +34,7 @@ class Beranda : AppCompatActivity() {
         val btnPengaturan = findViewById<ImageButton>(R.id.footer_pengaturan)
         val btnKeluar = findViewById<ImageButton>(R.id.footer_keluar)
         val btnPayrollChecker = findViewById<ImageButton>(R.id.laptransaksi)
+        val btnPending = findViewById<FrameLayout>(R.id.info_pending)
 
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter.createFromResource(
@@ -57,6 +59,11 @@ class Beranda : AppCompatActivity() {
         }
 
         btnPengaturan.setOnClickListener {
+            val intent = Intent(this, Pengaturan::class.java)
+            startActivity(intent)
+        }
+
+        btnPending.setOnClickListener {
             val intent = Intent(this, Pengaturan::class.java)
             startActivity(intent)
         }
