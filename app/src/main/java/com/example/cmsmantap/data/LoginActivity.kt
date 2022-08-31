@@ -46,12 +46,12 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please Insert ID Institusi, ID Pengguna, and Password", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if(pengguna == "mk001" || password == "adminmk"){
+            if(pengguna == "mk001" && password == "adminmk"){
                 val intent = Intent (this,Beranda::class.java)
                 startActivity(intent)
                 finish()
             }
-            if(pengguna == "ck001" || password == "adminck"){
+            if(pengguna == "ck001" && password == "adminck"){
                 val intent = Intent (this,Beranda_Cheker::class.java)
                 startActivity(intent)
                 finish()
