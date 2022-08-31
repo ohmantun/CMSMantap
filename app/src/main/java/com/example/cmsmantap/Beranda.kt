@@ -33,7 +33,6 @@ class Beranda : AppCompatActivity() {
         val menubtnPayroll = findViewById<ImageButton>(R.id.btnPayroll)
         val btnPengaturan = findViewById<ImageButton>(R.id.footer_pengaturan)
         val btnKeluar = findViewById<ImageButton>(R.id.footer_keluar)
-        val btnPayrollChecker = findViewById<ImageButton>(R.id.laptransaksi)
         val btnPending = findViewById<FrameLayout>(R.id.info_pending)
 
 // Create an ArrayAdapter using the string array and a default spinner layout
@@ -50,11 +49,6 @@ class Beranda : AppCompatActivity() {
 
         menubtnPayroll.setOnClickListener {
             val intent = Intent(this, Payroll::class.java)
-            startActivity(intent)
-        }
-
-        btnPayrollChecker.setOnClickListener {
-            val intent = Intent(this, OtorisasiPayroll::class.java)
             startActivity(intent)
         }
 
