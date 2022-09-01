@@ -1,6 +1,9 @@
 package com.example.cmsmantap
 
+import android.app.Dialog
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -20,6 +23,7 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
     lateinit var payrollUmumDCkrAdapter: PayrollUmumDCkrAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityDetailPayrollUmumBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -30,6 +34,41 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
 
         initView()
 
+        val btnReject = findViewById<Button>(R.id.btnReject)
+
+        btnReject.setOnClickListener {
+            val dialogBinding = layoutInflater.inflate(R.layout.reject_note_dialog, null)
+
+            val myDialog = Dialog(this)
+            myDialog.setContentView(dialogBinding)
+
+            myDialog.setCancelable(true)
+            myDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            myDialog.show()
+
+            val btnCancel = dialogBinding.findViewById<Button>(R.id.btnCancel)
+            btnCancel.setOnClickListener {
+                myDialog.cancel()
+            }
+
+        }
+
+        val btnValidasi = findViewById<Button>(R.id.btnValidasi)
+
+        btnValidasi.setOnClickListener {
+            val validasiBinding = layoutInflater.inflate(R.layout.validate_dialog, null)
+
+            val myValidasiDialog = Dialog(this)
+            myValidasiDialog.setContentView(validasiBinding)
+            myValidasiDialog.setCancelable(true)
+            myValidasiDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            myValidasiDialog.show()
+
+            val btnCancelValidasi = validasiBinding.findViewById<Button>(R.id.btnCancelValidasi)
+            btnCancelValidasi.setOnClickListener {
+                myValidasiDialog.cancel()
+            }
+        }
 
     }
 

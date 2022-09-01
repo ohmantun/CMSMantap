@@ -15,7 +15,7 @@ class OtorisasiPayroll : AppCompatActivity() {
         val btnBackpayrollCkr = findViewById<ImageButton>(R.id.btnBackpayrollCkr)
 
         btnBackpayrollCkr.setOnClickListener {
-            val intent = Intent(this, Beranda::class.java)
+            val intent = Intent(this, Beranda_Cheker::class.java)
             startActivity(intent)
         }
 
