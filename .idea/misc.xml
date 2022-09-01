@@ -37,12 +37,14 @@
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_ganti_sandi.xml" value="0.176" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_main_page.xml" value="0.152" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_notifikasi.xml" value="0.176" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_otorisasi_payroll.xml" value="0.15989739204788372" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_payroll.xml" value="0.2" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_payroll_pensiunan.xml" value="0.2" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_payroll_umum.xml" value="0.2" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_pengaturan.xml" value="0.2" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_validasi_payroll_pensiun.xml" value="0.20863616930312098" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_validasi_payroll_umum.xml" value="0.1" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/app_bar_main.xml" value="0.18385416666666668" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/beranda.xml" value="0.22826086956521738" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/coba.xml" value="0.264" />
@@ -61,7 +63,10 @@
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/main_page_cheker.xml" value="0.264" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/nav_header.xml" value="0.4" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/pa.xml" value="0.11799914493373237" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/reject_confirm_dialog.xml" value="0.1" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/reject_note_dialog.xml" value="0.1" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/spinner_item.xml" value="0.1791363830696879" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/validate_dialog.xml" value="0.1" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/menu/main.xml" value="0.18385416666666668" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/menu/nav_menu.xml" value="0.16197916666666667" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/menu/navigation_menu.xml" value="0.18385416666666668" />

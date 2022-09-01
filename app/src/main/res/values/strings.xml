@@ -15,9 +15,9 @@
     <string name="p_pensiunan">"Payroll Pensiunan"</string>
     <!-- Strings related to array at main page -->
     <string-array name="pilih_rek">
-        <item>Rekening 1</item>
-        <item>Rekening 2</item>
-        <item>Rekening 3</item>
+        <item>PT BALI NUSARAYA PARAMARTHA - 123456789090</item>
+        <item>PT BALI NUSARAYA PARAMARTHA - 342324254523</item>
+        <item>PT BALI NUSARAYA PARAMARTHA - 242678432678</item>
     </string-array>
     <!-- Strings related to array at Payroll umum page -->
     <string-array name="pilih_jenis_transaksi">

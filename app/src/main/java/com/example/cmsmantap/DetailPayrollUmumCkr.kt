@@ -1,6 +1,8 @@
 package com.example.cmsmantap
 
+import android.app.AlertDialog
 import android.app.Dialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -50,6 +52,25 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
             btnCancel.setOnClickListener {
                 myDialog.cancel()
             }
+
+            val btnRejectConfirm = dialogBinding.findViewById<Button>(R.id.btnRejectConfirm)
+            btnRejectConfirm.setOnClickListener {
+                val dialogBuilder = AlertDialog.Builder(this)
+                    // if the dialog is cancelable
+                    .setCancelable(true)
+                    // positive button text and action
+
+                    .setView(layoutInflater.inflate(R.layout.reject_confirm_dialog,null))
+                // negative button text and action
+                //    .setNegativeButton("Cancel", DialogInterface.OnClickListener {
+                //            dialog, id -> dialog.cancel()
+                //   })
+                // create dialog box
+                val alert = dialogBuilder.create()
+                // show alert dialog
+                alert.show()
+            }
+
 
         }
 

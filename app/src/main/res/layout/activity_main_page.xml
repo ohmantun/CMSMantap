@@ -27,7 +27,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <ImageView
+    <ImageButton
+        android:id="@+id/btnNotifikasi"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginLeft="290dp"
@@ -55,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,21 +115,14 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/rekeningAsal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="TABUNGAN SIMANTAP GOLD"
+                    android:layout_marginTop="20dp"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="1234567890"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -279,7 +273,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="60dp"
                         android:gravity="center"
-                        android:text="Pending"
+                        android:text="Belum Disetujui"
                         android:textColor="@color/white"
                         android:textSize="20sp"></TextView>
                 </FrameLayout>
@@ -308,7 +302,7 @@
                         android:id="@+id/needvalidate_total"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:gravity="center"
                         android:text="2"
                         android:textColor="@color/white"
@@ -318,11 +312,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="25dp"
                         android:gravity="center"
-                        android:text="Need Validate"
+                        android:text="Menunggu Persetujuan Releaser"
                         android:textColor="@color/white"
-                        android:textSize="18sp"></TextView>
+                        android:textSize="14sp"></TextView>
 
                 </FrameLayout>
 
@@ -350,7 +344,7 @@
                         android:id="@+id/needapprove_total"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:gravity="center"
                         android:text="2"
                         android:textColor="@color/white"
@@ -362,7 +356,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
                         android:gravity="center"
-                        android:text="Need Approve"
+                        android:text="Telah Disetujui"
                         android:textColor="@color/white"
                         android:textSize="18sp"></TextView>
 

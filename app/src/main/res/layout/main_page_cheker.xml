@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:layout_width="70dp"
@@ -25,7 +25,7 @@
         android:src="@drawable/logo2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:layout_width="40dp"
@@ -161,7 +161,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-
                 android:columnCount="2"
                 android:orientation="vertical"
                 android:rowCount="4">
@@ -280,7 +279,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="60dp"
                         android:gravity="center"
-                        android:text="Pending"
+                        android:text="Belum Disetujui"
                         android:textColor="@color/white"
                         android:textSize="20sp"></TextView>
                 </FrameLayout>
@@ -309,7 +308,7 @@
                         android:id="@+id/needvalidate_total"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:gravity="center"
                         android:text="2"
                         android:textColor="@color/white"
@@ -319,11 +318,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="25dp"
                         android:gravity="center"
-                        android:text="Need Validate"
+                        android:text="Menunggu Persetujuan Releaser"
                         android:textColor="@color/white"
-                        android:textSize="18sp"></TextView>
+                        android:textSize="14sp"></TextView>
 
                 </FrameLayout>
 
@@ -363,7 +362,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
                         android:gravity="center"
-                        android:text="Need Approve"
+                        android:text="Telah Disetujui"
                         android:textColor="@color/white"
                         android:textSize="18sp"></TextView>
 
