@@ -18,6 +18,12 @@
             android:name=".Beranda_Cheker"
             android:exported="false" />
         <activity
+            android:name=".Beranda_Releaser"
+            android:exported="false" />
+        <activity
+            android:name=".ApprovelPayroll"
+            android:exported="false" />
+        <activity
             android:name=".DetailPayrollPensiunCkr"
             android:exported="false" />
         <activity

@@ -16,10 +16,7 @@ import android.widget.Toast
 import android.content.Intent
 import android.widget.EditText
 import android.widget.TextView
-import com.example.cmsmantap.R
-import com.example.cmsmantap.Beranda
-import com.example.cmsmantap.Beranda_Cheker
-import com.example.cmsmantap.Payroll
+import com.example.cmsmantap.*
 
 //import com.example.cmsmantap.beranda
 //import com.example.cmsmantap.ui.login.LoggedInUserView
@@ -53,6 +50,11 @@ class LoginActivity : AppCompatActivity() {
             }
             if(pengguna == "ck001" && password == "adminck"){
                 val intent = Intent (this,Beranda_Cheker::class.java)
+                startActivity(intent)
+                finish()
+            }
+            if(pengguna == "rl001" && password == "adminrl"){
+                val intent = Intent (this,Beranda_Releaser::class.java)
                 startActivity(intent)
                 finish()
             }
