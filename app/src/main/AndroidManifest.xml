@@ -24,6 +24,12 @@
             android:name=".ValidasiPayrollPensiun"
             android:exported="false" />
         <activity
+            android:name=".Beranda_Releaser"
+            android:exported="false" />
+        <activity
+            android:name=".ApprovelPayroll"
+            android:exported="false" />
+        <activity
             android:name=".DetailPayrollUmumCkr"
             android:exported="false" />
         <activity
