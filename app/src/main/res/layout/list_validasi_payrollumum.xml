@@ -15,23 +15,23 @@
         app:cardCornerRadius="5dp"
         app:cardBackgroundColor="#EFEBEB">
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:columnCount="2"
+            android:rowCount="5">
 
             <TextView
                 android:id="@+id/tv_fileName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Payroll.CSV"
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_margin="3dp"/>
 
             <TextView
-                android:id="@+id/tv_tglPengajuan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tanggal Pengajuan :"
@@ -41,7 +41,6 @@
                 android:layout_margin="3dp"/>
 
             <TextView
-                android:id="@+id/tv_tglEksekusi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tanggal Eksekusi    :"
@@ -51,7 +50,6 @@
                 android:layout_margin="3dp"/>
 
             <TextView
-                android:id="@+id/tv_diajukanOleh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Diajukan Oleh           :"
@@ -61,7 +59,6 @@
                 android:layout_margin="3dp"/>
 
             <TextView
-                android:id="@+id/tv_keterangan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Keterangan               :"
@@ -71,45 +68,76 @@
                 android:layout_margin="3dp"/>
 
             <TextView
-                android:id="@+id/tv_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Status                         :"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_margin="3dp"/>
 
-            <GridLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tv_tglPengajuan"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:columnCount="2"
-                android:rowCount="1"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="25dp">
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="3dp"/>
+            <TextView
+                android:id="@+id/tv_tglEksekusi"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="3dp"/>
+            <TextView
+                android:id="@+id/tv_diajukanOleh"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="3dp"/>
+            <TextView
+                android:id="@+id/tv_keterangan"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="3dp"/>
 
-                <Button
-                    android:id="@+id/info_status"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="start"
-                    android:backgroundTint="#3A9FD8"
-                    android:enabled="true"
-                    android:text="Belum Disetujui"/>
+        </GridLayout>
 
-                <Button
-                    android:id="@+id/btnDetail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="end"
-                    android:backgroundTint="#0D63A5"
-                    android:enabled="true"
-                    android:text="Detail"/>
-            </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:columnCount="2"
+            android:rowCount="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="160dp">
 
-        </LinearLayout>
+            <Button
+                android:id="@+id/info_status"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:backgroundTint="#3A9FD8"
+                android:enabled="true"
+                android:text="Belum Disetujui"/>
+
+            <Button
+                android:id="@+id/btnDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:backgroundTint="#0D63A5"
+                android:enabled="true"
+                android:text="Detail"/>
+        </GridLayout>
 
     </androidx.cardview.widget.CardView>
 

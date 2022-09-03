@@ -5,11 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cmsmantap.adapter.PayrollPensiunCkrAdapter
-import com.example.cmsmantap.adapter.PayrollUmumCkrAdapter
 import com.example.cmsmantap.databinding.ActivityValidasiPayrollPensiunBinding
-import com.example.cmsmantap.databinding.ActivityValidasiPayrollUmumBinding
 import com.example.cmsmantap.model.PayrollPensiunCkr
-import com.example.cmsmantap.model.PayrollUmumChecker
 
 class ValidasiPayrollPensiun : AppCompatActivity() {
     private lateinit var binding: ActivityValidasiPayrollPensiunBinding

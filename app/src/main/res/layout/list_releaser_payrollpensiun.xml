@@ -38,6 +38,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_margin="3dp"
+                android:textAlignment="textEnd"
                 android:text="Proses                 : "/>
 
             <TextView
@@ -127,21 +128,22 @@
 
             <Button
                 android:id="@+id/info_statusPen"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
+                android:layout_width="230dp"
+                android:layout_height="60dp"
                 android:layout_gravity="start"
-                android:backgroundTint="#3A9FD8"
+                android:backgroundTint="#FFD600"
                 android:enabled="true"
-                android:text="Belum Disetujui"/>
+                android:text="Menunggu Persetujuan Releaser"/>
 
             <Button
                 android:id="@+id/btnDetailPen"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
+                android:layout_height="60dp"
                 android:layout_gravity="end"
                 android:backgroundTint="#0D63A5"
                 android:enabled="true"
-                android:text="Detail"/>
+                android:text="Detail"
+                android:layout_marginTop="8dp"/>
         </GridLayout>
 
     </androidx.cardview.widget.CardView>

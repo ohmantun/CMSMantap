@@ -10,26 +10,28 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cmsmantap.DetailPayrollUmumCkr
+import com.example.cmsmantap.DetailPayrollUmumReleaser
 import com.example.cmsmantap.R
 import com.example.cmsmantap.model.PayrollUmumChecker
+import com.example.cmsmantap.model.PayrollUmumReleaser
 
-class PayrollUmumCkrAdapter (val context: Context):
-    RecyclerView.Adapter<PayrollUmumCkrAdapter.PayrollUmumCkrViewHolder>() {
-    private val ckr : MutableList<PayrollUmumChecker> = mutableListOf()
+class PayrollUmumReleaserAdapter (val context: Context):
+    RecyclerView.Adapter<PayrollUmumReleaserAdapter.PayrollUmumReleaserViewHolder>() {
+    private val rsr : MutableList<PayrollUmumReleaser> = mutableListOf()
 
     override fun getItemCount(): Int {
-        return ckr.size
+        return rsr.size
     }
 
-    override fun onBindViewHolder(holder: PayrollUmumCkrAdapter.PayrollUmumCkrViewHolder, position: Int) {
-        holder.bindmodel(ckr[position])
+    override fun onBindViewHolder(holder: PayrollUmumReleaserAdapter.PayrollUmumReleaserViewHolder, position: Int) {
+        holder.bindmodel(rsr[position])
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PayrollUmumCkrViewHolder {
-        return PayrollUmumCkrViewHolder(LayoutInflater.from(context).inflate(R.layout.list_validasi_payrollumum,parent,false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PayrollUmumReleaserViewHolder {
+        return PayrollUmumReleaserViewHolder(LayoutInflater.from(context).inflate(R.layout.list_releaser_payrollumum,parent,false))
     }
 
-    inner class PayrollUmumCkrViewHolder (item: View): RecyclerView.ViewHolder(item){
+    inner class PayrollUmumReleaserViewHolder (item: View): RecyclerView.ViewHolder(item){
         val txtnamaFile:TextView = item.findViewById(R.id.tv_fileName)
         val txtTanggalPengajuan:TextView = item.findViewById(R.id.tv_tglPengajuan)
         val txtTanggalEksekusi:TextView = item.findViewById(R.id.tv_tglEksekusi)
@@ -40,7 +42,7 @@ class PayrollUmumCkrAdapter (val context: Context):
         val cardViewData: CardView = item.findViewById(R.id.cv_datapayrollumum)
         val btnDetail: Button = item.findViewById(R.id.btnDetail)
 
-        fun bindmodel(m:PayrollUmumChecker){
+        fun bindmodel(m:PayrollUmumReleaser){
             txtnamaFile.text = m.getnamaFile()
             txtTanggalPengajuan.text = m.getTanggalPengajuan()
             txtTanggalEksekusi.text = m.getTanggalEksekusi()
@@ -49,17 +51,15 @@ class PayrollUmumCkrAdapter (val context: Context):
             //txtStatus.text = m.getStatus()
 
             btnDetail.setOnClickListener{
-                var i = Intent(context, DetailPayrollUmumCkr::class.java)
+                var i = Intent(context, DetailPayrollUmumReleaser::class.java)
                 context.startActivity(i)
             }
         }
-
     }
 
-    fun setListDataPayrollUmumCkr(data:List<PayrollUmumChecker>){
-        ckr.clear()
-        ckr.addAll(data)
+    fun setListDataPayrollUmumReleaser(data:List<PayrollUmumReleaser>){
+        rsr.clear()
+        rsr.addAll(data)
         notifyDataSetChanged()
     }
-
 }

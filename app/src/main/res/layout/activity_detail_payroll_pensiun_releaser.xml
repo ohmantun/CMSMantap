@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    tools:context=".DetailPayrollPensiunReleaser">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btnBackDtl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/back_arrow" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="0"
+                    android:text="Approval Payroll Pensiun"
+                    android:textAlignment="center"
+                    android:textColor="#231F20"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Detail Data Payroll Pensiun"
+                    android:textColor="#231F20"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/waitingapproval"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Menunggu Persetujuan Releaser"
+                    android:textColor="#E8CE48"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_dataPayrollPensiunDtl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/list_detail_validasi_payrollpensiun" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#DF0707"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:text="Tanggal dapem = Tanggal upload,"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#DF0707"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:text="Tanggal efektif = tanggal proses CMS (sekarang / terjadwal)"/>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <Button
+                        android:id="@+id/btnPrevious"
+                        android:layout_width="120dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="start"
+                        android:backgroundTint="#DCDCDC"
+                        android:enabled="true"
+                        android:textColor="#000000"
+                        android:text="Previous"/>
+
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="120dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:backgroundTint="#00AD43"
+                        android:enabled="true"
+                        android:text="Next"/>
+                </GridLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:cardBackgroundColor="#99D9FA">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_jmlTransaksi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jumlah Transaksi                      : 5"
+                            android:textColor="#083358"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tv_totalNominalTrx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Nominal Transaksi          : 25.500.000"
+                            android:textColor="#083358"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <Button
+                        android:id="@+id/btnValidasi"
+                        android:layout_width="120dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="start"
+                        android:backgroundTint="#00AD43"
+                        android:enabled="true"
+                        android:text="Validasi"/>
+
+                    <Button
+                        android:id="@+id/btnReject"
+                        android:layout_width="120dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:backgroundTint="#DF0707"
+                        android:enabled="true"
+                        android:text="Reject"/>
+                </GridLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

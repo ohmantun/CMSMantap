@@ -13,17 +13,18 @@
         android:layout_margin="20dp"
         app:cardBackgroundColor="#EFEBEB">
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp">
+            android:layout_marginBottom="15dp"
+            android:columnCount="2"
+            android:rowCount="5">
 
 
             <TextView
-                android:id="@+id/tv_tglTransaksi"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tanggal Transaksi   :"
                 android:textSize="16sp"
@@ -32,8 +33,7 @@
                 android:layout_margin="7dp"/>
 
             <TextView
-                android:id="@+id/tv_rekSumber"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rekening Sumber    :"
                 android:textSize="16sp"
@@ -42,8 +42,7 @@
                 android:layout_margin="7dp"/>
 
             <TextView
-                android:id="@+id/tv_rekPenerima"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rekening Penerima :"
                 android:textSize="16sp"
@@ -52,8 +51,7 @@
                 android:layout_margin="7dp"/>
 
             <TextView
-                android:id="@+id/tv_nominal"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nominal                      :"
                 android:textSize="16sp"
@@ -62,8 +60,7 @@
                 android:layout_margin="7dp"/>
 
             <TextView
-                android:id="@+id/tv_detailKeterangan"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Keterangan                :"
                 android:textSize="16sp"
@@ -71,8 +68,53 @@
                 android:textStyle="bold"
                 android:layout_margin="7dp"/>
 
+            <TextView
+                android:id="@+id/tv_tglTransaksi"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/tv_rekSumber"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_rekPenerima"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_nominal"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_detailKeterangan"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+
+        </GridLayout>
 
 
 
