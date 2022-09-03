@@ -8,35 +8,27 @@
     android:background="#F7F7F7"
     tools:context=".data.LoginActivity">
 
-
-    <ImageView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="97dp"
         android:background="@drawable/box2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
 
     <ImageView
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginTop="15dp"
         android:src="@drawable/logo2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_gravity="center" />
 
     <ImageButton
         android:id="@+id/btnNotifikasi"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="290dp"
-        android:layout_marginTop="40dp"
         android:background="@drawable/ic_notification"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_gravity="center|end"
+        android:layout_marginEnd="20dp"/>
+    </FrameLayout>
 
     <TextView
         android:id="@+id/welcome"
@@ -118,19 +110,34 @@
                     android:id="@+id/rekeningAsal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:textColor="@color/white"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
-
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
                 <TextView
+                    android:id="@+id/totalSaldo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:text="Rp. 550.000.324"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/btnshowhide"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/showhide"
+                    android:layout_gravity="center">
+                </ImageButton>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
 
@@ -161,12 +168,12 @@
 
                 <ImageButton
                     android:layout_width="75dp"
-                    android:layout_height="95dp"
+                    android:layout_height="110dp"
                     android:layout_row="0"
                     android:layout_rowWeight="0"
                     android:layout_column="0"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="70dp"
+                    android:layout_marginLeft="60dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="40dp"
                     android:layout_marginBottom="10dp"
@@ -181,14 +188,14 @@
                 <ImageButton
                     android:id="@+id/laptransaksi"
                     android:layout_width="75dp"
-                    android:layout_height="95dp"
+                    android:layout_height="110dp"
                     android:layout_row="1"
                     android:layout_rowWeight="0"
                     android:layout_column="1"
                     android:layout_columnWeight="1"
                     android:layout_marginLeft="40dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="70dp"
+                    android:layout_marginRight="60dp"
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/laporan_transaksi_fitur"
                     android:clickable="true"
@@ -200,12 +207,12 @@
 
                 <ImageButton
                     android:layout_width="75dp"
-                    android:layout_height="95dp"
+                    android:layout_height="110dp"
                     android:layout_row="1"
                     android:layout_rowWeight="0"
                     android:layout_column="0"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="70dp"
+                    android:layout_marginLeft="60dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="40dp"
                     android:layout_marginBottom="20dp"
@@ -220,14 +227,14 @@
                 <ImageButton
                     android:id="@+id/btnPayroll"
                     android:layout_width="75dp"
-                    android:layout_height="95dp"
+                    android:layout_height="110dp"
                     android:layout_row="0"
                     android:layout_rowWeight="0"
                     android:layout_column="1"
                     android:layout_columnWeight="1"
                     android:layout_marginLeft="40dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="70dp"
+                    android:layout_marginRight="60dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/payroll_fitur"
                     android:clickable="true"
@@ -357,7 +364,7 @@
                         android:gravity="center"
                         android:text="Telah Disetujui"
                         android:textColor="@color/white"
-                        android:textSize="18sp"></TextView>
+                        android:textSize="16sp"></TextView>
 
                 </FrameLayout>
 
