@@ -33,7 +33,7 @@ class Beranda_Cheker : AppCompatActivity() {
         setContentView(R.layout.main_page_cheker)
 
         val spinner: Spinner = findViewById(R.id.spinner_rek)
-        val menubtnPayroll = findViewById<ImageButton>(R.id.btnOtoritasPayroll)
+        val menubtnPayroll = findViewById<FrameLayout>(R.id.btnOtorisasiPayroll)
         val btnPengaturan = findViewById<ImageButton>(R.id.footer_pengaturan)
         val btnKeluar = findViewById<ImageButton>(R.id.footer_keluar)
         val btnNotifikasi = findViewById<ImageButton>(R.id.btnNotifikasi)
