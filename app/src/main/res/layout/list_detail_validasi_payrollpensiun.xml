@@ -16,17 +16,18 @@
         app:cardCornerRadius="10dp"
         app:cardBackgroundColor="#EFEBEB">
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp">
+            android:layout_marginBottom="15dp"
+            android:columnCount="2"
+            android:rowCount="8">
 
 
             <TextView
-                android:id="@+id/tv_nmrPensiun"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nomor Pensiunan    :"
                 android:textSize="16sp"
@@ -35,8 +36,7 @@
                 android:layout_margin="7dp"/>
 
             <TextView
-                android:id="@+id/tv_nmrRekening"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nomor Rekening      :"
                 android:textSize="16sp"
@@ -45,8 +45,7 @@
                 android:layout_margin="7dp"/>
 
             <TextView
-                android:id="@+id/tv_nama"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama                           :"
                 android:textSize="16sp"
@@ -55,8 +54,7 @@
                 android:layout_margin="7dp"/>
 
             <TextView
-                android:id="@+id/tv_nilaiGaji"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nilai Gaji                     :"
                 android:textSize="16sp"
@@ -65,10 +63,81 @@
                 android:layout_margin="7dp"/>
 
             <TextView
-                android:id="@+id/tv_keteranganPen"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Keterangan                 :"
+                android:text="Keterangan                :"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status Blokir              :"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Dapem         :"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Efektif          :"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_nmrPensiun"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_nmrRekening"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_nama"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_nilaiGaji"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_keteranganPen"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -76,9 +145,8 @@
 
             <TextView
                 android:id="@+id/tv_statusBlokir"
-                android:layout_width="match_parent"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:text="Status Blokir                :"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -86,9 +154,8 @@
 
             <TextView
                 android:id="@+id/tv_tglDapem"
-                android:layout_width="match_parent"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:text="Tanggal Dapem           :"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -96,16 +163,16 @@
 
             <TextView
                 android:id="@+id/tv_tglEfektif"
-                android:layout_width="match_parent"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:text="Tanggal Efektif            :"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_margin="7dp"/>
 
 
-        </LinearLayout>
+
+        </GridLayout>
 
 
 

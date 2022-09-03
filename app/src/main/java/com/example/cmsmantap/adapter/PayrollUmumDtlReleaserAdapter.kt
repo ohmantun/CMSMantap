@@ -1,0 +1,52 @@
+package com.example.cmsmantap.adapter
+
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.example.cmsmantap.R
+import com.example.cmsmantap.model.PayrollUmumRsrDetail
+
+class PayrollUmumDtlReleaserAdapter (val context: Context):
+    RecyclerView.Adapter<PayrollUmumDtlReleaserAdapter.PayrollUmumDtlReleaserViewHolder>() {
+    private val rsrD : MutableList<PayrollUmumRsrDetail> = mutableListOf()
+
+    override fun getItemCount(): Int {
+        return rsrD.size
+    }
+
+    override fun onBindViewHolder(holder: PayrollUmumDtlReleaserAdapter.PayrollUmumDtlReleaserViewHolder, position: Int) {
+        holder.bindmodel(rsrD[position])
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PayrollUmumDtlReleaserAdapter.PayrollUmumDtlReleaserViewHolder {
+        return PayrollUmumDtlReleaserViewHolder(LayoutInflater.from(context).inflate(R.layout.list_detail_validasi_payrollumum,parent,false))
+    }
+
+    inner class PayrollUmumDtlReleaserViewHolder (item: View): RecyclerView.ViewHolder(item){
+        val txtTglTransaksi: TextView = item.findViewById(R.id.tv_tglTransaksi)
+        val txtRekSumber: TextView = item.findViewById(R.id.tv_rekSumber)
+        val txtRekPenerima: TextView = item.findViewById(R.id.tv_rekPenerima)
+        val txtNominal: TextView = item.findViewById(R.id.tv_nominal)
+        val txtKeteranganD: TextView = item.findViewById(R.id.tv_detailKeterangan)
+
+        //val cardViewData: CardView = item.findViewById(R.id.cv_detaildatapayrollumum)
+
+        fun bindmodel(m: PayrollUmumRsrDetail) {
+            txtTglTransaksi.text = m.getTglTransaksi()
+            txtRekSumber.text = m.getRekSumber()
+            txtRekPenerima.text = m.getRekPenerima()
+            txtNominal.text = m.getNominal()
+            txtKeteranganD.text = m.getKeteranganD()
+
+        }
+    }
+
+    fun setListDataPayrollUmumDtlRsr(data: MutableList<PayrollUmumRsrDetail>){
+        rsrD.clear()
+        rsrD.addAll(data)
+        notifyDataSetChanged()
+    }
+}

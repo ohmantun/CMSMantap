@@ -13,26 +13,29 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cmsmantap.adapter.PayrollPensiunCkrAdapter
 import com.example.cmsmantap.adapter.PayrollPensiunDtlCkrAdapter
+import com.example.cmsmantap.adapter.PayrollPensiunDtlReleaserAdapter
 import com.example.cmsmantap.adapter.PayrollUmumDCkrAdapter
 import com.example.cmsmantap.databinding.ActivityDetailPayrollPensiunCkrBinding
+import com.example.cmsmantap.databinding.ActivityDetailPayrollPensiunReleaserBinding
 import com.example.cmsmantap.databinding.ActivityDetailPayrollUmumBinding
 import com.example.cmsmantap.model.PayrollPensiunCkrDetail
+import com.example.cmsmantap.model.PayrollPensiunRsrDetail
 import com.example.cmsmantap.model.PayrollUmumCkrDetail
 
-class DetailPayrollPensiunCkr : AppCompatActivity() {
-    private lateinit var binding : ActivityDetailPayrollPensiunCkrBinding
+class DetailPayrollPensiunReleaser : AppCompatActivity() {
+    private lateinit var binding : ActivityDetailPayrollPensiunReleaserBinding
 
     val lm = LinearLayoutManager(this)
-    val addPayrollPensiunDetailCkrList : MutableList<PayrollPensiunCkrDetail> = ArrayList()
-    lateinit var payrollPensiunDtlCkrAdapter: PayrollPensiunDtlCkrAdapter
+    val addPayrollPensiunDetailRsrList : MutableList<PayrollPensiunRsrDetail> = ArrayList()
+    lateinit var payrollPensiunDtlReleaserAdapter: PayrollPensiunDtlReleaserAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailPayrollPensiunCkrBinding.inflate(layoutInflater)
+        binding = ActivityDetailPayrollPensiunReleaserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.btnBackDtl.setOnClickListener {
-            val intent = Intent(this, ValidasiPayrollPensiun::class.java)
+            val intent = Intent(this, ReleaserPayrollPensiun::class.java)
             startActivity(intent)
         }
 
@@ -112,35 +115,35 @@ class DetailPayrollPensiunCkr : AppCompatActivity() {
 
     fun initView(){
         binding.rvDataPayrollPensiunDtl.layoutManager = lm
-        payrollPensiunDtlCkrAdapter = PayrollPensiunDtlCkrAdapter(this)
-        binding.rvDataPayrollPensiunDtl.adapter = payrollPensiunDtlCkrAdapter
+        payrollPensiunDtlReleaserAdapter = PayrollPensiunDtlReleaserAdapter(this)
+        binding.rvDataPayrollPensiunDtl.adapter = payrollPensiunDtlReleaserAdapter
 
-        addPayrollPensiunDetailCkrList.add(
-            PayrollPensiunCkrDetail(nmrPensiun = "93782821893", nmrRekening = "352617353",
+        addPayrollPensiunDetailRsrList.add(
+            PayrollPensiunRsrDetail(nmrPensiun = "93782821893", nmrRekening = "352617353",
                 nama = "Rahmat Pratama", nilaiGaji = "4.500.000", keterangan = "Gaji Benar",
                 statusBlokir = "0", tglDapem = "16/08/2022", tglEfektif = "16/08/2022")
         )
-        addPayrollPensiunDetailCkrList.add(
-            PayrollPensiunCkrDetail(nmrPensiun = "93782821893", nmrRekening = "352617353",
+        addPayrollPensiunDetailRsrList.add(
+            PayrollPensiunRsrDetail(nmrPensiun = "93782821893", nmrRekening = "352617353",
                 nama = "Rahmat Pratama", nilaiGaji = "4.800.000", keterangan = "Gaji Benar",
                 statusBlokir = "0", tglDapem = "16/08/2022", tglEfektif = "16/08/2022")
         )
-        addPayrollPensiunDetailCkrList.add(
-            PayrollPensiunCkrDetail(nmrPensiun = "93782821893", nmrRekening = "352617353",
+        addPayrollPensiunDetailRsrList.add(
+            PayrollPensiunRsrDetail(nmrPensiun = "93782821893", nmrRekening = "352617353",
                 nama = "Rahmat Pratama", nilaiGaji = "4.000.000", keterangan = "Gaji Benar",
                 statusBlokir = "0", tglDapem = "16/08/2022", tglEfektif = "16/08/2022")
         )
-        addPayrollPensiunDetailCkrList.add(
-            PayrollPensiunCkrDetail(nmrPensiun = "93782821893", nmrRekening = "352617353",
+        addPayrollPensiunDetailRsrList.add(
+            PayrollPensiunRsrDetail(nmrPensiun = "93782821893", nmrRekening = "352617353",
                 nama = "Rahmat Pratama", nilaiGaji = "4.700.000", keterangan = "Gaji Benar",
                 statusBlokir = "0", tglDapem = "16/08/2022", tglEfektif = "16/08/2022")
         )
-        addPayrollPensiunDetailCkrList.add(
-            PayrollPensiunCkrDetail(nmrPensiun = "93782821893", nmrRekening = "352617353",
+        addPayrollPensiunDetailRsrList.add(
+            PayrollPensiunRsrDetail(nmrPensiun = "93782821893", nmrRekening = "352617353",
                 nama = "Rahmat Pratama", nilaiGaji = "3.500.000", keterangan = "Gaji Benar",
                 statusBlokir = "0", tglDapem = "16/08/2022", tglEfektif = "16/08/2022")
         )
 
-        payrollPensiunDtlCkrAdapter.setListDataPayrollPensiunDtlCkr(addPayrollPensiunDetailCkrList)
+        payrollPensiunDtlReleaserAdapter.setListDataPayrollPensiunDtlRsr(addPayrollPensiunDetailRsrList)
     }
 }

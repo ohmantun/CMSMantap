@@ -9,28 +9,28 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cmsmantap.DetailPayrollPensiunCkr
+import com.example.cmsmantap.DetailPayrollPensiunReleaser
 import com.example.cmsmantap.R
-import com.example.cmsmantap.model.PayrollPensiunCkr
+import com.example.cmsmantap.model.PayrollPensiunReleaser
 
 
-class PayrollPensiunCkrAdapter (val context: Context):
-    RecyclerView.Adapter<PayrollPensiunCkrAdapter.PayrollPensiunCkrViewHolder>() {
-    private val pensiunList : MutableList<PayrollPensiunCkr> = mutableListOf()
+class PayrollPensiunReleaserAdapter (val context: Context):
+    RecyclerView.Adapter<PayrollPensiunReleaserAdapter.PayrollPensiunRsrViewHolder>() {
+    private val rsrList : MutableList<PayrollPensiunReleaser> = mutableListOf()
 
     override fun getItemCount(): Int {
-        return pensiunList.size
+        return rsrList.size
     }
 
-    override fun onBindViewHolder(holder: PayrollPensiunCkrAdapter.PayrollPensiunCkrViewHolder, position: Int) {
-        holder.bindmodel(pensiunList[position])
+    override fun onBindViewHolder(holder: PayrollPensiunReleaserAdapter.PayrollPensiunRsrViewHolder, position: Int) {
+        holder.bindmodel(rsrList[position])
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PayrollPensiunCkrAdapter.PayrollPensiunCkrViewHolder {
-        return PayrollPensiunCkrViewHolder(LayoutInflater.from(context).inflate(R.layout.list_validasi_payrollpensiun,parent,false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PayrollPensiunReleaserAdapter.PayrollPensiunRsrViewHolder {
+        return PayrollPensiunRsrViewHolder(LayoutInflater.from(context).inflate(R.layout.list_releaser_payrollpensiun,parent,false))
     }
 
-    inner class PayrollPensiunCkrViewHolder (item: View): RecyclerView.ViewHolder(item){
+    inner class PayrollPensiunRsrViewHolder (item: View): RecyclerView.ViewHolder(item){
         val txtnamaFile: TextView = item.findViewById(R.id.tv_fileName)
         val txtProses: TextView = item.findViewById(R.id.tv_proses)
         val txtRekeningSumber: TextView = item.findViewById(R.id.tv_rekSumberPen)
@@ -41,7 +41,7 @@ class PayrollPensiunCkrAdapter (val context: Context):
         val cardViewData: CardView = item.findViewById(R.id.cv_datapayrollpensiun)
         val btnDetailPen: Button = item.findViewById(R.id.btnDetailPen)
 
-        fun bindmodel(m: PayrollPensiunCkr){
+        fun bindmodel(m: PayrollPensiunReleaser){
             txtnamaFile.text = m.getnamaFile()
             txtProses.text = m.getProses()
             txtRekeningSumber.text = m.getRekeningSumber()
@@ -50,7 +50,7 @@ class PayrollPensiunCkrAdapter (val context: Context):
             //txtStatus.text = m.getStatus()
 
             btnDetailPen.setOnClickListener {
-                var intent = Intent(context, DetailPayrollPensiunCkr::class.java)
+                var intent = Intent(context, DetailPayrollPensiunReleaser::class.java)
                 context.startActivity(intent)
             }
 
@@ -58,9 +58,9 @@ class PayrollPensiunCkrAdapter (val context: Context):
 
     }
 
-    fun setListDataPayrollPensiunCkr(data:List<PayrollPensiunCkr>){
-        pensiunList.clear()
-        pensiunList.addAll(data)
+    fun setListDataPayrollPensiunRsr(data:List<PayrollPensiunReleaser>){
+        rsrList.clear()
+        rsrList.addAll(data)
         notifyDataSetChanged()
     }
 }

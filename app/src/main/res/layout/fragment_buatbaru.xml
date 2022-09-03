@@ -9,6 +9,10 @@
     android:orientation="vertical"
     tools:context=".fragment.FragmentBuatbaru">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -76,7 +80,7 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="35dp"
+            android:layout_height="wrap_content"
             android:text="Cari File"
             android:background="@color/box_biru"
             android:layout_marginTop="10dp"/>
@@ -182,7 +186,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:columnCount="2"
-            android:rowCount="1">
+            android:rowCount="1"
+            android:layout_marginTop="20dp">
 
             <Button
                 android:id="@+id/btnCancel"
@@ -207,5 +212,7 @@
 
 
     </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>

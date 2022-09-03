@@ -10,8 +10,8 @@ class ApprovelPayroll : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.payroll_releaser)
 
-        val btnPayrollUmumChecker = findViewById<ImageButton>(R.id.btnPayroll_umum)
-        val btnPayrollPensiunan = findViewById<ImageButton>(R.id.btnPayroll_pensiunan)
+        val btnPayrollUmumReleaser = findViewById<ImageButton>(R.id.btnPayroll_umum)
+        val btnPayrollPensiunanReleaser = findViewById<ImageButton>(R.id.btnPayroll_pensiunan)
         val btnBackpayrollCkr = findViewById<ImageButton>(R.id.btnBackpayrollCkr)
 
         btnBackpayrollCkr.setOnClickListener {
@@ -19,13 +19,13 @@ class ApprovelPayroll : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btnPayrollUmumChecker.setOnClickListener {
-            val intent = Intent(this, ValidasiPayrollUmum::class.java)
+        btnPayrollUmumReleaser.setOnClickListener {
+            val intent = Intent(this, ReleaserPayrollUmum::class.java)
             startActivity(intent)
         }
 
-        btnPayrollPensiunan.setOnClickListener {
-            val intent = Intent(this, ValidasiPayrollPensiun::class.java)
+        btnPayrollPensiunanReleaser.setOnClickListener {
+            val intent = Intent(this, ReleaserPayrollPensiun::class.java)
             startActivity(intent)
         }
 
