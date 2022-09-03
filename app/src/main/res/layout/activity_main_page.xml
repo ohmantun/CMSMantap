@@ -166,9 +166,9 @@
                 android:orientation="vertical"
                 android:rowCount="4">
 
-                <ImageButton
+                <FrameLayout
                     android:layout_width="75dp"
-                    android:layout_height="110dp"
+                    android:layout_height="115dp"
                     android:layout_row="0"
                     android:layout_rowWeight="0"
                     android:layout_column="0"
@@ -176,19 +176,36 @@
                     android:layout_marginLeft="60dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="40dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/mutasi_fitur"
                     android:clickable="true"
                     android:contextClickable="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.146"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <ImageButton
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/mutasi_fitur" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="55dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center"
+                        android:text="Mutasi"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </FrameLayout>
+
+                <FrameLayout
                     android:id="@+id/laptransaksi"
                     android:layout_width="75dp"
-                    android:layout_height="110dp"
+                    android:layout_height="115dp"
                     android:layout_row="1"
                     android:layout_rowWeight="0"
                     android:layout_column="1"
@@ -197,17 +214,35 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="60dp"
                     android:layout_marginBottom="20dp"
-                    android:background="@drawable/laporan_transaksi_fitur"
-                    android:clickable="true"
-                    android:contextClickable="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.146"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <ImageButton
-                    android:layout_width="75dp"
-                    android:layout_height="110dp"
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/laporan_transaksi_fitur"
+                        android:clickable="true"
+                        android:contextClickable="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center"
+                        android:text="Laporan Transaksi"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="80dp"
+                    android:layout_height="115dp"
                     android:layout_row="1"
                     android:layout_rowWeight="0"
                     android:layout_column="0"
@@ -216,18 +251,35 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="40dp"
                     android:layout_marginBottom="20dp"
-                    android:background="@drawable/laporan_aktivitas_pengguna_fitur"
-                    android:clickable="true"
-                    android:contextClickable="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.146"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <ImageButton
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/laporan_aktivitas_pengguna_fitur"
+                        android:clickable="true"
+                        android:contextClickable="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center"
+                        android:text="Laporan Aktivitas Pengguna"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </FrameLayout>
+
+                <FrameLayout
                     android:id="@+id/btnPayroll"
                     android:layout_width="75dp"
-                    android:layout_height="110dp"
+                    android:layout_height="115dp"
                     android:layout_row="0"
                     android:layout_rowWeight="0"
                     android:layout_column="1"
@@ -236,13 +288,30 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="60dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/payroll_fitur"
-                    android:clickable="true"
-                    android:contextClickable="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.146"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/payroll_fitur"
+                        android:clickable="true"
+                        android:contextClickable="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="55dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center"
+                        android:text="Payroll"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </FrameLayout>
 
                 <FrameLayout
                     android:id="@+id/info_pending"

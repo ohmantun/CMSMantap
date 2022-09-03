@@ -34,7 +34,7 @@ class Beranda : AppCompatActivity() {
         setContentView(R.layout.activity_main_page)
 
         //  val spinner: Spinner = findViewById(R.id.spinner_rek)
-        val menubtnPayroll = findViewById<ImageButton>(R.id.btnPayroll)
+        val menubtnPayroll = findViewById<FrameLayout>(R.id.btnPayroll)
         val btnPengaturan = findViewById<ImageButton>(R.id.footer_pengaturan)
         val btnKeluar = findViewById<ImageButton>(R.id.footer_keluar)
         val btnPending = findViewById<FrameLayout>(R.id.info_pending)
