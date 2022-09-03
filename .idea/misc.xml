@@ -9,6 +9,10 @@
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable-v24/ic_vector_login.xml" value="0.217" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable-v24/tombol.xml" value="0.1285" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/back_arrow.xml" value="0.1535" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/bg_lap_akt.xml" value="0.1795" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/bg_lap_tr.xml" value="0.1795" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/bg_mutasi.xml" value="0.1795" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/bg_payroll.xml" value="0.1795" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/box.xml" value="0.1595" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/box_rek.xml" value="0.227" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/button.xml" value="0.1595" />
@@ -36,7 +40,7 @@
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_detail_payroll_umum.xml" value="0.1" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_ganti_sandi.xml" value="0.176" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_main_page.xml" value="0.2" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_main_page.xml" value="0.264" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_notifikasi.xml" value="0.176" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_otorisasi_payroll.xml" value="0.15989739204788372" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_payroll.xml" value="0.2" />
