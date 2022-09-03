@@ -18,8 +18,14 @@ class Pengaturan : AppCompatActivity() {
       //  val btnPayrollPensiunan = findViewById<ImageButton>(R.id.btnPayroll_pensiunan)
         val btnBack = findViewById<ImageView>(R.id.btnBack)
         val btnGantiSandi = findViewById<CardView>(R.id.btnGantiSandi)
+        val btnBeranda = findViewById<ImageButton>(R.id.footer_beranda)
 
         btnBack.setOnClickListener{
+            val intent = Intent(this, Beranda::class.java)
+            startActivity(intent)
+        }
+
+        btnBeranda.setOnClickListener{
             val intent = Intent(this, Beranda::class.java)
             startActivity(intent)
         }

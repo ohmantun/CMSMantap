@@ -4,6 +4,7 @@ package com.example.cmsmantap.data
 //import androidx.lifecycle.Observer
 //import androidx.lifecycle.ViewModelProvider
 import android.app.ProgressDialog
+import android.content.Context
 import android.os.Bundle
 //import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.Toast
 import android.content.Intent
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
 import com.example.cmsmantap.*
@@ -60,6 +62,8 @@ class LoginActivity : AppCompatActivity() {
             }
 
         }
+
+
 
       //      val intent = Intent(this, Beranda::class.java)
       //      startActivity(intent)
