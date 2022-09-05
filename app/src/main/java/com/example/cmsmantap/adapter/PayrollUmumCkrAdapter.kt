@@ -38,7 +38,7 @@ class PayrollUmumCkrAdapter (val context: Context):
         //val txtStatus:TextView = item.findViewById(R.id.tv_status)
 
         val cardViewData: CardView = item.findViewById(R.id.cv_datapayrollumum)
-        val btnDetail: Button = item.findViewById(R.id.btnDetail)
+        val btnDetail: CardView = item.findViewById(R.id.btnDetail)
 
         fun bindmodel(m:PayrollUmumChecker){
             txtnamaFile.text = m.getnamaFile()

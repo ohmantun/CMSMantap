@@ -2,20 +2,16 @@ package com.example.cmsmantap
 
 import android.app.AlertDialog
 import android.app.Dialog
-import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.cmsmantap.adapter.PayrollUmumCkrAdapter
 import com.example.cmsmantap.adapter.PayrollUmumDCkrAdapter
 import com.example.cmsmantap.databinding.ActivityDetailPayrollUmumBinding
-import com.example.cmsmantap.model.PayrollUmumChecker
 import com.example.cmsmantap.model.PayrollUmumCkrDetail
 
 class DetailPayrollUmumCkr : AppCompatActivity() {
@@ -97,15 +93,13 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
                 confirmDialog.setContentView(confirmBinding)
                 confirmDialog.setCancelable(true)
                 confirmDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-                confirmDialog.cancel()
                 confirmDialog.show()
 
                 val btnOkSelesai = confirmBinding.findViewById<Button>(R.id.btnOkselesai)
 
                 btnOkSelesai.setOnClickListener {
-
                     confirmDialog.cancel()
-
+                    myValidasiDialog.cancel()
                 }
 
             }

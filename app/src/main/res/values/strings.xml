@@ -23,7 +23,6 @@
     <string-array name="pilih_jenis_transaksi">
         <item>Transfer ke Bank Mandiri Taspen</item>
         <item>Transfer ke Bank Lain</item>
-        <item>Transfer ke Bank Jago</item>
     </string-array>
 
 

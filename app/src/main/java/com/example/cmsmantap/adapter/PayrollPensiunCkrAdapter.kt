@@ -39,7 +39,7 @@ class PayrollPensiunCkrAdapter (val context: Context):
         //val txtStatus: TextView = item.findViewById(R.id.tv_statusPen)
 
         val cardViewData: CardView = item.findViewById(R.id.cv_datapayrollpensiun)
-        val btnDetailPen: Button = item.findViewById(R.id.btnDetailPen)
+        val btnDetailPen: CardView = item.findViewById(R.id.btnDetailPen)
 
         fun bindmodel(m: PayrollPensiunCkr){
             txtnamaFile.text = m.getnamaFile()
