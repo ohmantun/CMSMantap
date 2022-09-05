@@ -22,35 +22,16 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInput"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxBackgroundColor="#F7F7F7"
-            android:layout_below="@+id/textView2">
-
-            <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                android:inputType="none"
-                android:text="-Pilih-"
-                android:textColor="@color/teal_700" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
         <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textInput"
-            android:hint="Masukkan Keterangan"
+            android:layout_below="@+id/textView2"
+
+            android:hint="Kata Kunci"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:textColorHint="@color/teal_700"/>
+            android:textColorHint="#AFAFAF"/>
 
         <GridLayout
             android:id="@+id/grid_filter"
@@ -63,35 +44,36 @@
             android:rowCount="1">
 
             <Button
-                android:id="@+id/btnKembali"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_gravity="start"
-                android:background="@drawable/tombol"
-                android:backgroundTint="@color/box_biru"
-                android:enabled="true"
-                android:text="Kembali" />
-
-            <Button
                 android:id="@+id/btnCari"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_gravity="start"
-                android:background="@drawable/tombol"
-                android:backgroundTint="@color/box_biru"
+                android:backgroundTint="#00AD43"
                 android:enabled="true"
                 android:text="Cari" />
 
             <Button
                 android:id="@+id/btnReset"
                 android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_height="48dp"
                 android:layout_gravity="start"
-                android:background="@drawable/tombol"
-                android:backgroundTint="@color/box_biru"
+                android:backgroundTint="#AFAFAF"
                 android:enabled="true"
                 android:text="Reset" />
         </GridLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -292,16 +274,8 @@
 
       </RelativeLayout>
 
-
         </ScrollView>
 
 
-
-    </RelativeLayout>
-
-
-
-
-
-
 </LinearLayout>
+
