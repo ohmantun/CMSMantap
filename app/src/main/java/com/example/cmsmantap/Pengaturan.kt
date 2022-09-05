@@ -20,9 +20,9 @@ class Pengaturan : AppCompatActivity() {
         val btnGantiSandi = findViewById<CardView>(R.id.btnGantiSandi)
         val btnBeranda = findViewById<ImageButton>(R.id.footer_beranda)
 
-        btnBack.setOnClickListener{
-            val intent = Intent(this, Beranda::class.java)
-            startActivity(intent)
+
+        btnBack.setOnClickListener(){
+            onBackPressed()
         }
 
         btnBeranda.setOnClickListener{

@@ -13,9 +13,8 @@ class Notifikasi : AppCompatActivity() {
 
         val btnBack = findViewById<ImageView>(R.id.btnBack)
 
-        btnBack.setOnClickListener{
-            val intent = Intent(this, Beranda::class.java)
-            startActivity(intent)
+        btnBack.setOnClickListener(){
+            onBackPressed()
         }
     }
 }
