@@ -95,14 +95,16 @@ class Beranda_Cheker : AppCompatActivity() {
             startActivity(intent)
         }
 
+        var temp = false
         btnhide.setOnClickListener {
-            if (btnhide.isClickable.toString().equals("Show")) {
-                saldo.transformationMethod = HideReturnsTransformationMethod.getInstance()
-                btnhide.isClickable
+            if(!temp){
+                saldo.visibility = View.INVISIBLE
+                Toast.makeText(applicationContext, "Invisible", Toast.LENGTH_SHORT).show()
             } else {
-                saldo.transformationMethod = PasswordTransformationMethod.getInstance()
-                btnhide.isClickable
+                saldo.visibility = View.VISIBLE
+                Toast.makeText(applicationContext, "Visible", Toast.LENGTH_SHORT).show()
             }
+            temp = !temp
 
             // when button is clicked, show the alert
             btnKeluar.setOnClickListener {
