@@ -28,7 +28,7 @@ class Beranda_Releaser : AppCompatActivity() {
         setContentView(R.layout.main_page_releaser)
 
         val spinner: Spinner = findViewById(R.id.spinner_rek)
-        val menubtnPayroll = findViewById<ImageButton>(R.id.btnOtoritasPayrollReleaser)
+        val menubtnPayroll = findViewById<FrameLayout>(R.id.btnOtorisasiPayrollReleaser)
         val btnPengaturan = findViewById<ImageButton>(R.id.footer_pengaturan)
         val btnKeluar = findViewById<ImageButton>(R.id.footer_keluar)
         val btnhide = findViewById<ImageButton>(R.id.btnshowhide)

@@ -97,7 +97,7 @@ class Beranda_Cheker : AppCompatActivity() {
 
         var temp = false
         btnhide.setOnClickListener {
-            if(!temp){
+            if (!temp) {
                 saldo.visibility = View.INVISIBLE
                 Toast.makeText(applicationContext, "Invisible", Toast.LENGTH_SHORT).show()
             } else {
@@ -106,6 +106,7 @@ class Beranda_Cheker : AppCompatActivity() {
             }
             temp = !temp
 
+        }
             // when button is clicked, show the alert
             btnKeluar.setOnClickListener {
                 // build alert dialog
@@ -135,4 +136,3 @@ class Beranda_Cheker : AppCompatActivity() {
 
         }
     }
-}
