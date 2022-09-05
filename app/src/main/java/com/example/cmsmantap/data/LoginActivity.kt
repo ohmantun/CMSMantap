@@ -60,6 +60,21 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
+            /* API fetch sinergimantap.users
+            if(institusi_id == api_fetch && username == api_fetch && password == api_fetch){
+                if("select role_id from users where username == api_fetch" == 1){
+                    directed to MAKER page
+                }
+                elif("select role_id from users where username == api_fetch" == 1){
+                    directed to CHECKER page
+                }
+                elif("select role_id from users where username == api_fetch" == 1){
+                    directed to RELEASER page
+                }
+                elif("select role_id from users where username == api_fetch" == 1){
+                    directed to ADMIN page
+                }
+            } */
 
         }
 
