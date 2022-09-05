@@ -9,373 +9,449 @@
     tools:context=".data.LoginActivity">
 
 
-    <ImageView
+
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="97dp"
-        android:background="@drawable/box2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/logo2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
-
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="290dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/ic_notification"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
-
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="@string/welcome2"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/spinner_rek"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="110dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></Spinner>
-
-    <RelativeLayout
-        android:clipToPadding="false"
-        android:gravity="left"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/kartuATM"
-            android:layout_width="240dp"
-            android:layout_height="111dp"
-            android:layout_marginTop="149dp"
-            android:layout_marginLeft="160dp"
-            android:layout_marginRight="15dp"
-            app:cardBackgroundColor="#A38E44"
-            app:cardCornerRadius="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:src="@drawable/kartuabu"></ImageView>
-
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/rekening"
-            android:layout_width="252dp"
-            android:layout_height="111dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="149dp"
-            app:cardBackgroundColor="@color/box_biru"
-            app:cardCornerRadius="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:gravity="left"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="TABUNGAN SIMANTAP GOLD"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="1234567890"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Rp. 550.000.324"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativelay1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="260dp">
-
-        <ScrollView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="left"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
 
-            <GridLayout
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="@string/welcome2"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinner_rek"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginTop="120dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                android:columnCount="2"
-                android:orientation="vertical"
-                android:rowCount="4">
 
-                <ImageButton
-                    android:layout_width="85dp"
-                    android:layout_height="95dp"
-                    android:layout_row="0"
-                    android:layout_rowWeight="0"
-                    android:layout_column="0"
-                    android:layout_columnWeight="1"
-                    android:layout_marginLeft="80dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/mutasi_fitur"
-                    android:clickable="true"
-                    android:contextClickable="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.146"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/kartuATM"
+                android:layout_width="240dp"
+                android:layout_height="111dp"
+                android:layout_marginTop="149dp"
+                android:layout_marginLeft="160dp"
+                android:layout_marginRight="15dp"
+                app:cardBackgroundColor="#A38E44"
+                app:cardCornerRadius="10dp">
 
-                <ImageButton
-                    android:id="@+id/laptransaksi"
-                    android:layout_width="85dp"
-                    android:layout_height="95dp"
-                    android:layout_row="1"
-                    android:layout_rowWeight="0"
-                    android:layout_column="1"
-                    android:layout_columnWeight="1"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="80dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/laporan_transaksi_fitur"
-                    android:clickable="true"
-                    android:contextClickable="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.146"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <ImageButton
-                    android:layout_width="85dp"
-                    android:layout_height="95dp"
-                    android:layout_row="1"
-                    android:layout_rowWeight="0"
-                    android:layout_column="0"
-                    android:layout_columnWeight="1"
-                    android:layout_marginLeft="80dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/laporan_aktivitas_pengguna_fitur"
-                    android:clickable="true"
-                    android:contextClickable="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.146"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
-
-                <ImageButton
-                    android:id="@+id/btnOtoritasPayrollReleaser"
-                    android:layout_width="85dp"
-                    android:layout_height="95dp"
-                    android:layout_row="0"
-                    android:layout_rowWeight="0"
-                    android:layout_column="1"
-                    android:layout_columnWeight="1"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="80dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/otorisasi_payroll"
-                    android:clickable="true"
-                    android:contextClickable="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.146"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"></ImageButton>
-
-                <FrameLayout
-                    android:id="@+id/info_pending"
-                    android:layout_width="85dp"
-                    android:layout_height="65dp"
-                    android:layout_row="2"
-                    android:layout_rowSpan="2"
-                    android:layout_rowWeight="1"
-                    android:layout_column="0"
-                    android:layout_columnWeight="1"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginBottom="150dp"
-                    android:background="@drawable/pending_shape"
-                    app:cardBackgroundColor="#BF0D63A5"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.146"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <TextView
-                        android:id="@+id/pending_total"
-                        android:layout_width="match_parent"
+                    <ImageView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:gravity="center"
-                        android:text="2"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold"></TextView>
+                        android:layout_marginStart="40dp"
+                        android:src="@drawable/kartuabu"></ImageView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rekening"
+                android:layout_width="252dp"
+                android:layout_height="111dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="149dp"
+                app:cardBackgroundColor="@color/box_biru"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="60dp"
-                        android:gravity="center"
-                        android:text="Pending"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"></TextView>
-                </FrameLayout>
-
-                <FrameLayout
-                    android:id="@+id/info_validate"
-                    android:layout_width="85dp"
-                    android:layout_height="65dp"
-                    android:layout_row="2"
-                    android:layout_rowWeight="0"
-                    android:layout_column="1"
-                    android:layout_columnWeight="1"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/needvalidate_shape"
-                    android:clickable="true"
-                    android:contextClickable="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.146"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <TextView
-                        android:id="@+id/needvalidate_total"
-                        android:layout_width="match_parent"
+                        android:id="@+id/rekeningAsal"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:text="2"
                         android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold"></TextView>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:gravity="center"
-                        android:text="Need Validate"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"></TextView>
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:id="@+id/totalSaldo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp. 550.000.324"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
 
-                </FrameLayout>
+                        <ImageButton
+                            android:id="@+id/btnshowhide"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:src="@drawable/showhide"
+                            android:layout_gravity="center">
+                        </ImageButton>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <FrameLayout
-                    android:id="@+id/info_approve"
-                    android:layout_width="40dp"
-                    android:layout_height="60dp"
-                    android:layout_row="3"
-                    android:layout_rowWeight="0"
-                    android:layout_column="1"
-                    android:layout_columnWeight="1"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="150dp"
-                    android:background="@drawable/needapprove_shape"
-                    android:clickable="true"
-                    android:contextClickable="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.146"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/needapprove_total"
-                        android:layout_width="match_parent"
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/relativelay1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="260dp">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:columnCount="2"
+                    android:orientation="vertical"
+                    android:rowCount="4">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_rowWeight="0"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:clickable="true"
+                        android:background="@drawable/bg_mutasi"
+                        android:elevation="5dp"
+                        android:contextClickable="true"
+                        android:padding="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.146"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="115dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/mutasi_fitur" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="55dp"
+                            android:layout_marginRight="8dp"
+                            android:gravity="center"
+                            android:text="Mutasi"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/laptransaksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_rowWeight="0"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:elevation="5dp"
+                        android:background="@drawable/bg_lap_tr"
+                        android:padding="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.146"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="95dp"
+                            android:layout_height="115dp"
+                            android:background="@drawable/laporan_transaksi_fitur"
+                            android:clickable="true"
+                            android:layout_gravity="center"
+                            android:contextClickable="true" />
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_gravity="center"
+                            android:text="Laporan Transaksi"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_rowWeight="0"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:padding="10dp"
+                        android:elevation="5dp"
+                        android:background="@drawable/bg_lap_akt"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.146"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="95dp"
+                            android:layout_height="115dp"
+                            android:background="@drawable/laporan_aktivitas_pengguna_fitur"
+                            android:clickable="true"
+                            android:layout_gravity="center"
+                            android:contextClickable="true" />
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_gravity="center"
+                            android:text="Laporan Aktivitas Pengguna"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/btnOtoritasPayrollReleaser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_rowWeight="0"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:contextClickable="true"
+                        android:padding="10dp"
+                        android:background="@drawable/bg_payroll"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.146"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="115dp"
+                            android:background="@drawable/payroll_fitur"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="45dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:text="Otorisasi Payroll"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/info_pending"
+                        android:layout_width="85dp"
+                        android:layout_height="140dp"
+                        android:layout_row="2"
+                        android:layout_rowSpan="2"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:elevation="5dp"
                         android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:text="2"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold"></TextView>
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="150dp"
+                        android:background="@drawable/pending_shape"
+                        app:cardBackgroundColor="#BF0D63A5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.146"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:gravity="center"
-                        android:text="Need Approve"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"></TextView>
+                        <TextView
+                            android:id="@+id/pending_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"></TextView>
 
-                </FrameLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="70dp"
+                            android:gravity="center"
+                            android:text="Belum Disetujui"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"></TextView>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/info_validate"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_row="2"
+                        android:layout_rowWeight="0"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="5dp"
+                        android:background="@drawable/needvalidate_shape"
+                        android:clickable="true"
+                        android:contextClickable="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.146"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/needvalidate_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="29dp"
+                            android:gravity="center"
+                            android:text="Menunggu Persetujuan Releaser"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"></TextView>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/info_approve"
+                        android:layout_width="85dp"
+                        android:layout_height="65dp"
+                        android:layout_row="3"
+                        android:layout_rowWeight="0"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="150dp"
+                        android:elevation="5dp"
+                        android:background="@drawable/needapprove_shape"
+                        android:clickable="true"
+                        android:contextClickable="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.146"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/needapprove_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:gravity="center"
+                            android:text="Telah Disetujui"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"></TextView>
+
+                    </FrameLayout>
 
 
-            </GridLayout>
-
-        </ScrollView>
+                </GridLayout>
 
 
-    </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:background="@drawable/box2"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo2"
+            android:layout_gravity="center" />
+
+        <ImageButton
+            android:id="@+id/btnNotifikasi"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_notification"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="20dp"/>
+    </FrameLayout>
+
+
 
     <FrameLayout
         android:id="@+id/frameLay"
@@ -400,7 +476,7 @@
                 android:layout_rowWeight="0"
                 android:layout_column="0"
                 android:layout_columnWeight="0"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="55dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
@@ -440,8 +516,8 @@
                 android:layout_rowWeight="0"
                 android:layout_column="0"
                 android:layout_columnWeight="0"
-                android:layout_marginLeft="350dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginStart="315dp"
+                android:layout_marginEnd="55dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/footer_keluar"
