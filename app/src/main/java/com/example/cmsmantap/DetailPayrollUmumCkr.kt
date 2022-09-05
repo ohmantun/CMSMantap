@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cmsmantap.adapter.PayrollUmumCkrAdapter
 import com.example.cmsmantap.adapter.PayrollUmumDCkrAdapter
@@ -85,10 +86,35 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
             myValidasiDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             myValidasiDialog.show()
 
+            val btnConfirmValidasi = validasiBinding.findViewById<Button>(R.id.btnAccValidasi)
+            val tvStatusInfo = findViewById<TextView>(R.id.tv_statusValidasi)
+
+            btnConfirmValidasi.setOnClickListener {
+                tvStatusInfo.setText("Menunggu Persetujuan Releaser")
+                tvStatusInfo.setTextColor(Color.parseColor("#E8CE48"))
+                val confirmBinding = layoutInflater.inflate(R.layout.validasi_sukses_dialog, null)
+                val confirmDialog = Dialog(this)
+                confirmDialog.setContentView(confirmBinding)
+                confirmDialog.setCancelable(true)
+                confirmDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+                confirmDialog.cancel()
+                confirmDialog.show()
+
+                val btnOkSelesai = confirmBinding.findViewById<Button>(R.id.btnOkselesai)
+
+                btnOkSelesai.setOnClickListener {
+
+                    confirmDialog.cancel()
+
+                }
+
+            }
+
             val btnCancelValidasi = validasiBinding.findViewById<Button>(R.id.btnCancelValidasi)
             btnCancelValidasi.setOnClickListener {
                 myValidasiDialog.cancel()
             }
+
         }
 
     }
