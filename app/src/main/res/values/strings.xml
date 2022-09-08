@@ -13,6 +13,15 @@
     <string name="login_failed">"Login failed"</string>
     <string name="nama">"MAKER002"</string>
     <string name="p_pensiunan">"Payroll Pensiunan"</string>
+    <string name="reject_note_notif">..........\n
+         Reject Note : \n
+    1.  Jumlah payroll tidak sesuai pada NIP 11011000 \n
+    2.  Nomor Rekening salah pada NIP 110110022 \n
+    3.  Jumlah payroll tidak sesuai pada NIP 11011000 \n
+    4.  Nomor Rekening salah pada NIP 11011002
+    Direject Oleh : <b>CHECKER002</b>
+    </string>
+    <string name="notifikasi">Notifikasi</string>
     <!-- Strings related to array at main page -->
     <string-array name="pilih_rek">
         <item>PT BALI NUSARAYA PARAMARTHA - 123456789090</item>
