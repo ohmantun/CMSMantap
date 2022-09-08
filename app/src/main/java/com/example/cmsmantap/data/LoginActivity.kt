@@ -45,23 +45,22 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please Insert ID Institusi, ID Pengguna, and Password", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if(pengguna == "mk001" && password == "adminmk"){
+            else if(pengguna == "mk001" && password == "adminmk"){
                 val intent = Intent (this,Beranda::class.java)
                 startActivity(intent)
                 finish()
             }
-            if(pengguna == "ck001" && password == "adminck"){
+            else if(pengguna == "ck001" && password == "adminck"){
                 val intent = Intent (this,Beranda_Cheker::class.java)
                 startActivity(intent)
                 finish()
             }
-            if(pengguna == "rl001" && password == "adminrl"){
+            else if(pengguna == "rl001" && password == "adminrl"){
                 val intent = Intent (this,Beranda_Releaser::class.java)
                 startActivity(intent)
                 finish()
             }else{
                 Toast.makeText(this, "ID Pengguna atau Password Salah", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
             }
             /* API fetch sinergimantap.users
             if(institusi_id == api_fetch && username == api_fetch && password == api_fetch){

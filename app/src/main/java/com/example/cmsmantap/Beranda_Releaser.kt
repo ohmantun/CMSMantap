@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.app.AlertDialog
+import android.app.Dialog
 import android.content.DialogInterface
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.view.View
 import android.widget.*
 import androidx.drawerlayout.widget.DrawerLayout
@@ -69,29 +72,44 @@ class Beranda_Releaser : AppCompatActivity() {
 
             // when button is clicked, show the alert
             btnKeluar.setOnClickListener {
-                // build alert dialog
-                val dialogBuilder = AlertDialog.Builder(this)
+                val keluarBinding = layoutInflater.inflate(R.layout.keluar_dialog, null)
 
-                // set message of alert dialog
-                dialogBuilder.setMessage("Apakah anda yakin ingin keluar?")
-                    // if the dialog is cancelable
-                    .setCancelable(false)
-                    // positive button text and action
-                    .setPositiveButton("Keluar", DialogInterface.OnClickListener { dialog, id ->
-                        finish()
-                    })
-                    // negative button text and action
-                    .setNegativeButton("Cancel", DialogInterface.OnClickListener { dialog, id ->
-                        dialog.cancel()
-                    })
+                val myValidasiDialog = Dialog(this)
+                myValidasiDialog.setContentView(keluarBinding)
+                myValidasiDialog.setCancelable(true)
+                myValidasiDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+                myValidasiDialog.show()
 
-                // create dialog box
-                val alert = dialogBuilder.create()
-                // set title for alert dialog box
-                alert.setTitle("Keluar")
-                // show alert dialog
-                alert.show()
+                val btnConfirmKeluar = keluarBinding.findViewById<Button>(R.id.btnConfirmKeluar)
+
+                btnConfirmKeluar.setOnClickListener {
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+
+                    /*   val confirmBinding = layoutInflater.inflate(R.layout.validasi_sukses_dialog, null)
+                       val confirmDialog = Dialog(this)
+                       confirmDialog.setContentView(confirmBinding)
+                       confirmDialog.setCancelable(true)
+                       confirmDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+                       confirmDialog.show()
+
+                       val btnOkSelesai = confirmBinding.findViewById<Button>(R.id.btnOkselesai)
+
+                       btnOkSelesai.setOnClickListener {
+                           confirmDialog.cancel()
+                           myValidasiDialog.cancel()
+                       }
+
+                     */
+                }
+
+                val btnCancelKeluar = keluarBinding.findViewById<Button>(R.id.btnCancelKeluar)
+                btnCancelKeluar.setOnClickListener {
+                    myValidasiDialog.cancel()
+                }
+
             }
+
         }
     }
 }
