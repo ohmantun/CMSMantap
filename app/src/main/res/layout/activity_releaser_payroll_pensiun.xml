@@ -73,6 +73,7 @@
                     android:textColorHint="#AFAFAF"
                     android:layout_marginTop="10dp" />
 
+
                 <Button
                     android:id="@+id/btnCari"
                     android:layout_width="wrap_content"
@@ -81,6 +82,9 @@
                     android:backgroundTint="#00AD43"
                     android:enabled="true"
                     android:text="Cari" />
+
+
+
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_dataPayrollPensiun"
