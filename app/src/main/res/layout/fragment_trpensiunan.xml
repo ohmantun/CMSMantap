@@ -102,7 +102,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tanggal Pengajuan :"
+                    android:text="Tanggal Pengajuan   :"
                     android:textSize="16sp"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -111,7 +111,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tanggal Eksekusi    :"
+                    android:text="Tanggal Eksekusi       :"
                     android:textSize="16sp"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -120,7 +120,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Diajukan Oleh           :"
+                    android:text="Diajukan Oleh             :"
                     android:textSize="16sp"
                     android:textColor="@color/black"
                     android:textStyle="bold"
@@ -131,9 +131,17 @@
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:textColor="@color/black"
+                    android:text="Jadwal Transaksi        :"
                     android:textStyle="bold"
                     android:layout_margin="3dp"/>
 
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_margin="3dp"/>
                 <TextView
                     android:id="@+id/tv_tglPengajuan"
                     android:layout_width="220dp"
@@ -150,8 +158,18 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:layout_margin="3dp"/>
+
                 <TextView
                     android:id="@+id/tv_diajukanOleh"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_margin="3dp"/>
+
+                <TextView
+                    android:id="@+id/tv_jadwalTransaksi"
                     android:layout_width="220dp"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
@@ -170,7 +188,7 @@
                 android:rowCount="1"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginTop="130dp">
+                android:layout_marginTop="150dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="180dp"
