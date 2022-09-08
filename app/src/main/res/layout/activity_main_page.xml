@@ -304,11 +304,11 @@
                         android:layout_rowWeight="1"
                         android:layout_column="0"
                         android:layout_columnWeight="1"
+                        android:elevation="5dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="150dp"
                         android:background="@drawable/pending_shape"
-                        android:elevation="5dp"
                         app:cardBackgroundColor="#BF0D63A5"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.146"
@@ -323,7 +323,7 @@
                             android:gravity="center"
                             android:text="2"
                             android:textColor="@color/white"
-                            android:textSize="24sp"
+                            android:textSize="30sp"
                             android:textStyle="bold"></TextView>
 
                         <TextView
@@ -333,7 +333,7 @@
                             android:gravity="center"
                             android:text="Belum Disetujui"
                             android:textColor="@color/white"
-                            android:textSize="16sp"></TextView>
+                            android:textSize="20sp"></TextView>
                     </FrameLayout>
 
                     <FrameLayout
@@ -346,10 +346,10 @@
                         android:layout_columnWeight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="10dp"
+                        android:elevation="5dp"
                         android:background="@drawable/needvalidate_shape"
                         android:clickable="true"
                         android:contextClickable="true"
-                        android:elevation="5dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.146"
                         app:layout_constraintStart_toStartOf="parent"
@@ -359,21 +359,21 @@
                             android:id="@+id/needvalidate_total"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
                             android:gravity="center"
                             android:text="2"
                             android:textColor="@color/white"
-                            android:textSize="24sp"
+                            android:textSize="30sp"
                             android:textStyle="bold"></TextView>
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="35dp"
-                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:textAlignment="center"
                             android:text="Menunggu Persetujuan Releaser"
                             android:textColor="@color/white"
-                            android:textSize="12sp"></TextView>
+                            android:textSize="13sp"></TextView>
 
                     </FrameLayout>
 
@@ -388,10 +388,10 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="150dp"
+                        android:elevation="5dp"
                         android:background="@drawable/needapprove_shape"
                         android:clickable="true"
                         android:contextClickable="true"
-                        android:elevation="5dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.146"
                         app:layout_constraintStart_toStartOf="parent"
@@ -401,11 +401,10 @@
                             android:id="@+id/needapprove_total"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="3dp"
                             android:gravity="center"
                             android:text="2"
                             android:textColor="@color/white"
-                            android:textSize="24sp"
+                            android:textSize="30sp"
                             android:textStyle="bold"></TextView>
 
                         <TextView
@@ -415,10 +414,9 @@
                             android:gravity="center"
                             android:text="Telah Disetujui"
                             android:textColor="@color/white"
-                            android:textSize="12sp"></TextView>
+                            android:textSize="13sp"></TextView>
 
                     </FrameLayout>
-
 
                 </GridLayout>
 
