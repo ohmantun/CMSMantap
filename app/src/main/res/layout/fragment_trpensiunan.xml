@@ -28,11 +28,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView2"
-
+            android:background="@drawable/kata_kunci"
+            android:paddingLeft="5dp"
             android:hint="Kata Kunci"
             android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textColorHint="#AFAFAF"/>
+            android:textColorHint="#AFAFAF"
+            android:textSize="16sp" />
 
         <GridLayout
             android:id="@+id/grid_filter"

@@ -7,7 +7,7 @@
     <string name="welcome2">Selamat Datang</string>
     <string name="action_sign_in">Login</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="hallo">Hello!</string>
+    <string name="hallo">Hallo!</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>

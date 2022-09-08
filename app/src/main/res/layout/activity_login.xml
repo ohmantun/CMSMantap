@@ -46,18 +46,18 @@
         android:id="@+id/tvinstitusi"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/inputInstitusi"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:autofillHints="@string/prompt_idinstitusi"
-        android:hint="@string/prompt_idinstitusi"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:selectAllOnFocus="true"
-        android:textSize="15sp"
-            android:background="@color/white">
-        </com.google.android.material.textfield.TextInputEditText>
+            android:id="@+id/inputInstitusi"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:autofillHints="@string/prompt_idinstitusi"
+            android:background="@color/white"
+            android:hint="@string/prompt_idinstitusi"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:selectAllOnFocus="true"
+            android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
 
     </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>

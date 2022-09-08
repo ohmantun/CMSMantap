@@ -34,14 +34,17 @@
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/splash_image.xml" value="0.1495" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/status_bar.xml" value="0.1595" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/drawable/tes.xml" value="0.1595" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/font/font_jamolhari.xml" value="0.23257802479692177" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/font/jamolhari.xml" value="0.23257802479692177" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/font/ubuntu.xml" value="0.23257802479692177" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.16012238653748087" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout-w936dp/activity_login.xml" value="0.1" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_beranda.xml" value="0.264" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_detail_payroll_umum.xml" value="0.1" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_ganti_sandi.xml" value="0.176" />
-        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_main_page.xml" value="0.264" />
-        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_notifikasi.xml" value="0.176" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_login.xml" value="0.6" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_main_page.xml" value="0.4" />
+        <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_notifikasi.xml" value="0.4" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_otorisasi_payroll.xml" value="0.15989739204788372" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_payroll.xml" value="0.2" />
         <entry key="..\:/Project/CMSMantap/app/src/main/res/layout/activity_payroll_pensiunan.xml" value="0.2" />
