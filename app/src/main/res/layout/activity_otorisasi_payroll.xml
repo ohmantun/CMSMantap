@@ -56,7 +56,7 @@
         android:id="@+id/btnPayroll_pensiunan"
         android:layout_width="match_parent"
         android:layout_height="190dp"
-        android:background="@drawable/validasi_payroll_pensiunan"
+        android:background="@drawable/validasi_payroll_pensiun"
         android:clickable="true"
         android:contextClickable="true"
         android:enabled="true"
