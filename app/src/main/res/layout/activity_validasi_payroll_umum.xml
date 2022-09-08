@@ -5,17 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F7F7F7"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="30dp"
-        android:orientation="vertical">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    android:orientation="vertical"
+    android:layout_marginTop="30dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -41,25 +32,22 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-            </LinearLayout>
-        </FrameLayout>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Daftar Data Payroll Umum"
-            android:textColor="#231F20"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Daftar Data Payroll Umum"
+                android:textColor="#231F20"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -78,6 +66,18 @@
                 android:backgroundTint="#00AD43"
                 android:enabled="true"
                 android:text="Cari" />
+
+        </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_dataPayrollUmum"
@@ -121,5 +121,3 @@
         </ScrollView>
 
     </LinearLayout>
-
-</LinearLayout>

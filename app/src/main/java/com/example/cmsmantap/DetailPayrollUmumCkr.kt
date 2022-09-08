@@ -17,7 +17,11 @@ import com.example.cmsmantap.model.PayrollUmumCkrDetail
 class DetailPayrollUmumCkr : AppCompatActivity() {
     private lateinit var binding : ActivityDetailPayrollUmumBinding
 
-    val lm = LinearLayoutManager(this)
+    val lm = object : LinearLayoutManager(this){
+        override fun canScrollVertically(): Boolean {
+            return false
+        }
+    }
     val addPayrollUmumDetailCkrList : MutableList<PayrollUmumCkrDetail> = ArrayList()
     lateinit var payrollUmumDCkrAdapter: PayrollUmumDCkrAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +40,7 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
         val btnReject = findViewById<Button>(R.id.btnReject)
 
         btnReject.setOnClickListener {
-            val dialogBinding = layoutInflater.inflate(R.layout.reject_note_dialog, null)
+            val dialogBinding = layoutInflater.inflate(R.layout.reject_confirm_dialog, null)
 
             val myDialog = Dialog(this)
             myDialog.setContentView(dialogBinding)
@@ -50,25 +54,28 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
                 myDialog.cancel()
             }
 
-            val btnRejectConfirm = dialogBinding.findViewById<Button>(R.id.btnRejectConfirm)
-            btnRejectConfirm.setOnClickListener {
-                val dialogBuilder = AlertDialog.Builder(this)
-                    // if the dialog is cancelable
-                    .setCancelable(true)
-                    // positive button text and action
+            val tvStatusInfoReject = findViewById<TextView>(R.id.tv_statusValidasi)
+            val btnOkConfirmReject = dialogBinding.findViewById<Button>(R.id.btnRejectConfirmOK)
 
-                    .setView(layoutInflater.inflate(R.layout.reject_confirm_dialog,null))
-                // negative button text and action
-                //    .setNegativeButton("Cancel", DialogInterface.OnClickListener {
-                //            dialog, id -> dialog.cancel()
-                //   })
-                // create dialog box
-                val alert = dialogBuilder.create()
-                // show alert dialog
-                alert.show()
+            btnOkConfirmReject.setOnClickListener {
+                tvStatusInfoReject.text = "DITOLAK!"
+                tvStatusInfoReject.setTextColor(Color.parseColor("#D20707"))
+                val suksesDialogBinding = layoutInflater.inflate(R.layout.reject_sukses_dialog, null)
+
+                val suksesDialog = Dialog(this)
+                suksesDialog.setContentView(suksesDialogBinding)
+
+                suksesDialog.setCancelable(true)
+                suksesDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+                suksesDialog.show()
+
+                val btnOkRejectSuskses = suksesDialogBinding.findViewById<Button>(R.id.btnOkRjtSukses)
+
+                btnOkRejectSuskses.setOnClickListener {
+                    suksesDialog.cancel()
+                    myDialog.cancel()
+                }
             }
-
-
         }
 
         val btnValidasi = findViewById<Button>(R.id.btnValidasi)
@@ -86,7 +93,7 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
             val tvStatusInfo = findViewById<TextView>(R.id.tv_statusValidasi)
 
             btnConfirmValidasi.setOnClickListener {
-                tvStatusInfo.setText("Menunggu Persetujuan Releaser")
+                tvStatusInfo.text = "Menunggu Persetujuan Releaser"
                 tvStatusInfo.setTextColor(Color.parseColor("#E8CE48"))
                 val confirmBinding = layoutInflater.inflate(R.layout.validasi_sukses_dialog, null)
                 val confirmDialog = Dialog(this)

@@ -15,10 +15,6 @@
     </style>
     <style name="Theme.Drawer.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.Drawer.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-    <style name="splashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_image</item>
-        <item name="android:statusBarColor">@color/white</item>
-    </style>
     <style name="SpinnerTextViewItem" parent="@android:style/Widget.TextView" >
         <item name="android:textSize" >8dp</item>
         <item name="android:textStyle" >italic</item>

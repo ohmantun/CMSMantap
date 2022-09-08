@@ -69,6 +69,7 @@
                 android:layout_marginTop="30dp"/>
 
             <TextView
+                android:id="@+id/tv_statusValidasiPen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Belum Disetujui"
@@ -164,7 +165,45 @@
 
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardBackgroundColor="#80F5F5F5"
+                android:layout_marginTop="30dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Reject Note"
+                        android:textAlignment="center"
+                        android:textColor="#CC231F20"/>
+
+
+                    <android.inputmethodservice.ExtractEditText
+                        android:id="@+id/et_rejectNote"
+                        android:layout_width="310dp"
+                        android:layout_height="130dp"
+                        android:hint="Silahkan masukan catatan"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:layout_marginTop="15dp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/teal_700"
+                        android:background="@drawable/ic_rectangle_edittext"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <GridLayout
                 android:layout_width="match_parent"

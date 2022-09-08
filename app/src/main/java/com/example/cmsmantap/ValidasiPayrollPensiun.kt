@@ -12,7 +12,11 @@ class ValidasiPayrollPensiun : AppCompatActivity() {
     private lateinit var binding: ActivityValidasiPayrollPensiunBinding
 
     lateinit var payrollPensiunCkrAdapter: PayrollPensiunCkrAdapter
-    val lm = LinearLayoutManager(this)
+    val lm = object : LinearLayoutManager(this){
+        override fun canScrollVertically(): Boolean {
+            return false
+        }
+    }
     val addPayrollPensiunCkrList : MutableList<PayrollPensiunCkr> = ArrayList()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

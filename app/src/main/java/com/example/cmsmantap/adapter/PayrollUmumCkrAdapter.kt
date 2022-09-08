@@ -17,6 +17,7 @@ class PayrollUmumCkrAdapter (val context: Context):
     RecyclerView.Adapter<PayrollUmumCkrAdapter.PayrollUmumCkrViewHolder>() {
     private val ckr : MutableList<PayrollUmumChecker> = mutableListOf()
 
+
     override fun getItemCount(): Int {
         return ckr.size
     }
