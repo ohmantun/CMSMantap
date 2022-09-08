@@ -59,6 +59,9 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent (this,Beranda_Releaser::class.java)
                 startActivity(intent)
                 finish()
+            }else{
+                Toast.makeText(this, "ID Pengguna atau Password Salah", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
             /* API fetch sinergimantap.users
             if(institusi_id == api_fetch && username == api_fetch && password == api_fetch){
