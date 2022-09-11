@@ -27,7 +27,7 @@ class Beranda : AppCompatActivity() {
         val menubtnPayroll = findViewById<FrameLayout>(R.id.btnPayroll)
         val btnPengaturan = findViewById<ImageButton>(R.id.footer_pengaturan)
         val btnKeluar = findViewById<ImageButton>(R.id.footer_keluar)
-        val btnPending = findViewById<FrameLayout>(R.id.info_pending)
+        val btnBlmDisetujui = findViewById<FrameLayout>(R.id.info_pending)
         val btnNotifikasi = findViewById<ImageButton>(R.id.btnNotifikasi)
         val btnhide = findViewById<ImageButton>(R.id.btnshowhide)
         val saldo = findViewById<TextView>(R.id.totalSaldo)
@@ -87,8 +87,8 @@ class Beranda : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btnPending.setOnClickListener {
-            val intent = Intent(this, Pengaturan::class.java)
+        btnBlmDisetujui.setOnClickListener {
+            val intent = Intent(this, DetailBelumDisetujui::class.java)
             startActivity(intent)
         }
 

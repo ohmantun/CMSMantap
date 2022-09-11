@@ -29,6 +29,9 @@
             android:name=".ReleaserPayrollPensiun"
             android:exported="false" />
         <activity
+            android:name=".DetailBelumDisetujui"
+            android:exported="false" />
+        <activity
             android:name=".ReleaserPayrollUmum"
             android:exported="false" />
         <activity
