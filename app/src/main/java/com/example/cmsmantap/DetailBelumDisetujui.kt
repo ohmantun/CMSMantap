@@ -19,7 +19,7 @@ class DetailBelumDisetujui : AppCompatActivity() {
 
         ArrayAdapter.createFromResource(
                    this,
-                   R.array.pilih_rek,
+                   R.array.pilih_jenis,
                    android.R.layout.simple_spinner_item
                ).also { adapter ->
             // Specify the layout to use when the list of choices appears
