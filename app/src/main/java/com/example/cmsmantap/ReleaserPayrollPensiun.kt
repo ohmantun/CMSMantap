@@ -13,7 +13,11 @@ class ReleaserPayrollPensiun : AppCompatActivity() {
     private lateinit var binding: ActivityReleaserPayrollPensiunBinding
 
     lateinit var payrollPensiunReleaserAdapter: PayrollPensiunReleaserAdapter
-    val lm = LinearLayoutManager(this)
+    val lm = object : LinearLayoutManager(this) {
+        override fun canScrollVertically(): Boolean {
+            return false
+        }
+    }
     val addPayrollPensiunRsrList : MutableList<PayrollPensiunReleaser> = ArrayList()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

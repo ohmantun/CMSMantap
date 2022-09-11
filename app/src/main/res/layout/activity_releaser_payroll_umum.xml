@@ -37,6 +37,7 @@
                     android:layout_weight="0"
                     android:text="Approval Payroll Umum"
                     android:textAlignment="center"
+                    android:layout_gravity="center"
                     android:textColor="#231F20"
                     android:textSize="20sp"
                     android:textStyle="bold" />
