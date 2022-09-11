@@ -34,7 +34,7 @@
             app:boxBackgroundColor="#F7F7F7">
 
             <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView"
+                android:id="@+id/acTvJenisTransaksi"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_weight="1"
@@ -96,6 +96,7 @@
             android:layout_marginTop="10dp"/>
 
         <EditText
+            android:id="@+id/et_keterangan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Masukkan Keterangan"

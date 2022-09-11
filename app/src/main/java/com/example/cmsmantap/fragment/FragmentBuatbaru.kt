@@ -1,11 +1,16 @@
 package com.example.cmsmantap.fragment
 
+import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.fragment.app.DialogFragment
+import androidx.navigation.fragment.findNavController
 import com.example.cmsmantap.R
 import com.example.cmsmantap.databinding.FragmentBuatbaruBinding
 
@@ -24,7 +29,7 @@ class FragmentBuatbaru : Fragment() {
 
         val pilihJenisTransaksi = resources.getStringArray(R.array.pilih_jenis_transaksi)
         val arrayAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, pilihJenisTransaksi)
-        binding.autoCompleteTextView.setAdapter(arrayAdapter)
+        binding.acTvJenisTransaksi.setAdapter(arrayAdapter)
 
         val pilihRekening = resources.getStringArray(R.array.pilih_rek)
         val arrAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, pilihRekening)
@@ -51,8 +56,20 @@ class FragmentBuatbaru : Fragment() {
             }
         }
 
-        return binding.root
 
+        binding.btnUpload.setOnClickListener {
+            Toast.makeText(context,
+                "Input Payroll Sukses. Menunggu Validasi Checker",
+                Toast.LENGTH_LONG
+            ).show()
+            binding.acTvJenisTransaksi.setText("")
+            binding.acTvNoRekPengirim.setText("")
+            binding.rgTglpembayaran.clearCheck()
+            binding.etKeterangan.text.clear()
+            binding.tvTglterjadwal.setText("")
+        }
+
+        return binding.root
         //val rgTglPembayaran = resources.getLayout(R.id.rgTglpembayaran)
 
 
@@ -71,10 +88,6 @@ class FragmentBuatbaru : Fragment() {
         }*/
     }
 
-
-        //val rgTglPembayaran = findViewById<RadioGroup>(R.id.rgTglpembayaran)
-        //val btnCancel = findViewById<Button>(R.id.btnCancel)
-        //val btnUpload = findViewById<Button>(R.id.btnUpload)
 
 
     }
