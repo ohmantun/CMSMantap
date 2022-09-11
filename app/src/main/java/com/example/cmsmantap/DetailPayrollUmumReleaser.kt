@@ -94,6 +94,12 @@ class DetailPayrollUmumReleaser : AppCompatActivity() {
         val btnValidasi = findViewById<Button>(R.id.btnValidasi)
 
         btnValidasi.setOnClickListener {
+            val intent = Intent(this, KirimOTP::class.java)
+            startActivity(intent)
+        }
+
+
+       /* btnValidasi.setOnClickListener {
             val validasiBinding = layoutInflater.inflate(R.layout.validate_dialog, null)
 
             val myValidasiDialog = Dialog(this)
@@ -130,6 +136,8 @@ class DetailPayrollUmumReleaser : AppCompatActivity() {
             }
 
         }
+        */
+
     }
 
 
