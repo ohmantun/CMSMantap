@@ -163,6 +163,7 @@ class InputOTP : AppCompatActivity() {
         if (otpCode == TEST_VERIFY_CODE){
             val intent = Intent(this, ApprovelPayroll::class.java)
             startActivity(intent)
+            Toast.makeText(this,"Berhasil", Toast.LENGTH_SHORT).show()
 
 
             val inputManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
