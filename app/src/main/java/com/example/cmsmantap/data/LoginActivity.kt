@@ -63,7 +63,7 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
-            else if(pengguna == "releaser001" && password == "opdit"){
+            else if(pengguna == "releaser001" && password == "odpit"){
                 val intent = Intent (this,Beranda_Releaser::class.java)
                 startActivity(intent)
                 finish()

@@ -27,6 +27,8 @@ class OtorisasiPayroll : AppCompatActivity() {
 
         btnPayrollUmumChecker.setOnClickListener {
             val intent = Intent(this, ValidasiPayrollUmum::class.java)
+            // buat nge pass id ke activity lain
+            // intent.putExtra("id",id)
             startActivity(intent)
         }
 

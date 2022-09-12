@@ -1,61 +1,52 @@
 package com.example.cmsmantap
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import android.view.View
+import android.widget.Toast
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.cmsmantap.adapter.PayrollUmumReleaserAdapter
-import com.example.cmsmantap.databinding.ActivityReleaserPayrollUmumBinding
-import com.example.cmsmantap.model.PayrollUmumReleaser
+import com.example.cmsmantap.data.MakerModel
+import com.example.cmsmantap.ui.ReleaserAdapter
+import com.example.cmsmantap.viewmodel.HomeViewModel
+import kotlinx.android.synthetic.main.activity_main.*
 
 
-class ReleaserPayrollUmum : AppCompatActivity() {
-    private lateinit var binding : ActivityReleaserPayrollUmumBinding
-
-    lateinit var payrollUmumReleaserAdapter: PayrollUmumReleaserAdapter
-    val lm = object : LinearLayoutManager(this) {
-        override fun canScrollVertically(): Boolean {
-            return false
-        }
-    }
-    val addPayrollUmumReleaserList : MutableList<PayrollUmumReleaser> = ArrayList()
+class ReleaserPayrollUmum : AppCompatActivity(), ReleaserAdapter.HomeListener {
+    // buat wiring
+    private lateinit var vm:HomeViewModel
+    private lateinit var adapter: ReleaserAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityReleaserPayrollUmumBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setTheme(R.style.Theme_CMSMantap)
+        setContentView(R.layout.activity_main)
 
-        binding.btnBack.setOnClickListener {
-            val intent = Intent(this, ApprovelPayroll::class.java)
-            startActivity(intent)
-        }
+        vm = ViewModelProvider(this)[HomeViewModel::class.java]
 
-        initView()
+        initAdapter()
+
+        vm.fetchAllTransaksiReleaserUmum()
+
+        vm.ReleaserModelListLiveData?.observe(this, Observer {
+            if (it!=null){
+                rv_home.visibility = View.VISIBLE
+                adapter.setData(it as ArrayList<MakerModel>)
+            }else{
+                showToast("Something went wrong")
+            }
+        })
 
     }
 
-    fun initView(){
-        binding.rvDataPayrollUmum.layoutManager = lm
-        payrollUmumReleaserAdapter = PayrollUmumReleaserAdapter(this)
-        binding.rvDataPayrollUmum.adapter = payrollUmumReleaserAdapter
+    private fun initAdapter() {
+        adapter = ReleaserAdapter(this)
+        rv_home.layoutManager = LinearLayoutManager(this)
+        rv_home.adapter = adapter
+    }
 
-        addPayrollUmumReleaserList.add(
-            PayrollUmumReleaser(namaFile = "Payroll.CSV", tanggalPengajuan = "20/02/2020",
-            tanggalEksekusi = "21/02/2020", diajukanOleh = "MAKER01", keterangan = "Testing", status = "Belum Disetujui")
-        )
-        addPayrollUmumReleaserList.add(PayrollUmumReleaser(namaFile = "Payroll.CSV", tanggalPengajuan = "20/02/2020",
-            tanggalEksekusi = "21/02/2020", diajukanOleh = "MAKER01", keterangan = "Testing", status = "Belum Disetujui"))
-
-        addPayrollUmumReleaserList.add(PayrollUmumReleaser(namaFile = "Payroll.CSV", tanggalPengajuan = "20/02/2020",
-            tanggalEksekusi = "21/02/2020", diajukanOleh = "MAKER01", keterangan = "Testing", status = "Belum Disetujui"))
-
-        addPayrollUmumReleaserList.add(PayrollUmumReleaser(namaFile = "Payroll.CSV", tanggalPengajuan = "20/02/2020",
-            tanggalEksekusi = "21/02/2020", diajukanOleh = "MAKER01", keterangan = "Testing", status = "Belum Disetujui"))
-
-        addPayrollUmumReleaserList.add(PayrollUmumReleaser(namaFile = "Payroll.CSV", tanggalPengajuan = "20/02/2020",
-            tanggalEksekusi = "21/02/2020", diajukanOleh = "MAKER01", keterangan = "Testing", status = "Belum Disetujui"))
-
-        payrollUmumReleaserAdapter.setListDataPayrollUmumReleaser(addPayrollUmumReleaserList)
+    private fun showToast(msg:String){
+        Toast.makeText(this,msg, Toast.LENGTH_SHORT).show()
     }
 }

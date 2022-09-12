@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cmsmantap.R
 import com.example.cmsmantap.data.MakerModel
-import kotlinx.android.synthetic.main.fragment_daftartransaksi.view.*
+import kotlinx.android.synthetic.main.fragment_daftartransaksi_cardview.view.*
 
-class HomeAdapter(var listener:HomeListener) : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>(){
+class MakerAdapter(var listener:HomeListener) : RecyclerView.Adapter<MakerAdapter.HomeViewHolder>(){
 
     private var data : ArrayList<MakerModel>?=null
 
@@ -23,7 +23,7 @@ class HomeAdapter(var listener:HomeListener) : RecyclerView.Adapter<HomeAdapter.
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
-        return HomeViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.fragment_daftartransaksi, parent, false))
+        return HomeViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.fragment_daftartransaksi_cardview, parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -52,10 +52,10 @@ class HomeAdapter(var listener:HomeListener) : RecyclerView.Adapter<HomeAdapter.
 
     class HomeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bindView(item: MakerModel?) {
-            itemView.tv_tglPengajuan.text = item?.tanggal_pengajuan
-            itemView.tv_tglEksekusi.text = item?.tanggal_eksekusi
-            itemView.tv_diajukanOleh.text = item?.maker
-            itemView.tv_jadwalTransaksi.text = item?.tanggal_eksekusi
+            itemView.tv_tanggal_pengajuan.text = item?.tanggal_pengajuan
+            itemView.tv_tanggal_eksekusi.text = item?.tanggal_eksekusi
+            itemView.tv_diajukan_oleh.text = item?.maker
+            itemView.tv_jadwal_transaksi.text = item?.tanggal_eksekusi
         }
 
     }

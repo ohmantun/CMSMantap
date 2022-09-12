@@ -12,15 +12,15 @@ import com.example.cmsmantap.Payroll
 import com.example.cmsmantap.R
 import com.example.cmsmantap.databinding.ActivityPayrollUmumBinding
 import com.example.cmsmantap.fragment.FragmentAdapter
-import com.example.cmsmantap.ui.HomeAdapter
+import com.example.cmsmantap.ui.MakerAdapter
 import com.example.cmsmantap.viewmodel.HomeViewModel
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class PayrollUmum : AppCompatActivity(), HomeAdapter.HomeListener {
+class PayrollUmum : AppCompatActivity(), MakerAdapter.HomeListener {
     private lateinit var vm:HomeViewModel
-    private lateinit var adapter: HomeAdapter
+    private lateinit var adapter: MakerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +40,7 @@ class PayrollUmum : AppCompatActivity(), HomeAdapter.HomeListener {
             }else{
                 showToast("Something went wrong")
             }
-            progress_home.visibility = View.GONE
+//            progress_home.visibility = View.GONE
         })
 
        /* btnUpload.setOnClickListener{
@@ -64,7 +64,7 @@ class PayrollUmum : AppCompatActivity(), HomeAdapter.HomeListener {
     }
 
     private fun initAdapter() {
-        adapter = HomeAdapter(this)
+        adapter = MakerAdapter(this)
         rv_home.layoutManager = LinearLayoutManager(this)
         rv_home.adapter = adapter
     }
