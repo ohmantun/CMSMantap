@@ -34,33 +34,41 @@ class LoginActivity : AppCompatActivity() {
 
 
         val btnLogin = findViewById<Button>(R.id.login)
+        val inputInstitusi = findViewById<TextView>(R.id.inputInstitusi)
         val inputPengguna = findViewById<TextView>(R.id.inputPengguna)
         val inputPassword = findViewById<TextView>(R.id.inputPassword)
 
         btnLogin.setOnClickListener {
-
+            val institusi = inputInstitusi.text.toString()
             val pengguna = inputPengguna.text.toString()
             val password = inputPassword.text.toString()
-            if (pengguna.isEmpty()|| password.isEmpty()) {
-                Toast.makeText(this, "Please Insert ID Institusi, ID Pengguna, and Password", Toast.LENGTH_SHORT).show()
+            if (institusi.isEmpty()) {
+                Toast.makeText(this, "Silahkan masukkan ID Institusi", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } else if (pengguna.isEmpty()) {
+                Toast.makeText(this, "Silahkan masukkan ID Pengguna", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } else if (password.isEmpty()) {
+                Toast.makeText(this, "Silahkan masukkan Password", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            else if(pengguna == "mk001" && password == "adminmk"){
+
+            if(pengguna == "maker001" && password == "odpit"){
                 val intent = Intent (this,Beranda::class.java)
                 startActivity(intent)
                 finish()
             }
-            else if(pengguna == "ck001" && password == "adminck"){
+            else if(pengguna == "checker001" && password == "odpit"){
                 val intent = Intent (this,Beranda_Cheker::class.java)
                 startActivity(intent)
                 finish()
             }
-            else if(pengguna == "rl001" && password == "adminrl"){
+            else if(pengguna == "releaser001" && password == "opdit"){
                 val intent = Intent (this,Beranda_Releaser::class.java)
                 startActivity(intent)
                 finish()
             }else{
-                Toast.makeText(this, "ID Pengguna atau Password Salah", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "ID Institusi / ID Pengguna / Password Salah", Toast.LENGTH_SHORT).show()
             }
             /* API fetch sinergimantap.users
             if(institusi_id == api_fetch && username == api_fetch && password == api_fetch){

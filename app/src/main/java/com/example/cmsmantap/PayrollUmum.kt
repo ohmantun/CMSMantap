@@ -3,56 +3,45 @@ package com.example.cmsmantap.data
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.*
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cmsmantap.Payroll
 import com.example.cmsmantap.R
 import com.example.cmsmantap.databinding.ActivityPayrollUmumBinding
 import com.example.cmsmantap.fragment.FragmentAdapter
+import com.example.cmsmantap.ui.HomeAdapter
+import com.example.cmsmantap.viewmodel.HomeViewModel
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.activity_main.*
 
 
-class PayrollUmum : AppCompatActivity() {
-    private lateinit var binding: ActivityPayrollUmumBinding
-    private lateinit var fragmentAdapter : FragmentAdapter
+class PayrollUmum : AppCompatActivity(), HomeAdapter.HomeListener {
+    private lateinit var vm:HomeViewModel
+    private lateinit var adapter: HomeAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_CMSMantap)
-        binding = ActivityPayrollUmumBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
-        fragmentAdapter = FragmentAdapter(supportFragmentManager,lifecycle)
+        vm = ViewModelProvider(this)[HomeViewModel::class.java]
 
-        with(binding){
-            viewPager.adapter = fragmentAdapter
+        initAdapter()
 
-            TabLayoutMediator(tabLayout,viewPager){tab, position ->
-                when(position){
-                    0 -> tab.text = "Buat Baru"
-                    1 -> tab.text = "Daftar Transaksi"
-                }
-            }.attach()
-        }
+        vm.fetchAllTransaksiMakerUmum()
 
-
-        /*if (savedInstanceState == null){
-            val fragment = FragmentDaftarTransaksi()
-            supportFragmentManager.beginTransaction()
-                .add(R.id.fragmentContainer, fragment, FragmentDaftarTransaksi::class.simpleName)
-                .commit()
-        }*/
-
-
-
-        //val rgTglPembayaran = findViewById<RadioGroup>(R.id.rgTglpembayaran)
-        //val btnCancel = findViewById<Button>(R.id.btnCancel)
-        //val btnUpload = findViewById<Button>(R.id.btnUpload)
-        val btnBack = findViewById<ImageView>(R.id.btnBack)
-
-        btnBack.setOnClickListener {
-            val intent = Intent(this,Payroll::class.java)
-            startActivity(intent)
-        }
+        vm.MakerModelListLiveData?.observe(this, Observer {
+            if (it!=null){
+                rv_home.visibility = View.VISIBLE
+                adapter.setData(it as ArrayList<MakerModel>)
+            }else{
+                showToast("Something went wrong")
+            }
+            progress_home.visibility = View.GONE
+        })
 
        /* btnUpload.setOnClickListener{
 
@@ -72,21 +61,16 @@ class PayrollUmum : AppCompatActivity() {
             }
         }*/
 
+    }
 
+    private fun initAdapter() {
+        adapter = HomeAdapter(this)
+        rv_home.layoutManager = LinearLayoutManager(this)
+        rv_home.adapter = adapter
+    }
 
-       /* val spinner: Spinner = findViewById(R.id.spinner_jenis_trx)
-
-        ArrayAdapter.createFromResource(
-            this,
-            R.array.pilih_jenis_transaksi,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            // Specify the layout to use when the list of choices appears
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            // Apply the adapter to the spinner
-            spinner.adapter = adapter
-        }*/
-
+    private fun showToast(msg:String){
+        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
     }
 
 }

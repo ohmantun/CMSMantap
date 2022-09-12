@@ -19,8 +19,6 @@ class Payroll : AppCompatActivity() {
         setTheme(R.style.Theme_CMSMantap)
         setContentView(R.layout.activity_payroll)
 
-
-
         val btnPayrollUmum = findViewById<ImageButton>(R.id.btnPayroll_umum)
         val btnPayrollPensiunan = findViewById<ImageButton>(R.id.btnPayroll_pensiunan)
         val btnBackpayroll = findViewById<ImageButton>(R.id.btnBackpayroll)
