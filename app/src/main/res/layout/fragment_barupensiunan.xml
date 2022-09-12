@@ -205,9 +205,9 @@
                 android:layout_width="120dp"
                 android:layout_height="48dp"
                 android:layout_gravity="start"
-                android:backgroundTint="@color/box_biru"
-                android:background="@drawable/tombol"
+                android:backgroundTint="#DCDCDC"
                 android:enabled="true"
+                android:textColor="#000000"
                 android:text="Cancel"/>
 
             <Button
@@ -215,8 +215,7 @@
                 android:layout_width="120dp"
                 android:layout_height="48dp"
                 android:layout_gravity="end"
-                android:backgroundTint="@color/box_biru"
-                android:background="@drawable/tombol"
+                android:backgroundTint="#00AD43"
                 android:enabled="true"
                 android:text="Proses"/>
         </GridLayout>
