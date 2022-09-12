@@ -72,7 +72,7 @@ class Beranda_Cheker : AppCompatActivity() {
         }
 
 // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter.createFromResource(
+        /*ArrayAdapter.createFromResource(
             this,
             R.array.pilih_rek,
             android.R.layout.simple_spinner_item
@@ -81,7 +81,7 @@ class Beranda_Cheker : AppCompatActivity() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             // Apply the adapter to the spinner
             spinner.adapter = adapter
-        }
+        }*/
 
         menubtnPayroll.setOnClickListener {
             val intent = Intent(this, OtorisasiPayroll::class.java)

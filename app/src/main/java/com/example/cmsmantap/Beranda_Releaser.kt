@@ -25,6 +25,9 @@ import com.example.cmsmantap.data.PayrollUmum
 
 class Beranda_Releaser : AppCompatActivity() {
 
+    lateinit var option: Spinner
+    lateinit var result: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_CMSMantap)
@@ -37,8 +40,35 @@ class Beranda_Releaser : AppCompatActivity() {
         val btnhide = findViewById<ImageButton>(R.id.btnshowhide)
         val saldo = findViewById<TextView>(R.id.totalSaldo)
 
+        option = findViewById(R.id.spinner_rek) as Spinner
+        result = findViewById(R.id.rekeningAsal) as TextView
+
+        var options = arrayOf(
+            "PT BALI NUSARAYA PARAMARTHA - 123456789090",
+            "PT BALI NUSARAYA PARAMARTHA - 342324254523",
+            "PT BALI NUSARAYA PARAMARTHA - 242678432678"
+        )
+
+        var norek = arrayOf(
+            "TABUNGAN SIMANTAP GOLD \r \n \n123456789090",
+            "GIRO \r \n \n342324254523",
+            "TABUNGAN SIMANTAP GOLD \r \n \n242678432678"
+        )
+        option.adapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, options)
+
+        option.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                result.text = "Rekening"
+            }
+
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                result.text = norek.get(p2)
+            }
+
+        }
+
 // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter.createFromResource(
+        /*ArrayAdapter.createFromResource(
             this,
             R.array.pilih_rek,
             android.R.layout.simple_spinner_item
@@ -47,7 +77,7 @@ class Beranda_Releaser : AppCompatActivity() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             // Apply the adapter to the spinner
             spinner.adapter = adapter
-        }
+        }*/
 
         menubtnPayroll.setOnClickListener {
             val intent = Intent(this, ApprovelPayroll::class.java)

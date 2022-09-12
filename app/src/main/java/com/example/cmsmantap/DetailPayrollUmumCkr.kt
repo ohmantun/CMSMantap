@@ -140,12 +140,12 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
         binding.rvDataPayrollUmumD.adapter = payrollUmumDCkrAdapter
 
         addPayrollUmumDetailCkrList.add(
-            PayrollUmumCkrDetail(tglTransaksi = "23/02/2020", rekSumber = "1231413",
-            rekPenerima = "8123818", nominal = "4.500.000", keteranganD = "Testing")
+            PayrollUmumCkrDetail(tglTransaksi = "25/09/2020", rekSumber = "1873918237",
+            rekPenerima = "6382912837", nominal = "4.500.000", keteranganD = "Gaji Bulan September")
         )
         addPayrollUmumDetailCkrList.add(
-            PayrollUmumCkrDetail(tglTransaksi = "23/02/2020", rekSumber = "1231413",
-                rekPenerima = "8123818", nominal = "6.500.000", keteranganD = "Testing")
+            PayrollUmumCkrDetail(tglTransaksi = "25/09/2020", rekSumber = "1873918237",
+                rekPenerima = "12378783268", nominal = "6.500.000", keteranganD = "Gaji Bulan September")
         )
         addPayrollUmumDetailCkrList.add(
             PayrollUmumCkrDetail(tglTransaksi = "23/02/2020", rekSumber = "1231413",

@@ -41,11 +41,11 @@ class ReleaserPayrollUmum : AppCompatActivity() {
         binding.rvDataPayrollUmum.adapter = payrollUmumReleaserAdapter
 
         addPayrollUmumReleaserList.add(
-            PayrollUmumReleaser(namaFile = "Payroll.CSV", tanggalPengajuan = "20/02/2020",
-            tanggalEksekusi = "21/02/2020", diajukanOleh = "MAKER01", keterangan = "Testing", status = "Belum Disetujui")
+            PayrollUmumReleaser(namaFile = "GajiSeptember.CSV", tanggalPengajuan = "20/09/2020",
+            tanggalEksekusi = "25/09/2020", diajukanOleh = "MK001", keterangan = "Gaji Bulan September", status = "Belum Disetujui")
         )
-        addPayrollUmumReleaserList.add(PayrollUmumReleaser(namaFile = "Payroll.CSV", tanggalPengajuan = "20/02/2020",
-            tanggalEksekusi = "21/02/2020", diajukanOleh = "MAKER01", keterangan = "Testing", status = "Belum Disetujui"))
+        addPayrollUmumReleaserList.add(PayrollUmumReleaser(namaFile = "GajiAgustus.CSV", tanggalPengajuan = "20/08/2020",
+            tanggalEksekusi = "25/08/2020", diajukanOleh = "MK001", keterangan = "Gaji Bulan Agustus", status = "Belum Disetujui"))
 
         addPayrollUmumReleaserList.add(PayrollUmumReleaser(namaFile = "Payroll.CSV", tanggalPengajuan = "20/02/2020",
             tanggalEksekusi = "21/02/2020", diajukanOleh = "MAKER01", keterangan = "Testing", status = "Belum Disetujui"))

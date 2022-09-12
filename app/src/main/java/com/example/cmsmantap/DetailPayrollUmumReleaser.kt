@@ -147,12 +147,12 @@ class DetailPayrollUmumReleaser : AppCompatActivity() {
         binding.rvDataPayrollUmumD.adapter = payrollUmumDtlReleaserAdapter
 
         addPayrollUmumDetailRsrList.add(
-            PayrollUmumRsrDetail(tglTransaksi = "23/02/2020", rekSumber = "1231413",
-                rekPenerima = "8123818", nominal = "4.500.000", keteranganD = "Testing")
+            PayrollUmumRsrDetail(tglTransaksi = "25/09/2020", rekSumber = "2362183829",
+                rekPenerima = "3621867322", nominal = "4.500.000", keteranganD = "Gaji Bulan September")
         )
         addPayrollUmumDetailRsrList.add(
-            PayrollUmumRsrDetail(tglTransaksi = "23/02/2020", rekSumber = "1231413",
-                rekPenerima = "8123818", nominal = "6.500.000", keteranganD = "Testing")
+            PayrollUmumRsrDetail(tglTransaksi = "25/09/2020", rekSumber = "2362183829",
+                rekPenerima = "3621867322", nominal = "6.500.000", keteranganD = "Gaji Bulan September")
         )
         addPayrollUmumDetailRsrList.add(
             PayrollUmumRsrDetail(tglTransaksi = "23/02/2020", rekSumber = "1231413",

@@ -40,11 +40,11 @@ class ValidasiPayrollUmum : AppCompatActivity() {
         payrollUmumCkrAdapter = PayrollUmumCkrAdapter(this)
         binding.rvDataPayrollUmum.adapter = payrollUmumCkrAdapter
 
-        addPayrollUmumCkrList.add(PayrollUmumChecker(namaFile = "Payroll.CSV", tanggalPengajuan = "20/02/2020",
-        tanggalEksekusi = "21/02/2020", diajukanOleh = "MAKER01", keterangan = "Testing", status = "Belum Disetujui")
+        addPayrollUmumCkrList.add(PayrollUmumChecker(namaFile = "GajiSeptember.CSV", tanggalPengajuan = "20/09/2020",
+        tanggalEksekusi = "25/09/2020", diajukanOleh = "MK001", keterangan = "Pembayaran Gaji Bulan September", status = "Belum Disetujui")
         )
-        addPayrollUmumCkrList.add(PayrollUmumChecker(namaFile = "Payroll.CSV", tanggalPengajuan = "20/02/2020",
-            tanggalEksekusi = "21/02/2020", diajukanOleh = "MAKER01", keterangan = "Testing", status = "Belum Disetujui"))
+        addPayrollUmumCkrList.add(PayrollUmumChecker(namaFile = "GajiAgustus.CSV", tanggalPengajuan = "20/08/2020",
+            tanggalEksekusi = "25/08/2020", diajukanOleh = "MK001", keterangan = "Pembayaran Gaji Bulan Agustus", status = "Belum Disetujui"))
 
         addPayrollUmumCkrList.add(PayrollUmumChecker(namaFile = "Payroll.CSV", tanggalPengajuan = "20/02/2020",
             tanggalEksekusi = "21/02/2020", diajukanOleh = "MAKER01", keterangan = "Testing", status = "Belum Disetujui"))
