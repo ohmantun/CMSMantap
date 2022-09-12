@@ -4,12 +4,10 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.KeyEvent
 import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
-import android.widget.FrameLayout
-import android.widget.ImageView
-import android.widget.Toast
+import android.widget.*
 import androidx.core.widget.addTextChangedListener
 import kotlinx.coroutines.delay
 
@@ -54,6 +52,31 @@ class InputOTP : AppCompatActivity() {
         btnBack.setOnClickListener(){
             onBackPressed()
         }
+
+        val mTextField = findViewById<TextView>(R.id.cdTimer)
+        val timer = object : CountDownTimer(120000, 1000) {
+
+            override fun onTick(millisUntilFinished: Long) {
+                val timeResult =
+                    "${(millisUntilFinished / 1000 / 60).toString().padStart(2, '0')}:" +
+                            "${(millisUntilFinished / 1000 % 60).toString().padStart(2, '0')} "
+
+                mTextField.text = "OTP anda berlaku hingga $timeResult"
+            }
+
+            override fun onFinish() {
+                mTextField.setText("Waktu habis ygy")
+            }
+        }.start()
+
+        val btnReset = findViewById<TextView>(R.id.btnReset)
+        btnReset.setOnClickListener(){
+            timer.cancel()
+            timer.start()
+        }
+
+
+
     }
 
     private fun setListener(){

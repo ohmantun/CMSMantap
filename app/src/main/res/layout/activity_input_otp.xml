@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textSize="14dp"
-            android:text="Masukkan OTP yang telah kami kirimkan ke email t************@@corporate.co.id"
+            android:text="Masukkan OTP yang telah kami kirimkan ke email t************2@corporate.co.id"
             android:textAlignment="center"/>
 
     <LinearLayout
@@ -160,6 +160,28 @@
             android:layout_height="60dp"/>
     </LinearLayout>
 
+
 </FrameLayout>
 
+    <TextView
+        android:id="@+id/cdTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:textSize="14sp"
+        android:layout_below="@id/frameLayoutRoot"/>
+
+    <TextView
+        android:id="@id/btnReset"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_below="@id/cdTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kirim Ulang"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+        android:clickable="true"/>
 </RelativeLayout>
