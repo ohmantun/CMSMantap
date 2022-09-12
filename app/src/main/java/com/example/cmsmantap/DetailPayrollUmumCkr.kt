@@ -7,10 +7,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cmsmantap.adapter.PayrollUmumDCkrAdapter
 import com.example.cmsmantap.databinding.ActivityDetailPayrollUmumBinding
@@ -104,8 +101,10 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
 
             val btnConfirmValidasi = validasiBinding.findViewById<Button>(R.id.btnAccValidasi)
             val tvStatusInfo = findViewById<TextView>(R.id.tv_statusValidasi)
+            val img_belumDisetujui = findViewById<ImageView>(R.id.img_belumDisetujui)
 
             btnConfirmValidasi.setOnClickListener {
+                img_belumDisetujui.setImageResource(R.drawable.waitingapproval)
                 tvStatusInfo.text = "Menunggu Persetujuan Releaser"
                 tvStatusInfo.setTextColor(Color.parseColor("#E8CE48"))
                 val confirmBinding = layoutInflater.inflate(R.layout.validasi_sukses_dialog, null)

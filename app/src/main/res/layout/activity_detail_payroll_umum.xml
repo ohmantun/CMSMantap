@@ -61,6 +61,7 @@
                 android:textStyle="bold" />
 
             <ImageView
+                android:id="@+id/img_belumDisetujui"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/checklist"
@@ -103,7 +104,7 @@
                         android:id="@+id/tv_jmlTransaksi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Jumlah Transaksi                      : 5"
+                        android:text="Jumlah Transaksi                      : 2"
                         android:textColor="#083358"
                         android:textStyle="bold"/>
 
@@ -111,7 +112,7 @@
                         android:id="@+id/tv_totalNominalTrx"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Total Nominal Transaksi          : 25.500.000"
+                        android:text="Total Nominal Transaksi          : 11.000.000"
                         android:textColor="#083358"
                         android:textStyle="bold"/>
 
