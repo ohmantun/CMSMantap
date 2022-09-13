@@ -61,17 +61,17 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/imageDetailChecker"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:src="@drawable/checklist"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"/>
 
             <TextView
-                android:id="@+id/tv_statusValidasi"
+                android:id="@+id/tv_statusValidasiChecker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Belum Disetujui"
                 android:textColor="#3A9FD8"
                 android:textStyle="bold"
                 android:textSize="20sp"

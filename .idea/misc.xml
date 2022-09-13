@@ -128,9 +128,11 @@
         <entry key="..\:/Users/lenovo/Documents/GitHub/CMSMantap/app/src/main/res/layout/spinner_item.xml" value="0.1" />
         <entry key="..\:/Users/lenovo/Documents/GitHub/CMSMantap/app/src/main/res/layout/validasi_sukses_dialog.xml" value="0.1" />
         <entry key="..\:/Users/lenovo/Documents/GitHub/CMSMantap/app/src/main/res/layout/validate_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/pending_shape.xml" value="0.1645" />
         <entry key="app/src/main/res/layout/activity_daftartransaksi_checker.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_detail_payroll_pensiun_ckr.xml" value="0.18614130434782608" />
-        <entry key="app/src/main/res/layout/activity_detail_payroll_umum.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/activity_detail_payroll_umum.xml" value="0.5525349934895833" />
+        <entry key="app/src/main/res/layout/activity_detail_payroll_umum_maker.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_detail_payroll_umum_releaser.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_input_otp.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.18614130434782608" />

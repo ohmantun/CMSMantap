@@ -45,7 +45,8 @@ class CheckerAdapter(var listener:HomeListener) : RecyclerView.Adapter<CheckerAd
             item?.let { it1 ->
              // bikin intent baru untuk ek activity detail
              val intent = Intent(holder.itemView.context, DetailPayrollUmumCkr::class.java)
-             intent.putExtra("id",it1.payroll_id)
+                intent.putExtra("id",it1.payroll_id)
+                intent.putExtra("status_checker",it1.status_checker)
                 holder.itemView.context.startActivity(intent)
             }
         }
