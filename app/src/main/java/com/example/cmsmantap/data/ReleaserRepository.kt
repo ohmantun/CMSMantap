@@ -46,4 +46,25 @@ class ReleaserRepository {
         return data
     }
 
+    fun updateTransaksiReleaser(MakerModel: MakerModel):LiveData<MakerModel>{
+        val data = MutableLiveData<MakerModel>()
+
+        apiInterface?.updateTransaksiReleaser(MakerModel)?.enqueue(object : Callback<MakerModel>{
+            override fun onFailure(call: Call<MakerModel>, t: Throwable) {
+                data.value = null
+            }
+
+            override fun onResponse(call: Call<MakerModel>, response: Response<MakerModel>) {
+                val res = response.body()
+                if (response.code() == 200 && res!=null){
+                    data.value = res
+                }else{
+                    data.value = null
+                }
+            }
+        })
+
+        return data
+    }
+
 }

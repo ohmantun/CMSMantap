@@ -131,6 +131,8 @@
         <entry key="app/src/main/res/layout/activity_daftartransaksi_checker.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_detail_payroll_pensiun_ckr.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_detail_payroll_umum.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/activity_detail_payroll_umum_releaser.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/activity_input_otp.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.31432581362516987" />
         <entry key="app/src/main/res/layout/activity_otorisasi_payroll.xml" value="0.18614130434782608" />
@@ -146,6 +148,7 @@
         <entry key="app/src/main/res/layout/fragment_signin.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/list_detail_validasi_payrollumum.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/list_releaser_payrollumum.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/payroll_releaser.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/reject_sukses_dialog.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/validasi_sukses_dialog.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/validate_dialog.xml" value="0.18614130434782608" />

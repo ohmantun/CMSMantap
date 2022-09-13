@@ -11,11 +11,13 @@ class KirimOTP : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_CMSMantap)
         setContentView(R.layout.activity_kirim_otp)
+        val payroll_id=intent.getIntExtra("id",0)
 
         val btnKirimOTP = findViewById<Button>(R.id.kirimOTP)
 
         btnKirimOTP.setOnClickListener {
             val intent = Intent(this, InputOTP::class.java)
+            intent.putExtra("id",payroll_id)
             startActivity(intent)
         }
 

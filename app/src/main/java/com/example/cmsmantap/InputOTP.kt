@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.KeyEvent
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -11,9 +12,14 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import com.example.cmsmantap.data.MakerModel
+import com.example.cmsmantap.viewmodel.HomeViewModel
 import kotlinx.coroutines.delay
 
 class InputOTP : AppCompatActivity() {
+    private lateinit var vm: HomeViewModel
 
     companion object {
         private const val TEST_VERIFY_CODE = "172022"
@@ -149,6 +155,8 @@ class InputOTP : AppCompatActivity() {
     }
 
     private fun verifyOTPCode(){
+        vm = ViewModelProvider(this)[HomeViewModel::class.java]
+        val payroll_id=intent.getIntExtra("id",0)
         val otpCode = "${editTextOne.text.toString().trim()}" +
                 "${editTextTwo.text.toString().trim()}" +
                 "${editTextThree.text.toString().trim()}" +
@@ -161,9 +169,23 @@ class InputOTP : AppCompatActivity() {
         }
 
         if (otpCode == TEST_VERIFY_CODE){
-            val intent = Intent(this, ApprovelPayroll::class.java)
-            startActivity(intent)
+            val makerModel = MakerModel()
+            makerModel.payroll_id = payroll_id
+            makerModel.status_maker = "Approved"
+            makerModel.status_checker = "Approved"
+            makerModel.status_releaser = "Approved"
 
+            vm.updateTransaksiReleaser(makerModel)
+            vm.updateTransaksiReleaserLiveData?.observe(this, Observer {
+                Log.d("Update status checker umum",it.toString())
+                if (it!=null){
+                    val intent = Intent(this, ReleaserPayrollUmum::class.java)
+                    startActivity(intent)
+                    finish()
+                }else{
+                    Toast.makeText(this, "Terjadi Kesalahan pada Sistem", Toast.LENGTH_SHORT).show()
+                }
+            })
 
             val inputManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
             inputManager.hideSoftInputFromWindow(frameLayoutRoot.windowToken,0)
