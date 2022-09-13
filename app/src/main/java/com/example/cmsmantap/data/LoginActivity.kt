@@ -76,6 +76,8 @@ class LoginActivity : AppCompatActivity() {
                         // val role_id = it.data.user.role_id
                         if(it.data?.user?.role_id === 1) {
                             val intent = Intent(this, Beranda::class.java)
+                            intent.putExtra("nama",it.data?.user?.nama)
+                            intent.putExtra("nama",it.data?.user?.username)
                             startActivity(intent)
                             finish()
                         } else if(it.data?.user?.role_id === 2){

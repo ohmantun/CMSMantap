@@ -73,22 +73,21 @@
         android:src="@drawable/profilpic" />
 
         <TextView
-            android:id="@+id/idUser"
+            android:id="@+id/idUserMaker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/idProfile"
             android:layout_centerInParent="true"
-            android:text="Nama User"
             android:layout_marginTop="10dp"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/idNorek"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/idUser"
+            android:layout_below="@+id/idUserMaker"
             android:layout_centerInParent="true"
             android:text="0123456789"
             android:layout_marginTop="5dp"
@@ -102,11 +101,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/idNorek"
             android:layout_centerInParent="true"
-            android:text="MAKER007"
             android:layout_marginTop="5dp"
+            android:text="MAKER007"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
-            android:textStyle="normal"
-            android:textColor="#FFFFFF" />
+            android:textStyle="normal" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/btnGantiSandi"

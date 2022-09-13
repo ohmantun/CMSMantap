@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.example.cmsmantap.data.LoginActivity
 
@@ -17,6 +18,10 @@ class Pengaturan : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_CMSMantap)
         setContentView(R.layout.activity_pengaturan)
+
+        val nama=intent.getStringExtra("nama")
+        val idUserMaker = findViewById<TextView>(R.id.idUserMaker)
+        idUserMaker.text = nama
 
       //  val btnPayrollUmum = findViewById<ImageButton>(R.id.btnPayroll_umum)
       //  val btnPayrollPensiunan = findViewById<ImageButton>(R.id.btnPayroll_pensiunan)
@@ -32,6 +37,7 @@ class Pengaturan : AppCompatActivity() {
 
         btnBeranda.setOnClickListener{
             val intent = Intent(this, Beranda::class.java)
+            intent.putExtra("nama",nama)
             startActivity(intent)
         }
 

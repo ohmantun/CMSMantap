@@ -30,15 +30,15 @@
     </string-array>
 
     <string-array name="pilih_rek">
-        <item>PT BALI NUSARAYA PARAMARTHA - 123456789090</item>
-        <item>PT BALI NUSARAYA PARAMARTHA - 342324254523</item>
-        <item>PT BALI NUSARAYA PARAMARTHA - 242678432678</item>
+        <item>1090015725104 - PT BALI NUSARAYA PARAMARTHA</item>
+        <item>2670288563 - PT BALI NUSARAYA PARAMARTHA</item>
+        <item>2221178841 - PT BALI NUSARAYA PARAMARTHA</item>
     </string-array>
     <!-- Strings related to array at Payroll umum page -->
     <string-array name="pilih_jenis_transaksi">
+        <item>Pilih Jenis Transaksi</item>
         <item>Transfer ke Bank Mandiri Taspen</item>
         <item>Transfer ke Bank Lain</item>
     </string-array>
-
-
+    <string name="selected_item">Selected item:</string>
 </resources>

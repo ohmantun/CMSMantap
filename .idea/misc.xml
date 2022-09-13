@@ -138,9 +138,11 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.31432581362516987" />
         <entry key="app/src/main/res/layout/activity_main_checker.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/activity_main_page.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_main_releaser.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_otorisasi_payroll.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_payroll.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/activity_pengaturan.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_validasi_payroll_umum.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/dashboard_belum_disetujui.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/dialog_loader.xml" value="0.1" />

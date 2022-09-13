@@ -9,7 +9,7 @@ import android.graphics.drawable.ColorDrawable
 import android.view.View
 import android.widget.*
 import com.example.cmsmantap.data.LoginActivity
-
+import org.w3c.dom.Text
 
 
 class Beranda : AppCompatActivity() {
@@ -22,6 +22,12 @@ class Beranda : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_CMSMantap)
         setContentView(R.layout.activity_main_page)
+
+        val nama=intent.getStringExtra("nama")
+        val welcome = findViewById<TextView>(R.id.welcomeMaker)
+        welcome.text = "Selamat datang, " + nama
+
+        val username=intent.getStringExtra("username")
 
         //  val spinner: Spinner = findViewById(R.id.spinner_rek)
         val menubtnPayroll = findViewById<FrameLayout>(R.id.btnPayroll)
@@ -79,6 +85,7 @@ class Beranda : AppCompatActivity() {
 
         btnPengaturan.setOnClickListener {
             val intent = Intent(this, Pengaturan::class.java)
+            intent.putExtra("nama",nama)
             startActivity(intent)
         }
 
