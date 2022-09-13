@@ -132,76 +132,14 @@
             android:textColor="#083358"
             android:layout_marginTop="10dp"/>
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/et_tglPembayaranGaji"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-        <RadioGroup
-            android:id="@+id/rgTglpembayaran"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <androidx.appcompat.widget.AppCompatRadioButton
-                android:id="@+id/rbSekarang"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:textColor="#AFAFAF"
-                android:text="Sekarang"
-                android:textSize="16sp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textColorHint="@color/teal_700"/>
-            <androidx.appcompat.widget.AppCompatRadioButton
-                android:id="@+id/rbTerjadwal"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:textColor="#AFAFAF"
-                android:text="Terjadwal"
-                android:textSize="16sp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textColorHint="@color/teal_700"/>
-        </RadioGroup>
-            <TextView
-                android:id="@+id/tvTrfpadatgl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Transfer Pada Tanggal"
-                android:layout_marginLeft="30dp"
-                android:paddingLeft="3dp"
-                android:textColor="@color/teal_700"
-                android:textSize="16sp"
-                android:layout_marginTop="10dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="30dp"
-            android:paddingLeft="3dp"
-            android:paddingBottom="5dp">
-
-            <TextView
-                android:id="@+id/tvTglterjadwal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="dd-mm-yyyy"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:layout_marginEnd="200dp" />
-
-            <ImageButton
-                android:id="@+id/btnPilihtgl"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/calendar"
-                tools:layout_editor_absoluteX="341dp"
-                tools:layout_editor_absoluteY="120dp" />
-
-        </LinearLayout>
+            android:hint="dd-mm-yyyy"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/teal_700"/>
 
         <GridLayout
             android:layout_width="match_parent"

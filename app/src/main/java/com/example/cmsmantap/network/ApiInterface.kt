@@ -24,10 +24,7 @@ interface ApiInterface {
     @POST("login")
     fun login(@Body LoginModel: LoginModel):Call<Wrapper<LoginResponse>>
 
-    @POST("posts")
-    fun createPost(@Body MakerModel: MakerModel):Call<MakerModel>
-
-    @DELETE("posts/{id}")
-    fun deletePost(@Path("id") id:Int):Call<String>
+//    @DELETE("posts/{id}")
+//    fun deletePost(@Path("id") id:Int):Call<String>
 
 }

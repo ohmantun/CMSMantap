@@ -64,13 +64,13 @@ class CheckerAdapter(var listener:HomeListener) : RecyclerView.Adapter<CheckerAd
     class HomeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bindView(item: MakerModel?) {
             if (item?.status_checker == "Approved by Checker"){
-                itemView.tv_infoStatusUmumChecker.text = "Menunggu diproses Releaser"
+                itemView.tv_infoStatusUmumChecker.text = "Menunggu Persetujuan Releaser"
                 itemView.tv_cardInfoStatusUmumChecker.setCardBackgroundColor(Color.parseColor("#F9C70C"))
             } else if (item?.status_checker == "Approved") {
-                itemView.tv_infoStatusUmumChecker.text = "Disetujui oleh Releaser"
+                itemView.tv_infoStatusUmumChecker.text = "Telah Disetujui"
                 itemView.tv_cardInfoStatusUmumChecker.setCardBackgroundColor(Color.parseColor("#00AD43"))
             } else if (item?.status_checker == "Rejected") {
-                itemView.tv_infoStatusUmumChecker.text = "Ditolak"
+                itemView.tv_infoStatusUmumChecker.text = "Belum Disetujui"
                 itemView.tv_cardInfoStatusUmumChecker.setCardBackgroundColor(Color.parseColor("#B22222"))
             } else {
                 itemView.tv_infoStatusUmumChecker.text = "Menunggu Diproses"

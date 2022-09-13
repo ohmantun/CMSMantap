@@ -13,6 +13,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
 import com.example.cmsmantap.R
 import com.example.cmsmantap.databinding.FragmentBuatbaruBinding
+import kotlinx.android.synthetic.main.fragment_barupensiunan.*
 
 
 class FragmentBuatbaru : Fragment() {
@@ -64,9 +65,9 @@ class FragmentBuatbaru : Fragment() {
             ).show()
 //            binding.acTvJenisTransaksi.setText("")
 //            binding.acTvNoRekPengirim.setText("")
-            binding.rgTglpembayaran.clearCheck()
-            binding.etKeterangan.text.clear()
-            binding.tvTglterjadwal.setText("")
+//            binding.rgTglpembayaran.clearCheck()
+//            binding.etKeterangan.text.clear()
+//            binding.tvTglterjadwal.setText("")
         }
 
         return binding.root

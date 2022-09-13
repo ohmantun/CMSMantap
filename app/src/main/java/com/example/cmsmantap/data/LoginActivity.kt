@@ -54,8 +54,8 @@ class LoginActivity : AppCompatActivity() {
             loginModel.username = pengguna
             loginModel.password = password
 
-            Log.wtf("DEBUG loginModel", loginModel.toString())
-            Log.wtf("DEBUG institusi", institusi)
+            // Log.wtf("DEBUG loginModel", loginModel.toString())
+            // Log.wtf("DEBUG institusi", institusi)
 
             if (institusi.isEmpty()) {
                 Toast.makeText(this, "Silahkan masukkan ID Institusi", Toast.LENGTH_SHORT).show()
