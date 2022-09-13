@@ -24,6 +24,12 @@ interface ApiInterface {
     @POST("login")
     fun login(@Body LoginModel: LoginModel):Call<Wrapper<LoginResponse>>
 
+    @POST("save_transaksi_checker_umum")
+    fun updateTransaksiChecker(@Body MakerModel: MakerModel):Call<MakerModel>
+
+    @POST("save_transaksi_releaser_umum")
+    fun updateTransaksiReleaser(@Body MakerModel: MakerModel):Call<MakerModel>
+
 //    @DELETE("posts/{id}")
 //    fun deletePost(@Path("id") id:Int):Call<String>
 

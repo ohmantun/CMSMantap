@@ -29,6 +29,9 @@ class HomeViewModel(application: Application): AndroidViewModel(application){
     // create payroll
     var createTransaksiMakerLiveData:LiveData<MakerModel>?=null
 
+    //update transaksi checker
+    var updateTransaksiCheckerLiveData:LiveData<MakerModel>?=null
+
 
 
 
@@ -45,6 +48,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application){
 
         loginLiveData = MutableLiveData()
         createTransaksiMakerLiveData = MutableLiveData()
+        updateTransaksiCheckerLiveData = MutableLiveData()
     }
 
     fun fetchAllTransaksiMakerUmum(){
@@ -67,6 +71,10 @@ class HomeViewModel(application: Application): AndroidViewModel(application){
 
     fun createTransaksiMaker(makerModel: MakerModel){
         createTransaksiMakerLiveData = MakerRepository?.createTransaksiMaker(makerModel)
+    }
+
+    fun updateTransaksiChecker(makerModel: MakerModel){
+        updateTransaksiCheckerLiveData = CheckerRepository?.updateTransaksiChecker(makerModel)
     }
 
 }

@@ -12,13 +12,19 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cmsmantap.adapter.PayrollUmumDCkrAdapter
+import com.example.cmsmantap.data.MakerModel
+import com.example.cmsmantap.data.PayrollUmum
 import com.example.cmsmantap.databinding.ActivityDetailPayrollUmumBinding
 import com.example.cmsmantap.model.PayrollUmumCkrDetail
+import com.example.cmsmantap.viewmodel.HomeViewModel
 
 class DetailPayrollUmumCkr : AppCompatActivity() {
     private lateinit var binding : ActivityDetailPayrollUmumBinding
+    private lateinit var vm: HomeViewModel
 
     val lm = object : LinearLayoutManager(this){
         override fun canScrollVertically(): Boolean {
@@ -35,6 +41,7 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
 
         binding = ActivityDetailPayrollUmumBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        vm = ViewModelProvider(this)[HomeViewModel::class.java]
 
         binding.btnBack.setOnClickListener {
             val intent = Intent(this, ValidasiPayrollUmum::class.java)
@@ -85,11 +92,24 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
                         suksesDialogBinding.findViewById<Button>(R.id.btnOkRjtSukses)
 
                     btnOkRejectSuskses.setOnClickListener {
-                        val btnValidasi = findViewById<Button>(R.id.btnValidasi)
-                        suksesDialog.cancel()
-                        myDialog.cancel()
-                        btnValidasi.isEnabled=false
-                        btnReject.isEnabled=false
+                        val makerModel = MakerModel()
+                        makerModel.payroll_id = payroll_id
+                        makerModel.status_maker = "Rejected"
+                        makerModel.status_checker = "Rejected"
+                        makerModel.status_releaser = "Rejected"
+                        makerModel.keterangan = inputRejectNote
+
+                        vm.updateTransaksiChecker(makerModel)
+                        vm.updateTransaksiCheckerLiveData?.observe(this, Observer {
+                            Log.d("Update status checker umum",it.toString())
+                            if (it!=null){
+                                val intent = Intent(this, ValidasiPayrollUmum::class.java)
+                                startActivity(intent)
+                                finish()
+                            }else{
+                                Toast.makeText(this, "Terjadi Kesalahan pada Sistem", Toast.LENGTH_SHORT).show()
+                            }
+                        })
                     }
                 }
             }
@@ -122,8 +142,23 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
                 val btnOkSelesai = confirmBinding.findViewById<Button>(R.id.btnOkselesai)
 
                 btnOkSelesai.setOnClickListener {
-                    confirmDialog.cancel()
-                    myValidasiDialog.cancel()
+                    val makerModel = MakerModel()
+                    makerModel.payroll_id = payroll_id
+                    makerModel.status_maker = "Approved by Checker"
+                    makerModel.status_checker = "Approved by Checker"
+                    makerModel.status_releaser = "Approved by Checker"
+
+                    vm.updateTransaksiChecker(makerModel)
+                    vm.updateTransaksiCheckerLiveData?.observe(this, Observer {
+                        Log.d("Update status checker umum",it.toString())
+                        if (it!=null){
+                            val intent = Intent(this, ValidasiPayrollUmum::class.java)
+                            startActivity(intent)
+                            finish()
+                        }else{
+                            Toast.makeText(this, "Terjadi Kesalahan pada Sistem", Toast.LENGTH_SHORT).show()
+                        }
+                    })
                 }
 
             }
