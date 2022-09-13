@@ -37,6 +37,7 @@ class ReleaserAdapter(var listener:HomeListener) : RecyclerView.Adapter<Releaser
 
     class HomeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bindView(item: MakerModel?) {
+//            Log.d("data releaser:",item?.maker.toString())
             itemView.tv_tanggal_pengajuan_releaser.text = item?.tanggal_pengajuan
             itemView.tv_tanggal_eksekusi_releaser.text = item?.tanggal_eksekusi
             itemView.tv_diajukan_oleh_releaser.text = item?.maker

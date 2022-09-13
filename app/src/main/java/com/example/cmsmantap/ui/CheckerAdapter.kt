@@ -1,10 +1,14 @@
 package com.example.cmsmantap.ui
 
+import android.content.Intent
+import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cmsmantap.DetailPayrollUmumCkr
 import com.example.cmsmantap.OtorisasiPayroll
 import com.example.cmsmantap.R
 import com.example.cmsmantap.data.MakerModel
@@ -18,6 +22,8 @@ class CheckerAdapter(var listener:HomeListener) : RecyclerView.Adapter<CheckerAd
     interface HomeListener{
         //fun onItemDeleted(MakerModel: MakerModel, position: Int)
     }
+
+
 
     fun setData(list: ArrayList<MakerModel>){
         data = list
@@ -35,16 +41,14 @@ class CheckerAdapter(var listener:HomeListener) : RecyclerView.Adapter<CheckerAd
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
         val item = data?.get(position)
         holder.bindView(item)
-        //
-//        holder.itemView.img_delete.setOnClickListener {
-//            item?.let { it1 ->
-            // bikin intent baru untuk ek activity detail
-            // val intent = Intent(this, OtorisasiPayroll::class.java)
-            // intent.putExtra("id",item.payroll_id)
-            //startActivity(intent)
-//                listener.onItemDeleted(it1, position)
-//            }
-//        }
+        holder.itemView.btnDetailChecker.setOnClickListener {
+            item?.let { it1 ->
+             // bikin intent baru untuk ek activity detail
+             val intent = Intent(holder.itemView.context, DetailPayrollUmumCkr::class.java)
+             intent.putExtra("id",it1.payroll_id)
+                holder.itemView.context.startActivity(intent)
+            }
+        }
     }
 
     fun addData(MakerModel: MakerModel) {
@@ -59,6 +63,19 @@ class CheckerAdapter(var listener:HomeListener) : RecyclerView.Adapter<CheckerAd
 
     class HomeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bindView(item: MakerModel?) {
+            if (item?.status_checker == "Approved by Checker"){
+                itemView.tv_infoStatusUmumChecker.text = "Menunggu diproses Releaser"
+                itemView.tv_cardInfoStatusUmumChecker.setCardBackgroundColor(Color.parseColor("#F9C70C"))
+            } else if (item?.status_checker == "Approved") {
+                itemView.tv_infoStatusUmumChecker.text = "Disetujui oleh Releaser"
+                itemView.tv_cardInfoStatusUmumChecker.setCardBackgroundColor(Color.parseColor("#00AD43"))
+            } else if (item?.status_checker == "Rejected") {
+                itemView.tv_infoStatusUmumChecker.text = "Ditolak"
+                itemView.tv_cardInfoStatusUmumChecker.setCardBackgroundColor(Color.parseColor("#B22222"))
+            } else {
+                itemView.tv_infoStatusUmumChecker.text = "Menunggu Diproses"
+                itemView.tv_cardInfoStatusUmumChecker.setCardBackgroundColor(Color.parseColor("#F9C70C"))
+            }
             itemView.tv_tanggal_pengajuan_checker.text = item?.tanggal_pengajuan
             itemView.tv_tanggal_eksekusi_checker.text = item?.tanggal_eksekusi
             itemView.tv_diajukan_oleh_checker.text = item?.maker

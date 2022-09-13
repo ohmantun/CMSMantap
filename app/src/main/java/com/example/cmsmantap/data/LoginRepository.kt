@@ -5,11 +5,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.cmsmantap.network.ApiClient
 import com.example.cmsmantap.network.ApiInterface
+import com.example.cmsmantap.response.LoginResponse
+import com.example.cmsmantap.response.Wrapper
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ReleaserRepository {
+class LoginRepository {
 
     private var apiInterface:ApiInterface?=null
 
@@ -17,32 +19,28 @@ class ReleaserRepository {
         apiInterface = ApiClient.getApiClient().create(ApiInterface::class.java)
     }
 
-    fun fetchAllTransaksiReleaserUmum():LiveData<List<MakerModel>>{
-        val data = MutableLiveData<List<MakerModel>>()
-        Log.d("DEBUG Test", "HERE")
+    fun login(loginModel: LoginModel):LiveData<Wrapper<LoginResponse>>{
+        val data = MutableLiveData<Wrapper<LoginResponse>>()
 
-        apiInterface?.fetchAllTransaksiReleaserUmum()?.enqueue(object : Callback<List<MakerModel>>{
-
-            override fun onFailure(call: Call<List<MakerModel>>, t: Throwable) {
-                data.value = null
-                Log.d("DEBUG FAIL", "HERE")
+        apiInterface?.login(loginModel)?.enqueue(object : Callback<Wrapper<LoginResponse>>{
+            override fun onFailure(call: Call<Wrapper<LoginResponse>>, t: Throwable) {
+                Log.d("DEBUG LoginRepo Error", "Error")
             }
 
             override fun onResponse(
-                call: Call<List<MakerModel>>,
-                response: Response<List<MakerModel>>
+                call: Call<Wrapper<LoginResponse>>,
+                response: Response<Wrapper<LoginResponse>>
             ) {
                 val res = response.body()
-                Log.d("DEBUG SUCCESS", res.toString())
-
-                if (response.code() == 200 &&  res!=null){
+                Log.d("DEBUG LoginRepo", res.toString())
+                if (response.code() == 200 && res!=null){
                     data.value = res
                 }else{
                     data.value = null
                 }
-
             }
         })
+
         return data
     }
 

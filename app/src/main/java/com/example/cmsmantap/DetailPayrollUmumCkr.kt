@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -28,6 +29,9 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
     lateinit var payrollUmumDCkrAdapter: PayrollUmumDCkrAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val payroll_id=intent.getIntExtra("id",0)
+        // Log.d("payrollid",payroll_id.toString())
 
         binding = ActivityDetailPayrollUmumBinding.inflate(layoutInflater)
         setContentView(binding.root)

@@ -43,7 +43,7 @@ class MakerRepository {
 
     }
 
-    fun createPost(MakerModel: MakerModel):LiveData<MakerModel>{
+    fun createTransaksiMaker(MakerModel: MakerModel):LiveData<MakerModel>{
         val data = MutableLiveData<MakerModel>()
 
         apiInterface?.createPost(MakerModel)?.enqueue(object : Callback<MakerModel>{
@@ -53,7 +53,7 @@ class MakerRepository {
 
             override fun onResponse(call: Call<MakerModel>, response: Response<MakerModel>) {
                 val res = response.body()
-                if (response.code() == 201 && res!=null){
+                if (response.code() == 200 && res!=null){
                     data.value = res
                 }else{
                     data.value = null
@@ -62,7 +62,6 @@ class MakerRepository {
         })
 
         return data
-
     }
 
     fun deletePost(id:Int):LiveData<Boolean>{

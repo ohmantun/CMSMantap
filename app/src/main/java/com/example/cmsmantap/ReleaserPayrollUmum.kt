@@ -2,6 +2,7 @@ package com.example.cmsmantap
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
@@ -30,6 +31,7 @@ class ReleaserPayrollUmum : AppCompatActivity(), ReleaserAdapter.HomeListener {
         vm.fetchAllTransaksiReleaserUmum()
 
         vm.ReleaserModelListLiveData?.observe(this, Observer {
+            Log.d("data activity releaser",it.toString())
             if (it!=null){
                 rv_home.visibility = View.VISIBLE
                 adapter.setData(it as ArrayList<MakerModel>)
