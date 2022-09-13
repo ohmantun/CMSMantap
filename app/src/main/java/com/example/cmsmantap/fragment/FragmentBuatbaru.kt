@@ -27,13 +27,13 @@ class FragmentBuatbaru : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentBuatbaruBinding.inflate(inflater, container, false)
 
-        val pilihJenisTransaksi = resources.getStringArray(R.array.pilih_jenis_transaksi)
-        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, pilihJenisTransaksi)
-        binding.acTvJenisTransaksi.setAdapter(arrayAdapter)
+//        val pilihJenisTransaksi = resources.getStringArray(R.array.pilih_jenis_transaksi)
+//        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, pilihJenisTransaksi)
+//        binding.acTvJenisTransaksi.setAdapter(arrayAdapter)
 
         val pilihRekening = resources.getStringArray(R.array.pilih_rek)
         val arrAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, pilihRekening)
-        binding.acTvNoRekPengirim.setAdapter(arrAdapter)
+//        binding.acTvNoRekPengirim.setAdapter(arrAdapter)
 
 
 
@@ -62,8 +62,8 @@ class FragmentBuatbaru : Fragment() {
                 "Input Payroll Sukses. Menunggu Validasi Checker",
                 Toast.LENGTH_LONG
             ).show()
-            binding.acTvJenisTransaksi.setText("")
-            binding.acTvNoRekPengirim.setText("")
+//            binding.acTvJenisTransaksi.setText("")
+//            binding.acTvNoRekPengirim.setText("")
             binding.rgTglpembayaran.clearCheck()
             binding.etKeterangan.text.clear()
             binding.tvTglterjadwal.setText("")

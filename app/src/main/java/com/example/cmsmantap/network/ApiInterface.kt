@@ -15,6 +15,9 @@ interface ApiInterface {
     @GET("daftar_transaksi_releaser_umum")
     fun fetchAllTransaksiReleaserUmum(): Call<List<MakerModel>>
 
+    @POST("save_transaksi_maker_umum")
+    fun createTransaksiMaker(@Body MakerModel: MakerModel):Call<MakerModel>
+
     @POST("posts")
     fun createPost(@Body MakerModel: MakerModel):Call<MakerModel>
 

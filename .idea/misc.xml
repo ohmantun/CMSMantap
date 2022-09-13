@@ -133,10 +133,13 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.38777552065641985" />
         <entry key="app/src/main/res/layout/activity_payroll.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/dashboard_belum_disetujui.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/dialog_loader.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_buatbaru.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_daftartransaksi.xml" value="0.35257568359375" />
         <entry key="app/src/main/res/layout/fragment_daftartransaksi_cardview.xml" value="0.30867156982421873" />
         <entry key="app/src/main/res/layout/fragment_daftartransaksi_checker_cardview.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/fragment_daftartransaksi_releaser_cardview.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/fragment_signin.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/list_releaser_payrollumum.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/validate_dialog.xml" value="0.18614130434782608" />
       </map>
