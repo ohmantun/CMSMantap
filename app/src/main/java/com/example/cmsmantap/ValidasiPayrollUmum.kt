@@ -35,7 +35,7 @@ class ValidasiPayrollUmum : AppCompatActivity(), CheckerAdapter.HomeListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_CMSMantap)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_checker)
 
         vm = ViewModelProvider(this)[HomeViewModel::class.java]
 
