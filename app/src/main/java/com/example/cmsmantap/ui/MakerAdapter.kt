@@ -37,14 +37,14 @@ class MakerAdapter(var listener:HomeListener) : RecyclerView.Adapter<MakerAdapte
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
         val item = data?.get(position)
         holder.bindView(item)
-        holder.itemView.btnDetailMaker.setOnClickListener {
-            item?.let { it1 ->
-                // bikin intent baru untuk ke activity detail
-                val intent = Intent(holder.itemView.context, DetailPayrollUmumCkr::class.java)
-                intent.putExtra("id",it1.payroll_id)
-                holder.itemView.context.startActivity(intent)
-            }
-        }
+//        holder.itemView.btnDetailMaker.setOnClickListener {
+//            item?.let { it1 ->
+//                // bikin intent baru untuk ke activity detail
+//                val intent = Intent(holder.itemView.context, DetailPayrollUmumCkr::class.java)
+//                intent.putExtra("id",it1.payroll_id)
+//                holder.itemView.context.startActivity(intent)
+//            }
+//        }
     }
 
     fun addData(MakerModel: MakerModel) {
