@@ -63,8 +63,9 @@
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/imageDetailReleaser"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
                     android:src="@drawable/waitingapproval"
                     android:layout_gravity="center"
                     android:layout_marginTop="30dp"/>
@@ -73,7 +74,6 @@
                     android:id="@+id/tv_statusPayrollUmum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Menunggu Persetujuan Releaser"
                     android:textColor="#E8CE48"
                     android:textStyle="bold"
                     android:textSize="20sp"

@@ -43,6 +43,7 @@ class ReleaserAdapter(var listener:HomeListener) : RecyclerView.Adapter<Releaser
                 // bikin intent baru untuk ek activity detail
                 val intent = Intent(holder.itemView.context, DetailPayrollUmumReleaser::class.java)
                 intent.putExtra("id",it1.payroll_id)
+                intent.putExtra("status_checker",it1.status_checker)
                 holder.itemView.context.startActivity(intent)
             }
         }

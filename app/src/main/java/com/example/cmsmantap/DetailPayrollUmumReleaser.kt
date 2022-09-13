@@ -8,10 +8,7 @@ import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -48,6 +45,27 @@ class DetailPayrollUmumReleaser : AppCompatActivity() {
         }
 
         initView()
+
+        val tv_statusValidasiChecker = findViewById<TextView>(R.id.tv_statusPayrollUmum)
+        val imageDetailReleaser = findViewById<ImageView>(R.id.imageDetailReleaser)
+
+        val status_checker=intent.getStringExtra("status_checker")
+        // change text status detail validasi checker
+        if (status_checker == "Approved by Checker"){
+            tv_statusValidasiChecker.text = "Menunggu Persetujuan Releaser"
+            imageDetailReleaser.setImageResource(R.drawable.checklist)
+        } else if (status_checker == "Approved") {
+            tv_statusValidasiChecker.text = "Telah Disetujui"
+            tv_statusValidasiChecker.setTextColor(Color.parseColor("#00AD43"))
+            imageDetailReleaser.setImageResource(R.drawable.successcheck)
+        } else if (status_checker == "Rejected") {
+            tv_statusValidasiChecker.text = "Belum Disetujui"
+            tv_statusValidasiChecker.setTextColor(Color.parseColor("#B22222"))
+            imageDetailReleaser.setImageResource(R.drawable.cross)
+        } else {
+            tv_statusValidasiChecker.text = "Menunggu Diproses"
+            imageDetailReleaser.setImageResource(R.drawable.checklist)
+        }
 
         val btnReject = findViewById<Button>(R.id.btnReject)
         val editTextRejectNote = findViewById<EditText>(R.id.et_rejectNote)
