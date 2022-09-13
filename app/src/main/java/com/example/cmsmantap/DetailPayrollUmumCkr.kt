@@ -198,24 +198,24 @@ class DetailPayrollUmumCkr : AppCompatActivity() {
         binding.rvDataPayrollUmumD.adapter = payrollUmumDCkrAdapter
 
         addPayrollUmumDetailCkrList.add(
-            PayrollUmumCkrDetail(tglTransaksi = "23/02/2020", rekSumber = "1231413",
-            rekPenerima = "8123818", nominal = "4.500.000", keteranganD = "Testing")
+            PayrollUmumCkrDetail(tglTransaksi = "14/09/2022", rekSumber = "1231413",
+            rekPenerima = "8123818", nominal = "4.500.000", keteranganD = "Payroll")
         )
         addPayrollUmumDetailCkrList.add(
-            PayrollUmumCkrDetail(tglTransaksi = "23/02/2020", rekSumber = "1231413",
-                rekPenerima = "8123818", nominal = "6.500.000", keteranganD = "Testing")
+            PayrollUmumCkrDetail(tglTransaksi = "14/09/2022", rekSumber = "1231413",
+                rekPenerima = "8123818", nominal = "6.500.000", keteranganD = "Payroll")
         )
         addPayrollUmumDetailCkrList.add(
-            PayrollUmumCkrDetail(tglTransaksi = "23/02/2020", rekSumber = "1231413",
-                rekPenerima = "8123818", nominal = "5.500.000", keteranganD = "Testing")
+            PayrollUmumCkrDetail(tglTransaksi = "14/09/2022", rekSumber = "1231413",
+                rekPenerima = "8123818", nominal = "5.500.000", keteranganD = "Payroll")
         )
         addPayrollUmumDetailCkrList.add(
-            PayrollUmumCkrDetail(tglTransaksi = "23/02/2020", rekSumber = "1231413",
-                rekPenerima = "8123818", nominal = "4.500.000", keteranganD = "Testing")
+            PayrollUmumCkrDetail(tglTransaksi = "14/09/2022", rekSumber = "1231413",
+                rekPenerima = "8123818", nominal = "4.500.000", keteranganD = "Payroll")
         )
         addPayrollUmumDetailCkrList.add(
-            PayrollUmumCkrDetail(tglTransaksi = "23/02/2020", rekSumber = "1231413",
-                rekPenerima = "8123818", nominal = "3.500.000", keteranganD = "Testing")
+            PayrollUmumCkrDetail(tglTransaksi = "14/09/2022", rekSumber = "1231413",
+                rekPenerima = "8123818", nominal = "3.500.000", keteranganD = "Payroll")
         )
 
         payrollUmumDCkrAdapter.setListDataPayrollUmumDCkr(addPayrollUmumDetailCkrList)
