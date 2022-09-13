@@ -50,15 +50,19 @@
         tools:ignore="MissingConstraints">
 
         <FrameLayout
+            android:id="@+id/frameLay1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
+            android:clickable="true"
             android:background="@drawable/ic_rectangle_notif">
 
             <LinearLayout
+                android:id="@+id/linearLayNotif1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:clickable="true"
                 tools:ignore="UselessParent">
 
                 <TextView
@@ -95,6 +99,7 @@
                     android:layout_marginEnd="25dp" />
 
                 <io.github.glailton.expandabletextview.ExpandableTextView
+                    android:id="@+id/et_readMore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"

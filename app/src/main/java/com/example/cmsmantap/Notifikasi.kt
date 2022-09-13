@@ -5,11 +5,10 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cmsmantap.data.LoginActivity
+import io.github.glailton.expandabletextview.ExpandableTextView
 
 class Notifikasi : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,8 +18,16 @@ class Notifikasi : AppCompatActivity() {
 
         val btnBack = findViewById<ImageView>(R.id.btnBack)
         val btnKeluar = findViewById<ImageButton>(R.id.footer_keluar)
+        val btnFrameLayNotif = findViewById<FrameLayout>(R.id.frameLay1)
+        val linearLayNotif1 = findViewById<LinearLayout>(R.id.linearLayNotif1)
 
-        btnBack.setOnClickListener(){
+        linearLayNotif1.setOnClickListener {
+            btnFrameLayNotif.setBackgroundResource(R.color.white)
+            val intent = Intent(this, NotifikasiRejectChecker::class.java)
+            startActivity(intent)
+        }
+
+        btnBack.setOnClickListener() {
             onBackPressed()
         }
 
