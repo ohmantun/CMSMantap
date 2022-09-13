@@ -54,7 +54,7 @@ class Beranda_Releaser : AppCompatActivity() {
             "GIRO \r \n \n342324254523",
             "TABUNGAN SIMANTAP GOLD \r \n \n242678432678"
         )
-        option.adapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, options)
+        option.adapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, options)
 
         option.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(p0: AdapterView<*>?) {
