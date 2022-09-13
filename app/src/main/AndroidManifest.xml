@@ -80,6 +80,9 @@
             android:name=".PayrollPensiunan"
             android:exported="false" />
         <activity
+            android:name=".data.BuatBaruPayrollUmum"
+            android:exported="false" />
+        <activity
             android:name=".data.PayrollUmum"
             android:exported="false" />
         <activity

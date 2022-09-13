@@ -7,11 +7,22 @@
     android:orientation="vertical"
     tools:context=".data.PayrollUmum">
 
+    <Button
+        android:id="@+id/btnNewPayrollMaker"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#00AD43"
+        android:enabled="true"
+        android:text="Buat Payroll" />
+
     <RelativeLayout
         android:id="@+id/search_card_transaction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp"
@@ -74,6 +85,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_home"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
 
 </LinearLayout>

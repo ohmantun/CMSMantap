@@ -8,6 +8,7 @@ import android.widget.*
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.cmsmantap.Beranda
 import com.example.cmsmantap.Payroll
 import com.example.cmsmantap.R
 import com.example.cmsmantap.databinding.ActivityPayrollUmumBinding
@@ -26,6 +27,15 @@ class PayrollUmum : AppCompatActivity(), MakerAdapter.HomeListener {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_CMSMantap)
         setContentView(R.layout.activity_main)
+
+        // pindah ke buat baru payroll umum
+        val btnNewPayroll = findViewById<Button>(R.id.btnNewPayrollMaker)
+
+        btnNewPayroll.setOnClickListener {
+            val intent = Intent(this, BuatBaruPayrollUmum::class.java)
+            startActivity(intent)
+        }
+        // end pindah ke buat baru payroll umum
 
         vm = ViewModelProvider(this)[HomeViewModel::class.java]
 
