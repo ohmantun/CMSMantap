@@ -188,7 +188,7 @@
                         android:textColor="#CC231F20"/>
 
 
-                    <android.inputmethodservice.ExtractEditText
+                    <EditText
                         android:id="@+id/et_rejectNote"
                         android:layout_width="310dp"
                         android:layout_height="130dp"
